@@ -7,6 +7,6 @@ import pandas as pd
 
 
 
-data = pd.read_csv('/Users/joshua/Documents/GitHub/DataAnalysis-groepje17/data/WFPVAM_FoodPrices_05-12-2017.csv')
+data = pd.read_csv('/Users/joshua/Documents/GitHub/DataAnalysis-groepje17/data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
 
 print(data)

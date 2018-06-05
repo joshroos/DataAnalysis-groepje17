@@ -12,3 +12,5 @@ ik ook!
 
 het is mij ook gelukt!!
 >>>>>>> master
+
+Dit voeg ik volgensmij toe vanuit de Darius branch

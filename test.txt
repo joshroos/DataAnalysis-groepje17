@@ -1,8 +1,7 @@
 Hoi jongen kunnen jullie dit lezen???
 
-<<<<<<< HEAD
 Want nu voeg ik gewoon iets anders toe, omg. Dit is de Joshua branch
-=======
+
 Nu ben ik er denk ik ook in!
 
 ik ook!
@@ -10,3 +9,6 @@ ik ook!
 het is mij ook gelukt!!
 
 Dit voeg ik volgensmij toe vanuit de Darius branch
+ik verander dingen lalala
+
+Dit is de Joshua branch om te laten zien hoe morgen werkt!!!

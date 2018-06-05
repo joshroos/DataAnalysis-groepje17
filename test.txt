@@ -7,3 +7,6 @@ Nu ben ik er denk ik ook in!
 
 ik ook!
 >>>>>>> master
+
+het is mij ook gelukt!!
+>>>>>>> master

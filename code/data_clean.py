@@ -31,8 +31,6 @@ data[data["mkt_name"] == 'National Average'] = data[data["mkt_name"] == 'Nationa
 data[data["mkt_name"] == 'Jammu'] = data[data["mkt_name"] == 'Jammu'].fillna('Jammu Kasjmir')
 data[data["mkt_name"] == 'Srinagar'] = data[data["mkt_name"] == 'Srinagar'].fillna('Jammu Kasjmir')
 
-print(len(data.columns))
 # verwijdert source van metingen 
 data = data.drop(columns=['mp_commoditysource'])
 
-print(len(data.columns))

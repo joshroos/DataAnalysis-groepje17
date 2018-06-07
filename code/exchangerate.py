@@ -69,5 +69,4 @@ writer = ExcelWriter('exchangerate_simple.xlsx')
 data.to_excel(writer,'Sheet1')
 writer.save()
 
-print(data["Congo" & "2012"])
 

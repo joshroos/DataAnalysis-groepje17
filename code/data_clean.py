@@ -8,6 +8,7 @@ import pandas as pd
 # lees bestand in
 data = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
 
-# controleert op missende data of dummy invoer
-for column in data:
-    continue
+
+#print(data)
+
+print(data['adm0_name'].unique())

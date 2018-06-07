@@ -4,18 +4,12 @@ print("Helloo")
 
 import matplotlib as plt
 import pandas as pd
-<<<<<<< HEAD
-import numpy as np
-
-
-data = pd.read_csv(".../data/exchangerate.csv")
-
-print(data)
-=======
 import io
+from pandas import ExcelWriter
+
 
 filename = '..\data\exchangerate.csv'
-data = pd.read_csv(filename ,header=2, sep=',')
+data = pd.read_csv(filename ,header=2, sep=',', error_bad_lines=False)
 countries = ['Afghanistan', 'Algeria', 'Armenia', 'Azerbaijan', 'Bangladesh', 'Benin',
  'Bhutan', 'Bolivia', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon',
  'Cape Verde', 'Central African Republic', 'Chad', 'Colombia', 'Congo',
@@ -31,16 +25,11 @@ countries = ['Afghanistan', 'Algeria', 'Armenia', 'Azerbaijan', 'Bangladesh', 'B
  'Ukraine', 'United Republic of Tanzania', 'Yemen', 'Zambia', 'Zimbabwe',
  'State of Palestine', 'Sudan', 'Egypt', 'South Sudan']
 
-# Create a Pandas Excel writer using XlsxWriter as the engine.
-writer = pd.ExcelWriter('exchangerate_simple.xlsx', engine='xlsxwriter')
-
-# Convert the dataframe to an XlsxWriter Excel object.
-data.to_excel(writer, sheet_name='Sheet1')
-
-# Close the Pandas Excel writer and output the Excel file.
+# schrijft bestand naar Excel file
+writer = ExcelWriter('exchangerate_simple.xlsx')
+data.to_excel(writer,'Sheet1')
 writer.save()
 
 print(data)
         
 
->>>>>>> Roos

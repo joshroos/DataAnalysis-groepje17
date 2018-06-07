@@ -30,39 +30,44 @@ countries_WFP = {'Afghanistan':1, 'Algeria':1,'Armenia':1,'Azerbaijan':1,'Bangla
 #data.to_excel(writer,'Sheet1')
 #writer.save()
 
-countries_exchange = data['Country Name']
-corresponding = []
-not_corresponding = []
-corresponding_countries = []
+def Find_corresponding(data, countries_WFP):
+    countries_exchange = data['Country Name']
+    corresponding = []
+    not_corresponding = []
+    corresponding_countries = []
+    missing = []
 
-for country in countries_exchange:
-    if countries_WFP.get(country) == 1:
-        corresponding.append(country)
-    else:
-        not_corresponding.append(country)
+    for country in countries_exchange:
+        if countries_WFP.get(country) == 1:
+            corresponding.append(country)
+        else:
+            not_corresponding.append(country)
 
-missing = []
+    for country in countries_WFP:
+        if country not in corresponding:
+            missing.append(country)
 
-for country in countries_WFP:
-    if country not in corresponding:
-        missing.append(country)
+    print("Amount WFP countries:",len(countries_WFP))
+    print("corresponding:",corresponding)
+    print("Amount corresponding:", len(corresponding))
+    print("not corresponding:", not_corresponding)
+    print("Amount not corresponding:", len(not_corresponding))
+    print("missing:", missing)
+    print("Amount missing:", len(missing))
 
-print("Amount WFP countries:",len(countries_WFP))
-print("corresponding:",corresponding)
-print("Amount corresponding:", len(corresponding))
-print("not corresponding:", not_corresponding)
-print("Amount not corresponding:", len(not_corresponding))
-print("missing:", missing)
-print("Amount missing:", len(missing))
+    return
 
+print(data.iloc[0])
+for i in range(len(data["Country Name"])):
+    if data["Country Name"][i] not in countries_WFP:
+        data = data.drop(i)
 
-#corresponding_countries = corresponding_countries.append(corresponding)
-#corresponding_countries = corresponding_countries.append(not_corresponding)
+years = [str(i) for i in range(1960, 1992)]
+data = data.drop(years, axis = 1)
 
-#writer = ExcelWriter('corresponding_countries.xlsx')
-#corresponding_countries.to_excel(writer,'Sheet1')
-#writer.save()
+writer = ExcelWriter('exchangerate_simple.xlsx')
+data.to_excel(writer,'Sheet1')
+writer.save()
 
-#print(data)
-        
+print(data["Congo" & "2012"])
 

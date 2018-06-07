@@ -21,6 +21,10 @@ data["mkt_name"] = data["mkt_name"].replace('m. Kyiv', 'Kyiv')
 data[(data["cur_name"] == 'AFN') & (data["mp_year"] < 2003)] = data[(data["cur_name"] == 'AFN') & (data["mp_year"] < 2003)].replace('AFN', 'AFA')
 data.adm1_name = [x.strip('$') for x in data.adm1_name]
 data.adm1_name = [x.strip('#') for x in data.adm1_name]
+data.adm1_name = [x.replace('_', ' ') for x in data.adm1_name]
+data.mkt_name = [x.replace('_', ' ') for x in data.mkt_name]
+data.mkt_name = [x.replace('-', ' ') for x in data.mkt_name]
+data["cur_name"] = data["cur_name"].replace('Somaliland Shilling', 'SOS')
 
 
 
@@ -43,6 +47,8 @@ for column in data:
             print(value)
 
         print('\n')
+
+        text = input()
 
 
 

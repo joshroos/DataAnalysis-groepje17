@@ -9,4 +9,7 @@ import pandas as pd
 
 data = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
 
-print(data)
+
+#print(data)
+
+print(data['adm0_name'].unique())

@@ -57,29 +57,17 @@ def Find_corresponding(data, countries_WFP):
 
     return
 
-#print(data)
+print(data.iloc[0])
+for i in range(len(data["Country Name"])):
+    if data["Country Name"][i] not in countries_WFP:
+        data = data.drop(i)
 
+years = [str(i) for i in range(1960, 1992)]
+data = data.drop(years, axis = 1)
 
-def create_exchange_file(data, countries_WFP):
-    countries_exchange = data['Country Name']
-    line_WFP = 0
-    relevant_data = []
-
-    for countryWFP in countries_WFP:
-        line_exchange = 0
-        for countryExchange in countries_exchange:
-            if countryExchange == countryWFP:
-                relevant_data.append(data.iloc[line_exchange])
-                line_WFP += 1
-                break
-            line_exchange += 1
-
-    return relevant_data
-
-
-exchange = create_exchange_file(data,countries_WFP)
-
-writer = ExcelWriter('exchange.xlsx')
-exchange.to_excel(writer,'Sheet1')
+writer = ExcelWriter('exchangerate_simple.xlsx')
+data.to_excel(writer,'Sheet1')
 writer.save()
+
+print(data["Congo" & "2012"])
 

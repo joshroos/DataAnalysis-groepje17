@@ -30,39 +30,56 @@ countries_WFP = {'Afghanistan':1, 'Algeria':1,'Armenia':1,'Azerbaijan':1,'Bangla
 #data.to_excel(writer,'Sheet1')
 #writer.save()
 
-countries_exchange = data['Country Name']
-corresponding = []
-not_corresponding = []
-corresponding_countries = []
+def Find_corresponding(data, countries_WFP):
+    countries_exchange = data['Country Name']
+    corresponding = []
+    not_corresponding = []
+    corresponding_countries = []
+    missing = []
 
-for country in countries_exchange:
-    if countries_WFP.get(country) == 1:
-        corresponding.append(country)
-    else:
-        not_corresponding.append(country)
+    for country in countries_exchange:
+        if countries_WFP.get(country) == 1:
+            corresponding.append(country)
+        else:
+            not_corresponding.append(country)
 
-missing = []
+    for country in countries_WFP:
+        if country not in corresponding:
+            missing.append(country)
 
-for country in countries_WFP:
-    if country not in corresponding:
-        missing.append(country)
+    print("Amount WFP countries:",len(countries_WFP))
+    print("corresponding:",corresponding)
+    print("Amount corresponding:", len(corresponding))
+    print("not corresponding:", not_corresponding)
+    print("Amount not corresponding:", len(not_corresponding))
+    print("missing:", missing)
+    print("Amount missing:", len(missing))
 
-print("Amount WFP countries:",len(countries_WFP))
-print("corresponding:",corresponding)
-print("Amount corresponding:", len(corresponding))
-print("not corresponding:", not_corresponding)
-print("Amount not corresponding:", len(not_corresponding))
-print("missing:", missing)
-print("Amount missing:", len(missing))
-
-
-#corresponding_countries = corresponding_countries.append(corresponding)
-#corresponding_countries = corresponding_countries.append(not_corresponding)
-
-#writer = ExcelWriter('corresponding_countries.xlsx')
-#corresponding_countries.to_excel(writer,'Sheet1')
-#writer.save()
+    return
 
 #print(data)
-        
+
+
+def create_exchange_file(data, countries_WFP):
+    countries_exchange = data['Country Name']
+    line_WFP = 0
+    relevant_data = []
+
+    for countryWFP in countries_WFP:
+        line_exchange = 0
+        for countryExchange in countries_exchange:
+            if countryExchange == countryWFP:
+                relevant_data.append(data.iloc[line_exchange])
+                line_WFP += 1
+                break
+            line_exchange += 1
+
+    return relevant_data
+
+
+exchange = create_exchange_file(data,countries_WFP)
+
+writer = ExcelWriter('exchange.xlsx')
+exchange.to_excel(writer,'Sheet1')
+writer.save()
 

@@ -1,6 +1,4 @@
-#Hallo allemaal
-
-print("Helloo")
+#Dit bestand maakt een overzichtelijke tabel met alle relevante data van exchange rate
 
 import matplotlib as plt
 import pandas as pd
@@ -13,22 +11,18 @@ data = pd.read_csv(filename ,header=2, sep=',', error_bad_lines=False)
 countries_WFP = {'Afghanistan':1, 'Algeria':1,'Armenia':1,'Azerbaijan':1,'Bangladesh':1,'Benin':1,
  'Bhutan':1,'Bolivia':1,'Burkina Faso':1,'Burundi':1,'Cambodia':1,'Cameroon':1,
  'Cape Verde':1,'Central African Republic':1,'Chad':1,'Colombia':1,'Congo':1,
- 'Costa Rica':1,"Cote d' Ivoire":1,'Democratic Republic of the Congo':1,
- 'Djibouti':1,'El Salvador':1,'Ethiopia':1,'Gambia':1,'Georgia':1,'Ghana':1,
- 'Guatemala':1,'Guinea-Bissau':1,'Guinea':1,'Haiti':1,'Honduras':1,'India':1,
+ "Cote d' Ivoire":1,'Democratic Republic of the Congo':1,
+ 'Djibouti':1,'Ethiopia':1,'Gambia':1,'Georgia':1,'Ghana':1,
+ 'Guatemala':1,'Guinea-Bissau':1,'Guinea':1,'Haiti':1,'India':1,
  'Indonesia':1,'Iran':1,'Iraq':1,'Jordan':1,'Kenya':1,
  'Kyrgyzstan':1,"Lao People's Democratic Republic":1,'Lebanon':1,'Lesotho':1,
  'Liberia':1,'Madagascar':1,'Malawi':1,'Mali':1,'Mauritania':1,'Mozambique':1,
- 'Myanmar':1,'Nepal':1,'Niger':1,'Nigeria':1,'Pakistan':1,'Panama':1,'Peru':1,
+ 'Myanmar':1,'Nepal':1,'Niger':1,'Nigeria':1,'Pakistan':1,'Peru':1,
  'Philippines':1,'Rwanda':1,'Senegal':1,'Somalia':1,'Sri Lanka':1,'Swaziland':1,
- 'Syrian Arab Republic':1,'Tajikistan':1,'Timor-Leste':1,'Turkey':1,'Uganda':1,
- 'Ukraine':1,'United Republic of Tanzania':1,'Yemen':1,'Zambia':1,'Zimbabwe':1,
+ 'Syrian Arab Republic':1,'Tajikistan':1,'Turkey':1,'Uganda':1,
+ 'Ukraine':1,'United Republic of Tanzania':1,'Yemen':1,'Zambia':1,
  'State of Palestine':1,'Sudan':1,'Egypt':1,'South Sudan':1}
 
-# schrijft bestand naar Excel file
-#writer = ExcelWriter('exchangerate_simple.xlsx')
-#data.to_excel(writer,'Sheet1')
-#writer.save()
 
 def Find_corresponding(data, countries_WFP):
     countries_exchange = data['Country Name']
@@ -57,7 +51,7 @@ def Find_corresponding(data, countries_WFP):
 
     return
 
-print(data.iloc[0])
+#print(data.iloc[0])
 for i in range(len(data["Country Name"])):
     if data["Country Name"][i] not in countries_WFP:
         data = data.drop(i)
@@ -65,8 +59,12 @@ for i in range(len(data["Country Name"])):
 years = [str(i) for i in range(1960, 1992)]
 data = data.drop(years, axis = 1)
 
+print(data)
+
 writer = ExcelWriter('exchangerate_simple.xlsx')
 data.to_excel(writer,'Sheet1')
 writer.save()
+
+#def convert_exchangerate(data, exchange_rate):
 
 

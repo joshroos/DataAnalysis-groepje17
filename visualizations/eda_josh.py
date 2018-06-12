@@ -37,7 +37,7 @@ meel_prijzen = []
 for year in years:
 
     brood = data_WFP.loc[(data_WFP['cm_name'] == 'Bread') & (data_WFP['mp_year'] == year), 'mp_price']
-    meel = data_WFP.loc[(data_WFP['cm_name'] == 'Flour') & (data_WFP['mp_year'] == year) & (data_WFP['adm0_name'] != 'Somalia'), 'mp_price']
+    meel = data_WFP.loc[(data_WFP['cm_name'] == 'Flour') & (data_WFP['mp_year'] == year), 'mp_price']
     meel_prijzen.append(meel.mean())
     brood_prijzen.append(brood.mean())
 

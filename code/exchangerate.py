@@ -59,7 +59,6 @@ for i in range(len(data["Country Name"])):
 years = [str(i) for i in range(1960, 1992)]
 data = data.drop(years, axis = 1)
 
-print(data)
 
 writer = ExcelWriter('exchangerate_simple.xlsx')
 data.to_excel(writer,'Sheet1')

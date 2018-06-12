@@ -7,12 +7,7 @@ import pandas as pd
 import numpy as np
 from pandas import ExcelWriter
 
-
-# lees bestand in
-data = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
-failed_columns = []
-
-
+# maakt de data schoon
 def data_clean(data):
     # vult de 'NaN' waarden met verschillende invoeren
     data[data["mkt_name"] == 'National Average'] = data[data["mkt_name"] == 'National Average'].fillna('National Average')
@@ -34,8 +29,7 @@ def data_clean(data):
 
     return data
 
-data = data_clean(data)
-
+# functie die data samenvoegt
 def data_aggregate(data):
     data.loc[data['cm_name'].str.contains('meal'), 'cm_name'] = 'Flour'
     data.loc[data['cm_name'].str.contains('flour'), 'cm_name'] = 'Flour'
@@ -57,62 +51,4 @@ def data_aggregate(data):
         data.loc[data['cm_name'].str.contains(category), 'cm_name'] = category
 
     return data
-data = data_aggregate(data)
-
-#print(data[data["cm_name"].str.contains('Rice')]["cm_name"])
-# food = data["cm_name"].unique()
-# food.sort()
-
-# for value in food:
-#     # if 'oes (paste)' in value:
-#     #     print(value)
-
-#     print(value)
-
-writer = ExcelWriter('data_clean.xlsx')
-data.to_excel(writer,'Sheet5')
-writer.save()
-
-# def data_normalise(data):
-
-#     return data
-
-# data_normalise(data)
-
-# unit = data["um_name"].unique()
-# unit.sort()
-
-# for value in unit:
-#     if ' G' in value:
-#         print(value)
-
-#     # print(value)
-
-# print(data.loc[data['um_name'].str.contains('115 G'), 'mp_price'])
-
-# data.loc[data['um_name'].str.contains('115 G'), 'mp_price'] = data.loc[data['um_name'].str.contains('115 G'), 'mp_price'] * (1000/115)
-
-# print(data.loc[data['um_name'].str.contains('115 G'), 'mp_price'])
-
-
-
-# # controleert op missende data of dummy invoer
-# for column in data:
-#     unique_values = data[column].unique()
-    
-#     try:
-#         unique_values.sort()
-#     except:
-#         failed_columns.append(column)
-
-#     if all(isinstance(item, str) for item in unique_values):
-#         print(column)
-#         for value in unique_values:
-#             print(value)
-
-#         print('\n')
-
-#         text = input()
-
-
 

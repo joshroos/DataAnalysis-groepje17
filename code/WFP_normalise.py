@@ -15,7 +15,7 @@ import WFP_clean
 data_WFP = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
 
 data_WFP = WFP_clean.data_clean(data_WFP)
-#data_WFP = WFP_clean.data_aggregate(data_WFP)
+data_WFP = WFP_clean.data_aggregate(data_WFP)
 
 def data_normalise(data):
     units = data["um_name"].unique()
@@ -64,22 +64,34 @@ def data_normalise(data):
 
     return data
 
-#data_WFP = data_normalise(data_WFP)
-
-valutas = data_WFP['cur_name'].unique()
-valuta = [e for e in valutas if e not in ('USD', 'AFA')]
-valuta.sort()
+data_WFP = data_normalise(data_WFP)
 
 data_exchange = pd.read_excel('../data/exchangerate_simple.xlsx')
 
-currency = data_WFP['cur_name'] == 'USD'
-year = data_WFP['mp_year'] == 2015
-#print(data_WFP.loc[currency, 'adm0_name'])
-dollars  = data_WFP[currency]['adm0_name'].unique()
+def valuta_normalise(data_WFP, data_exchange):
+    data_WFP['old currency'] = data_WFP['mp_price']
+    years = [str(x) for x in range(1992, 2018)]
+    countries = list(data_exchange['Country Name'])
 
-for land in dollars:
-    val = data_WFP[data_WFP['adm0_name'] == land]['cur_name'].unique()
-    print(val)
+    for country in countries:
+        for year in years:
+            country_exchange = data_exchange['Country Name'] == country
+            rate = list(data_exchange[country_exchange][year])
 
+            
+            country_wfp = data_WFP['adm0_name'] == country
+            year_wfp = data_WFP['mp_year'] == int(year)
 
-#print(len(data_exchange["1992"]))
+            prices  = data_WFP.loc[(country_wfp) & (year_wfp), 'mp_price']
+            prices = prices / rate[0]
+            data_WFP.loc[(country_wfp) & (year_wfp), 'mp_price'] = prices
+
+    return data_WFP
+
+valuta_normalise(data_WFP, data_exchange)
+
+data_WFP.to_csv('data_normalised.csv')
+
+writer = ExcelWriter('data_normalised.xlsx')
+data_WFP.to_excel(writer,'Sheet5')
+writer.save()

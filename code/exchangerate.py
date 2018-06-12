@@ -6,7 +6,7 @@ import io
 from pandas import ExcelWriter
 
 
-filename = '..\data\exchangerate.csv'
+filename = '../data/exchangerate.csv'
 data = pd.read_csv(filename ,header=2, sep=',', error_bad_lines=False)
 countries_WFP = {'Afghanistan':1, 'Algeria':1,'Armenia':1,'Azerbaijan':1,'Bangladesh':1,'Benin':1,
  'Bhutan':1,'Bolivia':1,'Burkina Faso':1,'Burundi':1,'Cambodia':1,'Cameroon':1,

@@ -12,10 +12,10 @@ import re
 import WFP_clean
 
 # lees bestand in
-data = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
+data_WFP = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
 
-data = WFP_clean.data_clean(data)
-#data = WFP_clean.data_aggregate(data)
+data_WFP = WFP_clean.data_clean(data_WFP)
+#data_WFP = WFP_clean.data_aggregate(data_WFP)
 
 def data_normalise(data):
     units = data["um_name"].unique()
@@ -64,5 +64,22 @@ def data_normalise(data):
 
     return data
 
-data_normalise(data)
+#data_WFP = data_normalise(data_WFP)
 
+valutas = data_WFP['cur_name'].unique()
+valuta = [e for e in valutas if e not in ('USD', 'AFA')]
+valuta.sort()
+
+data_exchange = pd.read_excel('../data/exchangerate_simple.xlsx')
+
+currency = data_WFP['cur_name'] == 'USD'
+year = data_WFP['mp_year'] == 2015
+#print(data_WFP.loc[currency, 'adm0_name'])
+dollars  = data_WFP[currency]['adm0_name'].unique()
+
+for land in dollars:
+    val = data_WFP[data_WFP['adm0_name'] == land]['cur_name'].unique()
+    print(val)
+
+
+#print(len(data_exchange["1992"]))

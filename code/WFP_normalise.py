@@ -62,6 +62,14 @@ def data_normalise(data):
         data.loc[data['um_name'].str.contains(unit), 'mp_price'] = prices
         data.loc[data['um_name'].str.contains(unit), 'um_name'] = 'L'
 
+    special_units = ['MT', 'Marmite']
+    factor = [1000, 2.7]
+
+    for i in range(len(special_units)):
+        prices = data.loc[data['um_name'].str.contains(special_units[i]), 'mp_price']
+        prices = prices / factor[i]
+        data.loc[data['um_name'].str.contains(special_units[i]), 'mp_price'] = prices
+        data.loc[data['um_name'].str.contains(special_units[i]), 'um_name'] = 'KG'
     return data
 
 data_WFP = data_normalise(data_WFP)
@@ -92,6 +100,6 @@ valuta_normalise(data_WFP, data_exchange)
 
 data_WFP.to_csv('data_normalised.csv')
 
-writer = ExcelWriter('data_normalised.xlsx')
-data_WFP.to_excel(writer,'Sheet5')
-writer.save()
+# writer = ExcelWriter('data_normalised.xlsx')
+# data_WFP.to_excel(writer,'Sheet5')
+# writer.save()

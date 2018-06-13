@@ -22,9 +22,13 @@ def rainfall_per_year():
             pr_new = rainfall.loc[(rainfall['Year'] == year) &  (rainfall['Country_Code'] == country), 'pr']
             pr_total = pr_new.sum()
             country_name = list(countrycodes.loc[countrycodes['alpha-3'] == country, 'name'])
+            if country == 'ISR':
+                print("Here is Israel")
+                country_name = ['State of Palestine']
             row = str(country_name[0]) + "," + str(year) + "," + str(pr_total) + "\n"
             csv.write(row)
 
+rainfall_per_year()
 
 # changes the country codes in de rainfall file to country name
 def change_country_code(rainfall):

@@ -62,14 +62,40 @@ def data_normalise(data):
         data.loc[data['um_name'].str.contains(unit), 'mp_price'] = prices
         data.loc[data['um_name'].str.contains(unit), 'um_name'] = 'L'
 
-    special_units = ['MT', 'Marmite']
-    factor = [1000, 2.7]
+    special_units = ['MT', 'Marmite', 'Pound', 'Cuartilla', 'Loaf', 'Libra']
+    factor = [1000, 2.7, 0.45359, 2.875575, 0.7, 0.45359]
 
     for i in range(len(special_units)):
         prices = data.loc[data['um_name'].str.contains(special_units[i]), 'mp_price']
         prices = prices / factor[i]
         data.loc[data['um_name'].str.contains(special_units[i]), 'mp_price'] = prices
         data.loc[data['um_name'].str.contains(special_units[i]), 'um_name'] = 'KG'
+
+    special_units = ['Gallon']
+    factor = [3.78541178]
+
+    for i in range(len(special_units)):
+        prices = data.loc[data['um_name'].str.contains(special_units[i]), 'mp_price']
+        prices = prices / factor[i]
+        data.loc[data['um_name'].str.contains(special_units[i]), 'mp_price'] = prices
+        data.loc[data['um_name'].str.contains(special_units[i]), 'um_name'] = 'L'
+
+    old_unit = ['Unit', 'Unit', 'Month', 'KG', 'KG', '30 pcs', '10 pcs', 'KG',
+     'Dozen', 'Unit', 'Unit', 'KG']
+    special_products = ['Bread', 'Livestock', 'Wage', 'Fuel (diesel)', 'Oil',
+     'Eggs', 'Eggs', 'Eggs', 'Eggs', 'Milk', 'Cheese', 'Milk']
+    factor = [0.7, 1, 30, 1.1299435028249, 1.086957, 30, 10, 20, 12, 7.5, 1, 1.03]
+    new_unit = ['KG', 'Head', 'Day', 'L', 'L', 'Unit', 'Unit', 'Unit', 'Unit', 'L', 'KG', 'L']
+
+    for i in range(len(special_products)):
+        unit = data['um_name'] == old_unit[i]
+        product = data['cm_name'] == special_products[i]
+        prices = data.loc[unit & product, 'mp_price']
+        prices = prices / factor[i]
+        data.loc[unit & product, 'mp_price'] = prices
+        data.loc[unit & product, 'um_name'] = new_unit[i]
+
+
     return data
 
 data_WFP = data_normalise(data_WFP)
@@ -98,7 +124,7 @@ def valuta_normalise(data_WFP, data_exchange):
 
 valuta_normalise(data_WFP, data_exchange)
 
-data_WFP.to_csv('data_normalised.csv')
+data_WFP.to_csv('WFP_data_normalised.csv')
 
 # writer = ExcelWriter('data_normalised.xlsx')
 # data_WFP.to_excel(writer,'Sheet5')

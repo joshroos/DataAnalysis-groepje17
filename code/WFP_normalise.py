@@ -54,7 +54,7 @@ def data_normalise(data):
         prices = prices / liter
         data.loc[data['um_name'].str.contains(unit), 'mp_price'] = prices
         data.loc[data['um_name'].str.contains(unit), 'um_name'] = 'L'
-    
+
     for unit in ml_to_liter:
         ml = int(re.search(r'\d+', unit).group())
         prices = data.loc[data['um_name'].str.contains(unit), 'mp_price']
@@ -86,7 +86,7 @@ def valuta_normalise(data_WFP, data_exchange):
             country_exchange = data_exchange['Country Name'] == country
             rate = list(data_exchange[country_exchange][year])
 
-            
+
             country_wfp = data_WFP['adm0_name'] == country
             year_wfp = data_WFP['mp_year'] == int(year)
 

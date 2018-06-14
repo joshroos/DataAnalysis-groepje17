@@ -5,14 +5,16 @@ import matplotlib as plt
 import pandas as pd
 import io
 from pandas import ExcelWriter
+import numpy as np
 
 rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
 
+
 def wheat_rainfall_Afghanistan(rainfall, data_WFP):
 
-    years = [x for x in range(1992, 2016)]
+    years = [x for x in range(2004, 2015)]
     prices = []
     rainfall_afghanistan = []
 
@@ -27,9 +29,9 @@ def wheat_rainfall_Afghanistan(rainfall, data_WFP):
         year_info = rainfall['year'] == i
         country = rainfall['country'] == 'Afghanistan'
         val2 = rainfall.loc[(year_info) & (country), 'pr_total']
-        rainfall_afghanistan.append(val2)
+        rainfall_afghanistan.append(val2.mean())
 
-    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
+    s1 = figure(x_range=(2004, 2015), y_range=(0, 1.1))
     s1.extra_y_ranges = {"foo": Range1d(start=0, end=500)}
     s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
     s1.line(years, prices, color="red")
@@ -37,11 +39,13 @@ def wheat_rainfall_Afghanistan(rainfall, data_WFP):
     output_file("wheat_rainfall_afghanistan.html")
     show(s1)
     
+    correlation = np.corrcoef(prices, rainfall_afghanistan)
+    print(correlation)
     return
 
 def wheat_rainfall_Ethiopia(rainfall, data_WFP):
 
-    years = [x for x in range(1992, 2016)]
+    years = [x for x in range(2005, 2015)]
     prices = []
     rainfall_Ethiopia = []
 
@@ -56,7 +60,7 @@ def wheat_rainfall_Ethiopia(rainfall, data_WFP):
         year_info = rainfall['year'] == i
         country = rainfall['country'] == 'Ethiopia'
         val2 = rainfall.loc[(year_info) & (country), 'pr_total']
-        rainfall_Ethiopia.append(val2)
+        rainfall_Ethiopia.append(val2.mean())
 
     s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
     s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
@@ -66,11 +70,13 @@ def wheat_rainfall_Ethiopia(rainfall, data_WFP):
     output_file("wheat_rainfall_ethiopia.html")
     show(s1)
     
+    correlation = np.corrcoef(prices, rainfall_Ethiopia)
+    print(correlation)
     return
 
 def wheat_rainfall_India(rainfall, data_WFP):
 
-    years = [x for x in range(1992, 2016)]
+    years = [x for x in range(2004, 2015)]
     prices = []
     rainfall_India = []
 
@@ -85,7 +91,7 @@ def wheat_rainfall_India(rainfall, data_WFP):
         year_info = rainfall['year'] == i
         country = rainfall['country'] == 'India'
         val2 = rainfall.loc[(year_info) & (country), 'pr_total']
-        rainfall_India.append(val2)
+        rainfall_India.append(val2.mean())
 
     s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
     s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
@@ -95,6 +101,9 @@ def wheat_rainfall_India(rainfall, data_WFP):
     output_file("wheat_rainfall_India.html")
     show(s1)
     
+    correlation = np.corrcoef(prices, rainfall_India)
+    print(correlation)
+
     return
 
 def wheat_rainfall(rainfall, data_WFP, country):
@@ -122,6 +131,8 @@ def wheat_rainfall(rainfall, data_WFP, country):
     s1.line(years, rainfall_country, color="blue", y_range_name="foo")
     show(s1)
 
+    
+
     return
 
 #val = data_WFP.loc[(data_WFP['cm_name'] == 'Wheat'), 'adm0_name']
@@ -129,6 +140,7 @@ def wheat_rainfall(rainfall, data_WFP, country):
 
 #for country in countries:    
 #    wheat_rainfall(rainfall, data_WFP, country)
+
 wheat_rainfall_Afghanistan(rainfall, data_WFP)
 wheat_rainfall_Ethiopia(rainfall, data_WFP)
 wheat_rainfall_India(rainfall, data_WFP)

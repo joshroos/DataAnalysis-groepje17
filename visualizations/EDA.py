@@ -10,84 +10,125 @@ rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_ba
 exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
 
-years = [x for x in range(1992, 2014)]
+def wheat_rainfall_Afghanistan(rainfall, data_WFP):
 
-#########################
-prices = []
+    years = [x for x in range(1992, 2016)]
+    prices = []
+    rainfall_afghanistan = []
 
-for year in years:
+    for i in years:
 
-    month = data_WFP['mp_month'] == 6
-    year = data_WFP['mp_year'] == year
-    country = data_WFP['adm0_name'] == 'Afghanistan'
-    cm_name = data_WFP['cm_name'] == 'Wheat'
+        year = data_WFP['mp_year'] == i
+        country = data_WFP['adm0_name'] == 'Afghanistan'
+        cm_name = data_WFP['cm_name'] == 'Wheat'
+        val1 = data_WFP.loc[(year) & (country) & (cm_name), 'mp_price']
+        prices.append(val1.mean())
 
-    val = data_WFP.loc[(month) & (year) & (country) & (cm_name), 'mp_price']
-    prices.append(val.mean())
+        year_info = rainfall['year'] == i
+        country = rainfall['country'] == 'Afghanistan'
+        val2 = rainfall.loc[(year_info) & (country), 'pr_total']
+        rainfall_afghanistan.append(val2)
 
-#output_file("wheat_new.html")
-#f = figure()
-#f.line(years,prices)
-#show(f)
-
-#########################
-years = [x for x in range(1992, 2014)]
-
-
-rainfall_afghanistan = []
-
-for year in years:
-    year_info = rainfall['year'] == year
-
-    country = rainfall['country'] == 'Afghanistan'
+    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
+    s1.extra_y_ranges = {"foo": Range1d(start=0, end=500)}
+    s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
+    s1.line(years, prices, color="red")
+    s1.line(years, rainfall_afghanistan, color="blue", y_range_name="foo")
+    output_file("wheat_rainfall_afghanistan.html")
+    show(s1)
     
-    val = rainfall.loc[(year_info) & (country), 'pr_total']
-    rainfall_afghanistan.append(val)
+    return
 
+def wheat_rainfall_Ethiopia(rainfall, data_WFP):
 
-#output_file("rainfall.html")
-#h = figure()
-#h.line(years, rainfall_afghanistan)
-#show(h)
+    years = [x for x in range(1992, 2016)]
+    prices = []
+    rainfall_Ethiopia = []
 
-#########################
+    for i in years:
 
-# Seting the params for the first figure.
-s1 = figure(x_axis_type="datetime", plot_width=1000, plot_height=600)
+        year = data_WFP['mp_year'] == i
+        country = data_WFP['adm0_name'] == 'Ethiopia'
+        cm_name = data_WFP['cm_name'] == 'Wheat'
+        val1 = data_WFP.loc[(year) & (country) & (cm_name), 'mp_price']
+        prices.append(val1.mean())
 
-# Setting the second y axis range name and range
-s1.extra_y_ranges = {"foo": Range1d(start=0, end=500)}
+        year_info = rainfall['year'] == i
+        country = rainfall['country'] == 'Ethiopia'
+        val2 = rainfall.loc[(year_info) & (country), 'pr_total']
+        rainfall_Ethiopia.append(val2)
 
-# Adding the second axis to the plot.  
-s1.add_layout(LinearAxis(y_range_name="foo"), 'right')
+    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
+    s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
+    s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
+    s1.line(years, prices, color="red")
+    s1.line(years, rainfall_Ethiopia, color="blue", y_range_name="foo")
+    output_file("wheat_rainfall_ethiopia.html")
+    show(s1)
+    
+    return
 
-# Setting the rect glyph params for the first graph. 
-# Using the default y range and y axis here.           
-s1.line(years, prices)
+def wheat_rainfall_India(rainfall, data_WFP):
 
-# Setting the rect glyph params for the second graph. 
-# Using the aditional y range named "foo" and "right" y axis here. 
-s1.line(years, rainfall_afghanistan, y_range_name="foo")
+    years = [x for x in range(1992, 2016)]
+    prices = []
+    rainfall_India = []
 
-# Show the combined graphs with twin y axes.
-show(s1)
+    for i in years:
 
-'''
-prices = []
+        year = data_WFP['mp_year'] == i
+        country = data_WFP['adm0_name'] == 'India'
+        cm_name = data_WFP['cm_name'] == 'Wheat'
+        val1 = data_WFP.loc[(year) & (country) & (cm_name), 'mp_price']
+        prices.append(val1.mean())
 
-for year in years:
+        year_info = rainfall['year'] == i
+        country = rainfall['country'] == 'India'
+        val2 = rainfall.loc[(year_info) & (country), 'pr_total']
+        rainfall_India.append(val2)
 
-    month = data_WFP['mp_month'] == 6
-    year = data_WFP['mp_year'] == year
-    country = data_WFP['adm0_name'] == 'Afghanistan'
-    cm_name = data_WFP['cm_name'] == 'Rice'
+    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
+    s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
+    s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
+    s1.line(years, prices, color="red")
+    s1.line(years, rainfall_India, color="blue", y_range_name="foo")
+    output_file("wheat_rainfall_India.html")
+    show(s1)
+    
+    return
 
-    val = data_WFP.loc[(month) & (year) & (country) & (cm_name), 'mp_price']
-    prices.append(val.mean())
+def wheat_rainfall(rainfall, data_WFP, country):
+    years = [x for x in range(1992, 2016)]
+    prices = []
+    rainfall_country = []
 
-output_file("Line_from_csv.html")
-f = figure()
-f.line(years,prices)
-show(f)
+    for i in years:
 
-'''
+        year1 = data_WFP['mp_year'] == i
+        country1 = data_WFP['adm0_name'] == country
+        cm_name = data_WFP['cm_name'] == 'Wheat'
+        val1 = data_WFP.loc[(year1) & (country1) & (cm_name), 'mp_price']
+        prices.append(val1.mean())
+
+        year2 = rainfall['year'] == i
+        country2 = rainfall['country'] == country
+        val2 = rainfall.loc[(year2) & (country2), 'pr_total']
+        rainfall_country.append(val2)
+
+    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
+    s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
+    s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
+    s1.line(years, prices, color="red")
+    s1.line(years, rainfall_country, color="blue", y_range_name="foo")
+    show(s1)
+
+    return
+
+#val = data_WFP.loc[(data_WFP['cm_name'] == 'Wheat'), 'adm0_name']
+#countries = val.unique()
+
+#for country in countries:    
+#    wheat_rainfall(rainfall, data_WFP, country)
+wheat_rainfall_Afghanistan(rainfall, data_WFP)
+wheat_rainfall_Ethiopia(rainfall, data_WFP)
+wheat_rainfall_India(rainfall, data_WFP)

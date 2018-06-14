@@ -44,7 +44,7 @@ for country in landen2:
 df.loc[df["Country Name"] == "State of Palestine", "2017"] = 14000000000
 df.loc[df["Country Name"] == "Djibouti", "2016"] = 1890000000
 df.loc[df["Country Name"] == "South Sudan", "2016"] = 3100000000
-df.loc[df["Country Name"] == "Syrian Arab Republic", "2017"] = "Unknown"
+df.loc[df["Country Name"] == "Syrian Arab Republic", "2017"] = 0
 df.loc[df["Country Name"] == "Pakistan", "2017"] = 304000000000
 df.loc[df["Country Name"] == "Egypt", "2017"] = 237000000000
 df.loc[df["Country Name"] == "Indonesia", "2017"] = 1011000000000

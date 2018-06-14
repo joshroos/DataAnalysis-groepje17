@@ -29,6 +29,8 @@ g = figure()
 # Create line plot
 g.line(years_w, wheat)
 
+print(years_w, wheat)
+
 show(g)
 
 rainfall = rainfall.loc[rainfall['pr_total']]

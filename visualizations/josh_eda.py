@@ -128,6 +128,8 @@ def make_corr(xname, yname, xax=False, yax=False):
     return plot
 
 def make_dist(x_name, xax=False, yax=False):
+    xdr = DataRange1d(bounds=None)
+    ydr = DataRange1d(bounds=None)
     mbl = 40 if yax else 0
     mbb = 40 if xax else 0
     plot = figure(tools="save", x_axis_label="", y_axis_label="",
@@ -138,15 +140,16 @@ def make_dist(x_name, xax=False, yax=False):
 
     measured = prices1
     hist, edges = np.histogram(measured, density=True, bins=50)
+    
 
-    x = np.linspace(-2, 2, 1000)
-    pdf = 1/(sigma * np.sqrt(2*np.pi)) * np.exp(-(x-mu)**2 / (2*sigma**2))
-    cdf = (1+scipy.special.erf((x-mu)/np.sqrt(2*sigma**2)))/2
+    # x = np.linspace(-2, 2, 1000)
+    # pdf = 1/(sigma * np.sqrt(2*np.pi)) * np.exp(-(x-mu)**2 / (2*sigma**2))
+    # cdf = (1+scipy.special.erf((x-mu)/np.sqrt(2*sigma**2)))/2
 
     plot.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:],
             fill_color="#036564", line_color="#033649")
-    plot.line(x, pdf, line_color="#D95B43", line_width=8, alpha=0.7, legend="PDF")
-    plot.line(x, cdf, line_color="white", line_width=2, alpha=0.7, legend="CDF")
+    # plot.line(x, pdf, line_color="#D95B43", line_width=8, alpha=0.7, legend="PDF")
+    # plot.line(x, cdf, line_color="white", line_width=2, alpha=0.7, legend="CDF")
     
     xticker = BasicTicker()
     plot.axis.visible = False

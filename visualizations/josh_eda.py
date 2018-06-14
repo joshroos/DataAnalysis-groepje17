@@ -15,21 +15,18 @@ from bokeh.embed import file_html
 from bokeh.layouts import gridplot
 from bokeh.models.glyphs import Circle
 from bokeh.models import (BasicTicker, ColumnDataSource, Grid, LinearAxis,
-                         DataRange1d, PanTool, Plot, WheelZoomTool)
+                         DataRange1d, PanTool, Plot, WheelZoomTool, Label)
 from bokeh.resources import INLINE
 from bokeh.sampledata.iris import flowers
 from bokeh.util.browser import view
 import scipy.special
 
 
-colormap = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}
-
-flowers['color'] = flowers['species'].map(lambda x: colormap[x])
 data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
 
-country = data_WFP['adm0_name'] == 'Ukraine'
-good1 = data_WFP['cm_name'] == 'Milk'
-good2 = data_WFP['cm_name'] == 'Sour cream'
+country = data_WFP['adm0_name'] == 'Turkey'
+good1 = data_WFP['cm_name'] == 'Oil'
+good2 = data_WFP['cm_name'] == 'Salt'
 
 prices1 = []
 prices2 = []
@@ -50,8 +47,8 @@ for year in range(1992, 2018):
 prices3 = []
 prices4 = []
 
-good1 = data_WFP['cm_name'] == 'Curd'
-good2 = data_WFP['cm_name'] == 'Butter'
+good1 = data_WFP['cm_name'] == 'Fish'
+good2 = data_WFP['cm_name'] == 'Milk'
 
 for year in range(1992, 2018):
     time = data_WFP['mp_year'] == year
@@ -78,17 +75,6 @@ data = dict(
 
     )
 source = ColumnDataSource(data)
-
-# source = ColumnDataSource(
-#     data=dict(
-#         petal_length=flowers['petal_length'],
-#         petal_width=flowers['petal_width'],
-#         sepal_length=flowers['sepal_length'],
-#         sepal_width=flowers['sepal_width'],
-#         color=flowers['color']
-#     )
-# )
-
 
 def make_corr(xname, yname, xax=False, yax=False):
     xdr = DataRange1d(bounds=None)
@@ -127,7 +113,7 @@ def make_corr(xname, yname, xax=False, yax=False):
     
     return plot
 
-def make_dist(x_name, xax=False, yax=False):
+def make_dist(xname, xax=False, yax=False):
     xdr = DataRange1d(bounds=None)
     ydr = DataRange1d(bounds=None)
     mbl = 40 if yax else 0
@@ -136,9 +122,7 @@ def make_dist(x_name, xax=False, yax=False):
             background_fill_color="#E8DDCB", plot_width=200+mbl, plot_height=200+mbb, 
             min_border_left=2+mbl, min_border_right=2, min_border_top=2, min_border_bottom=2+mbb)
 
-    mu, sigma = 0, 0.5
-
-    measured = prices1
+    measured = data[xname]
     hist, edges = np.histogram(measured, density=True, bins=50)
     
 
@@ -155,14 +139,14 @@ def make_dist(x_name, xax=False, yax=False):
     plot.axis.visible = False
     if xax:
         xaxis = LinearAxis()
-        xaxis.axis_label = x_name
+        xaxis.axis_label = xname
         plot.add_layout(xaxis, 'below')
         xticker = xaxis.ticker
         yticker = BasicTicker()
     
     if yax:
         yaxis = LinearAxis()
-        yaxis.axis_label = 'Pr(x)'
+        yaxis.axis_label = xname
         yaxis.major_label_orientation = 'vertical'
         plot.add_layout(yaxis, 'left')
         yticker = yaxis.ticker
@@ -170,24 +154,74 @@ def make_dist(x_name, xax=False, yax=False):
     plot.legend.background_fill_color = "darkgrey"
     
     return plot
+
+
+def show_coeff(xname, yname, xax=False, yax=False):
+    xdr = DataRange1d(bounds=None)
+    ydr = DataRange1d(bounds=None)
+    mbl = 40 if yax else 0
+    mbb = 40 if xax else 0
+
+    measured1 = data[xname]
+    measured2 = data[yname]
+
+    coeff = np.corrcoef(measured1, measured2)
+
+    plot = figure(
+        x_range=xdr, y_range=ydr, background_fill_color="#efe8e2",
+        border_fill_color='white', plot_width=200 + mbl, plot_height=200 + mbb,
+        min_border_left=2+mbl, min_border_right=2, min_border_top=2, min_border_bottom=2+mbb)
     
+    plot.text(text_align='center', text=[round(coeff[0][1], 3)], text_font_size='35pt', x = 0, y=-5)
+
+    xticker = BasicTicker()
+    plot.axis.visible = False
+    if xax:
+        xaxis = LinearAxis()
+        xaxis.axis_label = xname
+        plot.add_layout(xaxis, 'below')
+        xticker = xaxis.ticker
+    plot.add_layout(Grid(dimension=0, ticker=xticker))
+
+    yticker = BasicTicker()
+    if yax:
+        yaxis = LinearAxis()
+        yaxis.axis_label = yname
+        yaxis.major_label_orientation = 'vertical'
+        plot.add_layout(yaxis, 'left')
+        yticker = yaxis.ticker
+        
+    plot.add_layout(Grid(dimension=1, ticker=yticker))
+    plot.add_tools(PanTool(), WheelZoomTool()) 
+
+    return plot
+
 xattrs = ['Milk', 'Sour_cream', 'Butter', 'Curd' ]
 yattrs = list(reversed(xattrs))
 plots = []
 
+done = []
 for y in yattrs:
     row = []
     for x in xattrs:
-        if x != y:
+        if (x, y) in done or (y, x) in done:
+            xax = (y == yattrs[-1])
+            yax = (x == xattrs[0])
+            plot = show_coeff(x, y, xax, yax)
+            row.append(plot)
+
+        elif x != y:
             xax = (y == yattrs[-1])
             yax = (x == xattrs[0])
             plot = make_corr(x, y, xax, yax)
             row.append(plot)
+            done.append((x, y))
         elif x == y:
             xax = (y == yattrs[-1])
             yax = (x == xattrs[0])
             plot = make_dist(x, xax, yax)
             row.append(plot)
+            done.append((x, y))
 
     plots.append(row)
 

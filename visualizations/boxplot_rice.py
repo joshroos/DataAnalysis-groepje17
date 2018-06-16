@@ -5,12 +5,10 @@ from bokeh.plotting import figure, show, output_file
 
 df = pd.read_csv('../data/WFP_data_normalised.csv' ,header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 #countries = df['adm0_name'].unique()
-yy = df.loc[df["cm_name"].str.contains("Wheat"), "mp_price"]
-g = df.loc[df["cm_name"].str.contains("Wheat"), 'adm0_name']
-countries = g.unique()
-
-#print(len(yy))
-#print(len(g))
+yy = df.loc[df["cm_name"].str.contains("Rice"), "mp_price"]
+g = df.loc[df["cm_name"].str.contains("Rice"), 'adm0_name']
+#countries = g.unique()
+countries = ['Yemen','Iraq', 'State of Palestine']
 df = pd.DataFrame(dict(score=yy, group=g))
 #print(df)
 # find the quartiles and IQR for each category

@@ -7,7 +7,7 @@ import pandas as pd
 from pandas import ExcelWriter
 
 # leest bestand in
-data = pd.read_csv('../data/WFPVAM_FoodPrices_05-12-2017.csv', encoding='latin-1')
+data = pd.read_csv('../data/Refugees 1962 - 2017.csv', encoding='latin-1')
 
 # schrijft bestand naar Excel file
 writer = ExcelWriter('data_overview.xlsx')

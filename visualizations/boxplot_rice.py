@@ -7,8 +7,14 @@ df = pd.read_csv('../data/WFP_data_normalised.csv' ,header=0, sep=',', error_bad
 #countries = df['adm0_name'].unique()
 yy = df.loc[df["cm_name"].str.contains("Rice"), "mp_price"]
 g = df.loc[df["cm_name"].str.contains("Rice"), 'adm0_name']
-#countries = g.unique()
-countries = ['Yemen','Iraq', 'State of Palestine']
+countries = g.unique()
+countries.sort()
+for value in yy:
+    if value > 5:
+        print(df.loc[df['mp_price'] == value, 'adm0_name'])
+        print(value)
+
+#countries = ['Yemen','Iraq', 'State of Palestine']
 df = pd.DataFrame(dict(score=yy, group=g))
 #print(df)
 # find the quartiles and IQR for each category
@@ -36,7 +42,7 @@ if not out.empty:
                 outx.append(country)
                 outy.append(value)
 
-p = figure(tools="save", background_fill_color="#E8F8F5", title="", x_range=countries)
+p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="", x_range=countries)
 
 # if no outliers, shrink lengths of stems to be no longer than the minimums or maximums
 qmin = groups.quantile(q=0.00)

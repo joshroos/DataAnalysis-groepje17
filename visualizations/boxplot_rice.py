@@ -8,11 +8,12 @@ df = pd.read_csv('../data/WFP_data_normalised.csv' ,header=0, sep=',', error_bad
 yy = df.loc[df["cm_name"].str.contains("Rice"), "mp_price"]
 g = df.loc[df["cm_name"].str.contains("Rice"), 'adm0_name']
 countries = g.unique()
-
+countries.sort()
 for value in yy:
-    if value > 30:
+    if value > 5:
         print(df.loc[df['mp_price'] == value, 'adm0_name'])
         print(value)
+
 #countries = ['Yemen','Iraq', 'State of Palestine']
 df = pd.DataFrame(dict(score=yy, group=g))
 #print(df)

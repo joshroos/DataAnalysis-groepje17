@@ -6,14 +6,20 @@ from bokeh.plotting import figure, show, output_file
 df = pd.read_csv('../data/WFP_data_normalised.csv' ,header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 #countries = df['adm0_name'].unique()
 yy = df.loc[df["cm_name"].str.contains("Rice"), "mp_price"]
-g = df.loc[df["cm_name"].str.contains("Rice"), 'adm0_name']
-countries = g.unique()
-countries.sort()
+j = df.loc[df["cm_name"].str.contains("Rice"), 'adm0_name']
+g = []
+for i in j:
+    if i == 'Yemen' or 'Iraq' or 'State of Palestine':
+        g.append(i)
+print('g', g)
+countries = ['Yemen', 'Iraq', 'State of Palestine']
+#countries.sort()
 # for value in yy:
 #     if value > 5:
 #         print(df.loc[df['mp_price'] == value, 'adm0_name'])
 #         print(value)
 
+#countries = ['Yemen','Iraq', 'State of Palestine']
 df = pd.DataFrame(dict(score=yy, group=g))
 #print(df)
 # find the quartiles and IQR for each category
@@ -28,7 +34,6 @@ lower = q1 - 1.5*iqr
 def outliers(group):
     countries = group.name
     return group[(group.score > upper.loc[countries]['score']) | (group.score < lower.loc[countries]['score'])]['score']
-
 out = groups.apply(outliers).dropna()
 
 #prepare outlier data for plotting, we need coordinates for every outlier.
@@ -42,8 +47,7 @@ if not out.empty:
                 outx.append(country)
                 outy.append(value)
 
-i = ['Algeria', 'Armenia', 'Yemen']
-p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="", x_range=i)
+p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="", x_range=countries)
 
 # if no outliers, shrink lengths of stems to be no longer than the minimums or maximums
 qmin = groups.quantile(q=0.00)

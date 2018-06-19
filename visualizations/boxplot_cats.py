@@ -11,7 +11,7 @@ for i, l in enumerate(cats):
     yy[g == l] += i // 2
 df = pd.DataFrame(dict(score=yy, group=g))
 
-print(df)
+#print(df)
 # find the quartiles and IQR for each category
 groups = df.groupby('group')
 q1 = groups.quantile(q=0.25)

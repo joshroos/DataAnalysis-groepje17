@@ -1,0 +1,642 @@
+Country, product_combination, correlation, Amount_of_datapoints
+Afghanistan,Bread and Wheat,0.8875,44
+Afghanistan,Wheat and Fuel (diesel),0.8859,65
+Afghanistan,Rice and Wage,0.8941,41
+Afghanistan,Rice and Fuel (diesel),0.9058,41
+Armenia,Flour and Pasta,0.8195,61
+Armenia,Flour and Cheese,0.8103,61
+Armenia,Meat and Pasta,0.7916,61
+Armenia,Meat and Apples,0.7861,61
+Armenia,Meat and Fish,0.787,61
+Armenia,Oil and Sugar,0.8176,61
+Armenia,Oil and Pasta,0.8536,61
+Armenia,Oil and Fuel (petrol-gasoline),0.8875,52
+Armenia,Sugar and Fuel (petrol-gasoline),0.8208,52
+Armenia,Pasta and Rice,0.8181,61
+Armenia,Pasta and Fuel (petrol-gasoline),0.9022,52
+Armenia,Tomatoes and Cucumbers,0.8891,61
+Armenia,Rice and Fuel (diesel),0.8709,48
+Armenia,Cheese and Fish,0.7522,61
+Armenia,Fuel (diesel) and Fuel (petrol-gasoline),0.9844,173
+Benin,Rice and Sorghum,0.8645,149
+Benin,Sorghum and Maize,0.8032,149
+Benin,Maize and Millet,0.8256,79
+Bolivia,Noodles and Rice,0.9392,83
+Burkina Faso,Maize and Sorghum,0.9493,180
+Burkina Faso,Maize and Millet,0.9082,180
+Burkina Faso,Maize and Rice,0.8213,57
+Burkina Faso,Sorghum and Millet,0.9687,180
+Burkina Faso,Sorghum and Rice,0.7652,57
+Burkina Faso,Millet and Rice,0.8387,57
+Burundi,Beans and Flour,0.8111,173
+Burundi,Flour and Sweet potatoes,0.8929,174
+Cameroon,Maize and Sorghum,0.8275,82
+Cameroon,Beans and Sorghum,0.7551,82
+Cape Verde,Flour and Rice,0.8128,46
+Central African Republic,Millet and Cassava,0.7596,123
+Chad,Maize and Millet,0.8922,168
+Chad,Maize and Sorghum,0.8588,168
+Chad,Millet and Sorghum,0.9385,168
+Colombia,Flour and Oil,0.7723,144
+Colombia,Flour and Rice,0.8173,66
+Colombia,Flour and Cocoa,0.9416,56
+Colombia,Flour and Fish,0.8685,56
+Colombia,Flour and Chickpeas,0.7639,120
+Colombia,Flour and Bananas,0.8846,56
+Colombia,Flour and Fuel (diesel),0.9419,56
+Colombia,Flour and Fuel (petrol-gasoline),0.9319,56
+Colombia,Flour and Cheese,0.8867,52
+Colombia,Flour and Milk,0.8563,75
+Colombia,Flour and Wage,0.8906,56
+Colombia,Maize and Rice,0.7665,66
+Colombia,Beans and Rice,0.8373,66
+Colombia,Beans and Milk,0.8966,75
+Colombia,Sugar and Chickpeas,0.821,120
+Colombia,Cocoa and Fish,0.8174,56
+Colombia,Cocoa and Bananas,0.8709,56
+Colombia,Cocoa and Fuel (diesel),0.9464,56
+Colombia,Cocoa and Fuel (petrol-gasoline),0.9354,56
+Colombia,Cocoa and Cheese,0.9036,52
+Colombia,Cocoa and Lentils,-0.8449,56
+Colombia,Cocoa and Milk,0.7747,52
+Colombia,Cocoa and Wage,0.8911,56
+Colombia,Coffee and Milk,0.9883,43
+Colombia,Fish and Bananas,0.7577,56
+Colombia,Fish and Fuel (diesel),0.8037,56
+Colombia,Fish and Fuel (petrol-gasoline),0.7948,56
+Colombia,Peas and Bananas,0.7679,56
+Colombia,Peas and Fuel (diesel),0.7873,56
+Colombia,Peas and Fuel (petrol-gasoline),0.7917,56
+Colombia,Peas and Cheese,0.839,52
+Colombia,Peas and Wage,0.7819,56
+Colombia,Bananas and Fuel (diesel),0.9561,56
+Colombia,Bananas and Fuel (petrol-gasoline),0.9591,56
+Colombia,Bananas and Cheese,0.9597,52
+Colombia,Bananas and Milk,0.7782,52
+Colombia,Bananas and Wage,0.959,56
+Colombia,Fuel (diesel) and Fuel (petrol-gasoline),0.9967,56
+Colombia,Fuel (diesel) and Cheese,0.969,52
+Colombia,Fuel (diesel) and Milk,0.7995,52
+Colombia,Fuel (diesel) and Wage,0.9808,56
+Colombia,Fuel (petrol-gasoline) and Cheese,0.9663,52
+Colombia,Fuel (petrol-gasoline) and Milk,0.7795,52
+Colombia,Fuel (petrol-gasoline) and Wage,0.9863,56
+Colombia,Cheese and Milk,0.7757,49
+Colombia,Cheese and Wage,0.9687,52
+Congo,Oil and Rice,0.7974,44
+Congo,Groundnuts and Fish,0.8672,45
+Costa Rica,Maize and Rice,0.8169,99
+Democratic Republic of the Congo,Beans and Flour,0.8372,112
+Democratic Republic of the Congo,Beans and Fuel (diesel),0.8718,76
+Democratic Republic of the Congo,Beans and Transport (public),0.9666,77
+Democratic Republic of the Congo,Maize and Flour,0.8753,111
+Democratic Republic of the Congo,Maize and Transport (public),0.8301,77
+Democratic Republic of the Congo,Flour and Cassava,0.7665,112
+Democratic Republic of the Congo,Flour and Fuel (diesel),0.8926,76
+Democratic Republic of the Congo,Flour and Transport (public),0.9357,77
+Democratic Republic of the Congo,Rice and Meat,0.8751,112
+Democratic Republic of the Congo,Rice and Fuel (diesel),0.9246,76
+Democratic Republic of the Congo,Rice and Transport (public),0.9194,77
+Democratic Republic of the Congo,Meat and Fuel (diesel),0.8991,76
+Democratic Republic of the Congo,Meat and Transport (public),0.9213,77
+Democratic Republic of the Congo,Fuel (diesel) and Fish,0.8774,74
+Democratic Republic of the Congo,Fuel (diesel) and Transport (public),0.8752,73
+Democratic Republic of the Congo,Fish and Transport (public),0.857,76
+Djibouti,Rice and Oil,0.8604,60
+Ethiopia,Sorghum and Maize,0.8892,143
+Ethiopia,Sorghum and Wheat,0.8544,143
+Ethiopia,Maize and Wheat,0.9048,143
+Gambia,Maize and Millet,0.8278,119
+Guatemala,Bread and Milk,0.9841,84
+Guatemala,Bread and Potatoes,0.8929,84
+Guatemala,Bread and Beans,0.8438,180
+Guatemala,Bread and Eggs,0.9523,84
+Guatemala,Bread and Meat,0.9562,84
+Guatemala,Bread and Oil,0.9855,84
+Guatemala,Bread and Sugar,0.8724,84
+Guatemala,Bread and Pasta,0.9751,84
+Guatemala,Bread and Tomatoes,0.8084,84
+Guatemala,Bread and Cheese,0.9774,84
+Guatemala,Bread and Plantains,0.9553,84
+Guatemala,Bread and Coffee,0.9427,84
+Guatemala,Bread and Onions,0.8023,84
+Guatemala,Bread and Salt,0.9897,84
+Guatemala,Bread and Rice,0.896,180
+Guatemala,Bread and Bananas,0.9608,84
+Guatemala,Bread and Tortilla (maize),0.9767,180
+Guatemala,Bread and Maize,0.7692,167
+Guatemala,Milk and Potatoes,0.9209,84
+Guatemala,Milk and Eggs,0.9439,84
+Guatemala,Milk and Meat,0.9587,84
+Guatemala,Milk and Oil,0.9778,84
+Guatemala,Milk and Sugar,0.8219,84
+Guatemala,Milk and Pasta,0.9753,84
+Guatemala,Milk and Tomatoes,0.8271,84
+Guatemala,Milk and Cheese,0.9849,84
+Guatemala,Milk and Plantains,0.9667,84
+Guatemala,Milk and Coffee,0.8995,84
+Guatemala,Milk and Onions,0.813,84
+Guatemala,Milk and Salt,0.9804,84
+Guatemala,Milk and Bananas,0.9652,84
+Guatemala,Milk and Tortilla (maize),0.9862,84
+Guatemala,Potatoes and Eggs,0.8989,84
+Guatemala,Potatoes and Meat,0.9502,84
+Guatemala,Potatoes and Oil,0.8747,84
+Guatemala,Potatoes and Pasta,0.8938,84
+Guatemala,Potatoes and Tomatoes,0.8424,84
+Guatemala,Potatoes and Cheese,0.949,84
+Guatemala,Potatoes and Plantains,0.9522,84
+Guatemala,Potatoes and Onions,0.8739,84
+Guatemala,Potatoes and Salt,0.9183,84
+Guatemala,Potatoes and Bananas,0.9513,84
+Guatemala,Potatoes and Tortilla (maize),0.8926,84
+Guatemala,Beans and Rice,0.9075,180
+Guatemala,Beans and Tortilla (maize),0.8,180
+Guatemala,Beans and Maize,0.7573,167
+Guatemala,Eggs and Meat,0.9576,84
+Guatemala,Eggs and Oil,0.9442,84
+Guatemala,Eggs and Sugar,0.7528,84
+Guatemala,Eggs and Pasta,0.9086,84
+Guatemala,Eggs and Tomatoes,0.8203,84
+Guatemala,Eggs and Cheese,0.9603,84
+Guatemala,Eggs and Plantains,0.9584,84
+Guatemala,Eggs and Coffee,0.8383,84
+Guatemala,Eggs and Onions,0.8312,84
+Guatemala,Eggs and Salt,0.9691,84
+Guatemala,Eggs and Bananas,0.9675,84
+Guatemala,Eggs and Tortilla (maize),0.9314,84
+Guatemala,Meat and Oil,0.9426,84
+Guatemala,Meat and Sugar,0.7525,84
+Guatemala,Meat and Pasta,0.9421,84
+Guatemala,Meat and Tomatoes,0.8686,84
+Guatemala,Meat and Cheese,0.9872,84
+Guatemala,Meat and Plantains,0.9864,84
+Guatemala,Meat and Coffee,0.8322,84
+Guatemala,Meat and Onions,0.8981,84
+Guatemala,Meat and Salt,0.9775,84
+Guatemala,Meat and Bananas,0.9918,84
+Guatemala,Meat and Tortilla (maize),0.9601,84
+Guatemala,Oil and Sugar,0.8323,84
+Guatemala,Oil and Pasta,0.98,84
+Guatemala,Oil and Tomatoes,0.7636,84
+Guatemala,Oil and Cheese,0.959,84
+Guatemala,Oil and Plantains,0.938,84
+Guatemala,Oil and Coffee,0.9249,84
+Guatemala,Oil and Onions,0.7606,84
+Guatemala,Oil and Salt,0.9709,84
+Guatemala,Oil and Bananas,0.9439,84
+Guatemala,Oil and Tortilla (maize),0.9763,84
+Guatemala,Sugar and Pasta,0.8383,84
+Guatemala,Sugar and Cheese,0.804,84
+Guatemala,Sugar and Plantains,0.7514,84
+Guatemala,Sugar and Coffee,0.9387,84
+Guatemala,Sugar and Salt,0.8433,84
+Guatemala,Sugar and Bananas,0.7598,84
+Guatemala,Sugar and Tortilla (maize),0.8687,84
+Guatemala,Pasta and Tomatoes,0.7863,84
+Guatemala,Pasta and Cheese,0.9607,84
+Guatemala,Pasta and Plantains,0.941,84
+Guatemala,Pasta and Coffee,0.9186,84
+Guatemala,Pasta and Onions,0.783,84
+Guatemala,Pasta and Salt,0.9613,84
+Guatemala,Pasta and Bananas,0.943,84
+Guatemala,Pasta and Tortilla (maize),0.9798,84
+Guatemala,Tomatoes and Cheese,0.8731,84
+Guatemala,Tomatoes and Plantains,0.8754,84
+Guatemala,Tomatoes and Onions,0.8951,84
+Guatemala,Tomatoes and Salt,0.8428,84
+Guatemala,Tomatoes and Bananas,0.8723,84
+Guatemala,Tomatoes and Tortilla (maize),0.8341,84
+Guatemala,Cheese and Plantains,0.991,84
+Guatemala,Cheese and Coffee,0.8702,84
+Guatemala,Cheese and Onions,0.8768,84
+Guatemala,Cheese and Salt,0.989,84
+Guatemala,Cheese and Bananas,0.9917,84
+Guatemala,Cheese and Tortilla (maize),0.9801,84
+Guatemala,Plantains and Coffee,0.8269,84
+Guatemala,Plantains and Onions,0.8968,84
+Guatemala,Plantains and Salt,0.976,84
+Guatemala,Plantains and Bananas,0.9944,84
+Guatemala,Plantains and Tortilla (maize),0.9593,84
+Guatemala,Coffee and Salt,0.909,84
+Guatemala,Coffee and Bananas,0.8341,84
+Guatemala,Coffee and Tortilla (maize),0.9359,84
+Guatemala,Onions and Salt,0.8491,84
+Guatemala,Onions and Bananas,0.8963,84
+Guatemala,Onions and Tortilla (maize),0.8169,84
+Guatemala,Salt and Bananas,0.9805,84
+Guatemala,Salt and Tortilla (maize),0.984,84
+Guatemala,Rice and Tortilla (maize),0.814,180
+Guatemala,Rice and Maize,0.7964,167
+Guatemala,Bananas and Tortilla (maize),0.9599,84
+Guatemala,Fuel (diesel) and Fuel (petrol-gasoline),0.9753,83
+Guinea-Bissau,Sorghum and Millet,0.7501,102
+Guinea,Rice and Sugar,0.7662,60
+Guinea,Rice and Meat,0.753,57
+Haiti,Rice and Oil,0.9714,56
+Haiti,Rice and Flour,0.8744,148
+India,Rice and Sugar,0.8675,228
+India,Rice and Oil,0.8221,228
+India,Rice and Wheat,0.9436,279
+India,Flour and Wheat,0.9749,64
+India,Lentils and Tea,-0.8332,55
+India,Sugar and Wheat,0.8293,228
+India,Tea and Oil,0.8301,55
+India,Oil and Wheat,0.8251,228
+Indonesia,Rice and Meat,0.9024,129
+Indonesia,Rice and Eggs,0.8713,128
+Indonesia,Rice and Sugar,0.8515,129
+Indonesia,Rice and Fuel (kerosene),0.8598,84
+Indonesia,Wheat and Milk,0.7594,129
+Indonesia,Wheat and Oil,0.8678,129
+Indonesia,Wheat and Fuel (kerosene),0.8443,84
+Indonesia,Meat and Eggs,0.9117,128
+Indonesia,Meat and Sugar,0.7954,129
+Indonesia,Meat and Fuel (kerosene),0.8747,84
+Indonesia,Eggs and Milk,0.7746,128
+Indonesia,Eggs and Sugar,0.7894,128
+Indonesia,Eggs and Fuel (kerosene),0.9167,83
+Indonesia,Milk and Oil,0.8147,129
+Indonesia,Milk and Sugar,0.8015,129
+Indonesia,Milk and Fuel (kerosene),0.9098,84
+Indonesia,Sugar and Fuel (kerosene),0.9081,84
+Iran(Islamic Republic of),Rice and Eggs,0.7874,64
+Iran(Islamic Republic of),Rice and Oil,0.8265,64
+Iran(Islamic Republic of),Rice and Sugar,0.9652,64
+Iran(Islamic Republic of),Rice and Lentils,0.9088,64
+Iran(Islamic Republic of),Eggs and Oil,0.7953,64
+Iran(Islamic Republic of),Eggs and Lentils,0.7635,64
+Iran(Islamic Republic of),Oil and Sugar,0.7997,64
+Iran(Islamic Republic of),Oil and Lentils,0.7703,64
+Iran(Islamic Republic of),Sugar and Lentils,0.9173,64
+Iraq,Flour and Bread,0.9689,49
+Jordan,Rice and Oil,0.8669,76
+Jordan,Eggs and Apples,0.7768,59
+Jordan,Meat and Milk,0.994,59
+Jordan,Oil and Apples,-0.7991,59
+Jordan,Sugar and Garlic,0.9999,59
+Jordan,Sugar and Tomatoes,0.9998,59
+Jordan,Sugar and Beans,1.0,59
+Jordan,Sugar and Cucumbers,0.9999,59
+Jordan,Garlic and Tomatoes,0.9997,59
+Jordan,Garlic and Beans,0.9998,59
+Jordan,Garlic and Cucumbers,0.9997,59
+Jordan,Tomatoes and Beans,0.9998,59
+Jordan,Tomatoes and Cucumbers,0.9998,59
+Jordan,Beans and Cucumbers,0.9999,59
+Kenya,Bread and Milk,0.7863,138
+Kenya,Sorghum and Maize,0.8771,140
+Kenya,Sorghum and Beans,0.7887,140
+Kenya,Maize and Beans,0.8331,140
+Kyrgyzstan,Bread and Eggs,0.7762,71
+Kyrgyzstan,Bread and Oil,0.8077,71
+Kyrgyzstan,Bread and Tea,-0.8616,56
+Kyrgyzstan,Eggs and Oil,0.823,96
+Kyrgyzstan,Eggs and Tea,-0.7533,56
+Kyrgyzstan,Meat and Tea,-0.7889,56
+Kyrgyzstan,Carrots and Onions,0.7896,56
+Lebanon,Beans and Rice,0.7872,53
+Lebanon,Sugar and Meat,0.8167,53
+Lebanon,Sugar and Oil,0.9385,45
+Lebanon,Sugar and Milk,0.7587,53
+Lebanon,Sugar and Bread,0.8124,52
+Lebanon,Meat and Oil,0.7817,45
+Lebanon,Meat and Milk,0.9405,53
+Lebanon,Meat and Bread,0.8151,52
+Lebanon,Oil and Milk,0.7823,45
+Lebanon,Oil and Bread,0.8597,44
+Lebanon,Milk and Bread,0.7766,52
+Lesotho,Flour and Bread,0.9403,94
+Lesotho,Flour and Oil,0.9579,94
+Lesotho,Bread and Oil,0.9426,94
+Lesotho,Peas and Beans,0.7935,87
+Liberia,Rice and Cassava,0.8288,90
+Liberia,Cowpeas and Cassava,0.7783,59
+Madagascar,Flour and Oil,0.8373,56
+Madagascar,Flour and Sugar,0.9484,56
+Madagascar,Oil and Sugar,0.8935,56
+Mali,Maize and Sorghum,0.9079,176
+Mali,Maize and Millet,0.8716,176
+Mali,Maize and Rice,0.7679,176
+Mali,Sorghum and Millet,0.9732,176
+Mauritania,Wheat and Oil,0.8285,116
+Mozambique,Rice and Oil,0.8218,177
+Mozambique,Rice and Flour,0.933,77
+Mozambique,Rice and Sugar,0.8046,177
+Mozambique,Rice and Beans,0.854,177
+Mozambique,Rice and Groundnuts,0.76,177
+Mozambique,Oil and Flour,0.8945,77
+Mozambique,Flour and Sugar,0.848,77
+Mozambique,Sugar and Beans,0.7818,177
+Mozambique,Sugar and Groundnuts,0.7781,177
+Mozambique,Beans and Groundnuts,0.8373,177
+Myanmar,Oil and Rice,0.9884,117
+Myanmar,Oil and Chickpeas,0.9394,114
+Myanmar,Oil and Salt,0.8875,117
+Myanmar,Oil and Fuel (diesel),0.8298,46
+Myanmar,Rice and Chickpeas,0.9336,114
+Myanmar,Rice and Salt,0.9195,117
+Myanmar,Chickpeas and Pulses,0.8054,67
+Myanmar,Chickpeas and Salt,0.8828,114
+Myanmar,Chickpeas and Garlic,0.8141,41
+Nepal,Rice and Wheat,0.9729,192
+Niger,Maize and Rice,0.7964,108
+Niger,Maize and Sorghum,0.9621,279
+Niger,Maize and Millet,0.9605,281
+Niger,Maize and Beans,0.8406,209
+Niger,Sorghum and Millet,0.9818,279
+Niger,Sorghum and Beans,0.8651,207
+Niger,Millet and Beans,0.8937,210
+Nigeria,Maize and Rice,0.896,159
+Nigeria,Maize and Sorghum,0.9825,159
+Nigeria,Maize and Millet,0.9725,159
+Nigeria,Rice and Sorghum,0.8557,159
+Nigeria,Rice and Millet,0.8618,159
+Nigeria,Sorghum and Millet,0.9833,159
+Nigeria,Oil and Yam,0.7532,41
+Pakistan,Flour and Rice,0.8151,162
+Pakistan,Flour and Fuel (diesel),0.8374,45
+Pakistan,Rice and Oil,0.8742,55
+Pakistan,Rice and Butter,0.905,53
+Pakistan,Rice and Fuel (diesel),0.8676,45
+Pakistan,Oil and Butter,0.9927,53
+Pakistan,Oil and Fuel (diesel),0.9368,45
+Pakistan,Butter and Fuel (diesel),0.9437,45
+Peru,Maize and Meat,0.9125,137
+Peru,Maize and Oil,0.8145,138
+Peru,Maize and Flour,0.9276,138
+Peru,Meat and Oil,0.7796,139
+Peru,Meat and Flour,0.8944,139
+Peru,Oil and Flour,0.935,140
+Philippines,Rice and Eggs,0.8573,97
+Philippines,Sweet potatoes and Eggs,0.7694,96
+Philippines,Meat and Fish,0.8076,97
+Rwand a,Flour and Sweet potatoes,0.915,96
+Rwand a,Cassava and Sweet potatoes,0.787,96
+Rwand a,Potatoes and Eggplants,0.7824,71
+Rwand a,Peppers (green) and Spinach,0.8192,60
+Rwand a,Peppers (green) and Eggplants,0.8133,60
+Rwand a,Spinach and Eggplants,0.8281,60
+Rwand a,Eggplants and Passion fruit,0.7527,71
+Senegal,Maize and Rice,0.8501,207
+Senegal,Maize and Sorghum,0.8829,204
+Senegal,Maize and Millet,0.882,207
+Senegal,Rice and Millet,0.7653,211
+Senegal,Sorghum and Millet,0.9708,208
+Somalia,Rice and Oil,0.9809,59
+Sri Lanka,Flour and Fuel (diesel),0.9655,48
+Sri Lanka,Flour and Fuel (petrol-gasoline),0.8903,48
+Sri Lanka,Fuel (diesel) and Fuel (petrol-gasoline),0.8746,48
+Swaziland ,Rice and Oil,0.8767,56
+Swaziland ,Flour and Maize,0.8058,95
+Swaziland ,Flour and Oil,0.9147,57
+Swaziland ,Flour and Salt,0.7676,56
+Swaziland ,Oil and Salt,0.8527,46
+Swaziland ,Salt and Beans,0.8032,54
+Syrian Arab Republic,Rice and Oil,0.8026,77
+Syrian Arab Republic,Rice and Tea,0.9228,65
+Syrian Arab Republic,Rice and Fuel (gas),0.7597,51
+Syrian Arab Republic,Flour and Oil,0.8694,77
+Syrian Arab Republic,Flour and Fuel (gas),0.8193,51
+Syrian Arab Republic,Lentils and Tea,0.7659,65
+Syrian Arab Republic,Oil and Tea,0.787,65
+Syrian Arab Republic,Oil and Fuel (gas),0.8313,51
+Tajikistan,Maize and Rice,0.8383,187
+Tajikistan,Maize and Bread,0.7647,187
+Tajikistan,Maize and Milk,0.792,161
+Tajikistan,Maize and Wheat,0.9563,187
+Tajikistan,Maize and Eggs,0.7861,163
+Tajikistan,Maize and Oil,0.9343,187
+Tajikistan,Maize and Sugar,0.7929,187
+Tajikistan,Maize and Meat,0.9044,187
+Tajikistan,Maize and Carrots,0.7699,187
+Tajikistan,Maize and Flour,0.9219,187
+Tajikistan,Maize and Salt,0.8509,187
+Tajikistan,Rice and Milk,0.8824,161
+Tajikistan,Rice and Wheat,0.8111,187
+Tajikistan,Rice and Eggs,0.75,163
+Tajikistan,Rice and Oil,0.8421,187
+Tajikistan,Rice and Sugar,0.7845,187
+Tajikistan,Rice and Meat,0.8753,187
+Tajikistan,Rice and Flour,0.7742,187
+Tajikistan,Rice and Salt,0.8775,187
+Tajikistan,Bread and Wheat,0.8304,187
+Tajikistan,Bread and Oil,0.7821,187
+Tajikistan,Bread and Flour,0.8602,187
+Tajikistan,Bread and Salt,0.7588,187
+Tajikistan,Milk and Wheat,0.7651,161
+Tajikistan,Milk and Eggs,0.8127,161
+Tajikistan,Milk and Oil,0.8494,161
+Tajikistan,Milk and Sugar,0.7827,161
+Tajikistan,Milk and Meat,0.9052,161
+Tajikistan,Milk and Salt,0.7702,161
+Tajikistan,Potatoes and Salt,0.7602,187
+Tajikistan,Wheat and Eggs,0.8116,163
+Tajikistan,Wheat and Oil,0.9522,187
+Tajikistan,Wheat and Meat,0.868,187
+Tajikistan,Wheat and Flour,0.965,187
+Tajikistan,Wheat and Salt,0.8361,187
+Tajikistan,Eggs and Oil,0.8647,163
+Tajikistan,Eggs and Meat,0.7559,163
+Tajikistan,Eggs and Flour,0.7789,163
+Tajikistan,Eggs and Salt,0.7789,163
+Tajikistan,Oil and Sugar,0.7907,187
+Tajikistan,Oil and Meat,0.8808,187
+Tajikistan,Oil and Flour,0.9097,187
+Tajikistan,Oil and Salt,0.8208,187
+Tajikistan,Sugar and Meat,0.8089,187
+Tajikistan,Sugar and Salt,0.7716,187
+Tajikistan,Meat and Tea,0.8142,187
+Tajikistan,Meat and Flour,0.8658,187
+Tajikistan,Meat and Salt,0.8864,187
+Tajikistan,Flour and Salt,0.8388,187
+Timor-Leste,Maize and Rice,0.9452,62
+Turkey,Rice and Flour,0.9065,47
+Turkey,Rice and Beans,0.8704,47
+Turkey,Rice and Sugar,0.8074,47
+Turkey,Rice and Pasta,0.8983,47
+Turkey,Rice and Bulgur,0.8652,47
+Turkey,Rice and Milk,-0.8087,47
+Turkey,Rice and Cocoa (powder),0.81,47
+Turkey,Flour and Beans,0.8472,47
+Turkey,Flour and Sugar,0.965,47
+Turkey,Flour and Pasta,0.9666,47
+Turkey,Flour and Bread,0.8268,47
+Turkey,Flour and Coffee,0.8465,47
+Turkey,Flour and Salt,0.8917,47
+Turkey,Flour and Bulgur,0.9627,47
+Turkey,Flour and Milk,-0.7814,47
+Turkey,Flour and Cocoa (powder),0.9385,47
+Turkey,Beans and Sugar,0.7939,47
+Turkey,Beans and Pasta,0.7555,47
+Turkey,Beans and Bread,0.8968,47
+Turkey,Beans and Coffee,0.7989,47
+Turkey,Beans and Oil,-0.8041,47
+Turkey,Beans and Salt,0.8229,47
+Turkey,Beans and Bulgur,0.8789,47
+Turkey,Beans and Fish,0.8093,47
+Turkey,Beans and Milk,-0.7888,47
+Turkey,Beans and Cocoa (powder),0.863,47
+Turkey,Meat and Bread,0.8064,47
+Turkey,Meat and Coffee,0.8502,47
+Turkey,Meat and Salt,0.8532,47
+Turkey,Meat and Fish,0.844,47
+Turkey,Sugar and Pasta,0.9382,47
+Turkey,Sugar and Bread,0.7925,47
+Turkey,Sugar and Coffee,0.8935,47
+Turkey,Sugar and Salt,0.9145,47
+Turkey,Sugar and Bulgur,0.9439,47
+Turkey,Sugar and Cocoa (powder),0.9374,47
+Turkey,Lentils and Oil,0.7841,47
+Turkey,Lentils and Milk,0.7565,47
+Turkey,Pasta and Coffee,0.7532,47
+Turkey,Pasta and Salt,0.7986,47
+Turkey,Pasta and Bulgur,0.9168,47
+Turkey,Pasta and Milk,-0.7905,47
+Turkey,Pasta and Cocoa (powder),0.8872,47
+Turkey,Tomatoes and Bread,-0.7621,47
+Turkey,Tomatoes and Oil,0.8429,47
+Turkey,Tomatoes and Milk,0.8482,47
+Turkey,Bread and Coffee,0.9049,47
+Turkey,Bread and Oil,-0.855,47
+Turkey,Bread and Salt,0.9221,47
+Turkey,Bread and Bulgur,0.9089,47
+Turkey,Bread and Fish,0.9299,47
+Turkey,Bread and Milk,-0.7989,47
+Turkey,Bread and Cocoa (powder),0.9205,47
+Turkey,Coffee and Salt,0.979,47
+Turkey,Coffee and Bulgur,0.9233,47
+Turkey,Coffee and Fish,0.8766,47
+Turkey,Coffee and Cocoa (powder),0.9478,47
+Turkey,Oil and Milk,0.8565,47
+Turkey,Oil and Cocoa (powder),-0.7547,47
+Turkey,Salt and Bulgur,0.9465,47
+Turkey,Salt and Fish,0.8614,47
+Turkey,Salt and Cocoa (powder),0.9665,47
+Turkey,Bulgur and Fish,0.808,47
+Turkey,Bulgur and Milk,-0.8261,47
+Turkey,Bulgur and Cocoa (powder),0.9889,47
+Turkey,Fish and Cocoa (powder),0.8183,47
+Turkey,Milk and Cocoa (powder),-0.822,47
+Ugand a,Maize and Flour,0.7621,78
+Ugand a,Millet and Flour,0.8221,78
+Ukraine,Rice and Pasta,0.8736,43
+Ukraine,Rice and Flour,0.8798,43
+Ukraine,Rice and Fuel (diesel),0.7699,43
+Ukraine,Milk and Meat,0.8333,43
+Ukraine,Milk and Fuel (petrol-gasoline),0.7712,43
+Ukraine,Milk and Curd,0.9532,43
+Ukraine,Milk and Sour cream,0.9981,43
+Ukraine,Milk and Butter,0.9885,43
+Ukraine,Potatoes and Onions,0.8848,43
+Ukraine,Eggs and Fat (salo),0.7795,43
+Ukraine,Sugar and Meat,0.7526,43
+Ukraine,Sugar and Fuel (petrol-gasoline),0.7607,43
+Ukraine,Sugar and Curd,0.8321,43
+Ukraine,Sugar and Sour cream,0.7502,43
+Ukraine,Pasta and Meat,0.7923,43
+Ukraine,Pasta and Flour,0.9672,43
+Ukraine,Pasta and Fuel (diesel),0.8625,43
+Ukraine,Pasta and Fuel (petrol-gasoline),0.8359,43
+Ukraine,Meat and Fuel (diesel),0.9002,43
+Ukraine,Meat and Fuel (petrol-gasoline),0.9372,43
+Ukraine,Meat and Curd,0.9279,43
+Ukraine,Meat and Sour cream,0.8299,43
+Ukraine,Meat and Butter,0.7601,43
+Ukraine,Meat and Bread,0.8185,43
+Ukraine,Meat and Fat (salo),0.8921,43
+Ukraine,Carrots and Beetroots,0.936,43
+Ukraine,Flour and Fuel (diesel),0.8154,43
+Ukraine,Flour and Fuel (petrol-gasoline),0.7771,43
+Ukraine,Flour and Bread,0.7536,43
+Ukraine,Oil and Bread,0.8354,43
+Ukraine,Fuel (diesel) and Fuel (petrol-gasoline),0.9862,43
+Ukraine,Fuel (diesel) and Curd,0.8394,43
+Ukraine,Fuel (petrol-gasoline) and Curd,0.8965,43
+Ukraine,Fuel (petrol-gasoline) and Sour cream,0.7733,43
+Ukraine,Fuel (petrol-gasoline) and Fat (salo),0.774,43
+Ukraine,Curd and Sour cream,0.9562,43
+Ukraine,Curd and Butter,0.9238,43
+Ukraine,Curd and Fat (salo),0.754,43
+Ukraine,Sour cream and Butter,0.9886,43
+Ukraine,Bread and Fat (salo),0.7669,43
+Yemen,Flour and Rice,0.8623,50
+Yemen,Flour and Beans,0.7723,64
+Yemen,Flour and Wheat,0.9052,87
+Yemen,Flour and Lentils,0.8722,50
+Yemen,Flour and Salt,0.8393,50
+Yemen,Flour and Fuel (diesel),0.7724,53
+Yemen,Flour and Fuel (petrol-gasoline),0.8105,53
+Yemen,Rice and Beans,0.8617,50
+Yemen,Rice and Sugar,0.8036,50
+Yemen,Rice and Lentils,0.9413,50
+Yemen,Rice and Salt,0.9265,50
+Yemen,Beans and Lentils,0.9023,50
+Yemen,Sugar and Lentils,0.814,50
+Yemen,Lentils and Salt,0.8948,50
+Yemen,Fuel (diesel) and Fuel (petrol-gasoline),0.9883,53
+Zambia,Rice and Groundnuts,0.795,62
+Zambia,Rice and Beans,0.8435,62
+Zambia,Groundnuts and Beans,0.879,64
+State of Palestine,Bread and Chickpeas,0.834,42
+State of Palestine,Bread and Water,0.9429,42
+State of Palestine,Sugar and Tea,0.7901,42
+State of Palestine,Oil and Tea,0.7731,42
+State of Palestine,Chickpeas and Water,0.8435,42
+State of Palestine,Tea and Labaneh,0.8116,41
+Sudan,Sorghum and Millet,0.9712,178
+Sudan,Millet and Wheat,0.8577,84
+Egypt,Flour and Pasta,0.8432,85
+South Sudan,Fuel (diesel) and Fuel (petrol-gasoline),0.9275,60
+South Sudan,Fuel (diesel) and Flour,0.8943,50
+South Sudan,Fuel (diesel) and Maize,0.8428,59
+South Sudan,Fuel (diesel) and Beans,0.8926,59
+South Sudan,Fuel (diesel) and Oil,0.9218,45
+South Sudan,Fuel (diesel) and Groundnuts,0.8405,56
+South Sudan,Fuel (diesel) and Sorghum,0.9044,59
+South Sudan,Fuel (diesel) and Millet,0.9138,48
+South Sudan,Fuel (diesel) and Sesame,0.9276,54
+South Sudan,Fuel (diesel) and Cassava,0.8846,54
+South Sudan,Fuel (petrol-gasoline) and Flour,0.8028,50
+South Sudan,Fuel (petrol-gasoline) and Maize,0.7584,59
+South Sudan,Fuel (petrol-gasoline) and Beans,0.814,59
+South Sudan,Fuel (petrol-gasoline) and Oil,0.8301,45
+South Sudan,Fuel (petrol-gasoline) and Groundnuts,0.7628,56
+South Sudan,Fuel (petrol-gasoline) and Sorghum,0.8213,59
+South Sudan,Fuel (petrol-gasoline) and Millet,0.8507,48
+South Sudan,Fuel (petrol-gasoline) and Sesame,0.8496,54
+South Sudan,Fuel (petrol-gasoline) and Cassava,0.7953,54
+South Sudan,Exchange rate (unofficial) and Maize,0.9455,45
+South Sudan,Exchange rate (unofficial) and Beans,0.8244,45
+South Sudan,Exchange rate (unofficial) and Oil,0.9214,45
+South Sudan,Exchange rate (unofficial) and Groundnuts,0.8825,45
+South Sudan,Exchange rate (unofficial) and Sorghum,0.8851,45
+South Sudan,Exchange rate (unofficial) and Sesame,0.8601,44
+South Sudan,Flour and Maize,0.9479,86
+South Sudan,Flour and Beans,0.855,84
+South Sudan,Flour and Sorghum,0.9471,86
+South Sudan,Flour and Millet,0.9043,75
+South Sudan,Flour and Sesame,0.8836,81
+South Sudan,Flour and Cassava,0.8422,77
+South Sudan,Maize and Beans,0.7896,102
+South Sudan,Maize and Oil,0.9529,54
+South Sudan,Maize and Sorghum,0.9476,121
+South Sudan,Maize and Millet,0.8877,110
+South Sudan,Maize and Sesame,0.8972,116
+South Sudan,Maize and Cassava,0.8159,86
+South Sudan,Beans and Oil,0.9084,54
+South Sudan,Beans and Sorghum,0.8792,102
+South Sudan,Beans and Millet,0.8657,91
+South Sudan,Beans and Sesame,0.8793,97
+South Sudan,Beans and Cassava,0.843,86
+South Sudan,Oil and Groundnuts,0.9182,54
+South Sudan,Oil and Sorghum,0.9666,54
+South Sudan,Oil and Millet,0.9513,47
+South Sudan,Oil and Sesame,0.9285,52
+South Sudan,Oil and Cassava,0.8916,43
+South Sudan,Sorghum and Millet,0.956,128
+South Sudan,Sorghum and Sesame,0.9427,120
+South Sudan,Sorghum and Cassava,0.8546,86
+South Sudan,Millet and Sesame,0.9301,114
+South Sudan,Millet and Cassava,0.8387,80
+South Sudan,Sesame and Cassava,0.8554,86

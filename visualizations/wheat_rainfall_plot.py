@@ -126,12 +126,10 @@ def wheat_rainfall(rainfall, data_WFP, country):
 
     s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
     s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
-    s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
+    s1.add_layout(LinearAxis(y_range_name="foo", axis_label="rainfall per year in mm"), 'right')   
     s1.line(years, prices, color="red")
     s1.line(years, rainfall_country, color="blue", y_range_name="foo")
     show(s1)
-
-    
 
     return
 

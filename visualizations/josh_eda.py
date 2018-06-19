@@ -3,53 +3,40 @@
 # 
 
 from __future__ import print_function
-from bokeh.plotting import figure
-from bokeh.io import output_file, show
+
 import matplotlib as plt
 import pandas as pd
 import io
-from pandas import ExcelWriter
 import numpy as np
+import scipy.special
+
+from pandas import ExcelWriter
+
+from bokeh.plotting import figure
+from bokeh.io import output_file, show
 from bokeh.document import Document
 from bokeh.embed import file_html
 from bokeh.layouts import gridplot
 from bokeh.models.glyphs import Circle
 from bokeh.models import (BasicTicker, ColumnDataSource, Grid, LinearAxis,
-                         DataRange1d, PanTool, Plot, WheelZoomTool, Label)
+                         DataRange1d, Plot, Label)
 from bokeh.resources import INLINE
 from bokeh.sampledata.iris import flowers
 from bokeh.util.browser import view
-import scipy.special
-
 
 data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
-
-country = data_WFP['adm0_name'] == 'Turkey'
-good1 = data_WFP['cm_name'] == 'Oil'
-good2 = data_WFP['cm_name'] == 'Salt'
+goods = ['Milk', 'Sour cream', 'Butter', 'Curd']
+country = data_WFP['adm0_name'] == 'Ukraine'
+good1 = data_WFP['cm_name'] == goods[0]
+good2 = data_WFP['cm_name'] == goods[1]
+good3 = data_WFP['cm_name'] == goods[2]
+good4 = data_WFP['cm_name'] == goods[3]
 
 prices1 = []
 prices2 = []
-
-for year in range(1992, 2018):
-    time = data_WFP['mp_year'] == year
-    for month in range(1, 13):
-        data_month = data_WFP['mp_month'] == month
-        list_good1 = data_WFP.loc[country & good1 &
-            time & data_month, 'mp_price']
-        list_good2 = data_WFP.loc[country & good2 & 
-        time & data_month, 'mp_price']
-
-        if list_good2.empty is False and list_good1.empty is False:
-            prices1.append(list_good1.mean())
-            prices2.append(list_good2.mean())
-
 prices3 = []
 prices4 = []
 
-good1 = data_WFP['cm_name'] == 'Fish'
-good2 = data_WFP['cm_name'] == 'Milk'
-
 for year in range(1992, 2018):
     time = data_WFP['mp_year'] == year
     for month in range(1, 13):
@@ -57,11 +44,17 @@ for year in range(1992, 2018):
         list_good1 = data_WFP.loc[country & good1 &
             time & data_month, 'mp_price']
         list_good2 = data_WFP.loc[country & good2 & 
-        time & data_month, 'mp_price']
-
-        if list_good2.empty is False and list_good1.empty is False:
-            prices3.append(list_good1.mean())
-            prices4.append(list_good2.mean())
+            time & data_month, 'mp_price']
+        list_good3 = data_WFP.loc[country & good3 &
+            time & data_month, 'mp_price']
+        list_good4 = data_WFP.loc[country & good4 & 
+            time & data_month, 'mp_price']
+        if len(list_good1) > 0 and len(list_good2) > 0:
+            if len(list_good3) > 0 and len(list_good4) > 0:
+                prices1.append(list_good1.mean())
+                prices2.append(list_good2.mean())
+                prices3.append(list_good3.mean())
+                prices4.append(list_good4.mean())
 
 prices1 = pd.Series(prices1)
 prices2 = pd.Series(prices2)
@@ -109,7 +102,6 @@ def make_corr(xname, yname, xax=False, yax=False):
         yticker = yaxis.ticker
         
     plot.add_layout(Grid(dimension=1, ticker=yticker))
-    plot.add_tools(PanTool(), WheelZoomTool())        
     
     return plot
 
@@ -172,7 +164,7 @@ def show_coeff(xname, yname, xax=False, yax=False):
         border_fill_color='white', plot_width=200 + mbl, plot_height=200 + mbb,
         min_border_left=2+mbl, min_border_right=2, min_border_top=2, min_border_bottom=2+mbb)
     
-    plot.text(text_align='center', text=[round(coeff[0][1], 3)], text_font_size='35pt', x = 0, y=-5)
+    plot.text(text_align='center', text_baseline='middle', text=[round(coeff[0][1], 3)], text_font_size='35pt', x = 0, y=-5)
 
     xticker = BasicTicker()
     plot.axis.visible = False
@@ -192,33 +184,31 @@ def show_coeff(xname, yname, xax=False, yax=False):
         yticker = yaxis.ticker
         
     plot.add_layout(Grid(dimension=1, ticker=yticker))
-    plot.add_tools(PanTool(), WheelZoomTool()) 
 
     return plot
 
-xattrs = ['Milk', 'Sour_cream', 'Butter', 'Curd' ]
-yattrs = list(reversed(xattrs))
+goods = ['Milk', 'Sour_cream', 'Butter', 'Curd' ]
+yattrs = list(reversed(goods))
 plots = []
 
 done = []
 for y in yattrs:
     row = []
-    for x in xattrs:
+    for x in goods:
         if (x, y) in done or (y, x) in done:
             xax = (y == yattrs[-1])
-            yax = (x == xattrs[0])
+            yax = (x == goods[0])
             plot = show_coeff(x, y, xax, yax)
             row.append(plot)
-
         elif x != y:
             xax = (y == yattrs[-1])
-            yax = (x == xattrs[0])
+            yax = (x == goods[0])
             plot = make_corr(x, y, xax, yax)
             row.append(plot)
             done.append((x, y))
         elif x == y:
             xax = (y == yattrs[-1])
-            yax = (x == xattrs[0])
+            yax = (x == goods[0])
             plot = make_dist(x, xax, yax)
             row.append(plot)
             done.append((x, y))

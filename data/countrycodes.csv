@@ -63,6 +63,7 @@ Denmark,DK,DNK,208,ISO 3166-2:DK,Europe,Northern Europe,,150,154,
 Djibouti,DJ,DJI,262,ISO 3166-2:DJ,Africa,Sub-Saharan Africa,Eastern Africa,002,202,014
 Dominica,DM,DMA,212,ISO 3166-2:DM,Americas,Latin America and the Caribbean,Caribbean,019,419,029
 Dominican Republic,DO,DOM,214,ISO 3166-2:DO,Americas,Latin America and the Caribbean,Caribbean,019,419,029
+Democratic Republic of the Congo,CO,COD,,,,,,,,
 Ecuador,EC,ECU,218,ISO 3166-2:EC,Americas,Latin America and the Caribbean,South America,019,419,005
 Egypt,EG,EGY,818,ISO 3166-2:EG,Africa,Northern Africa,,002,015,
 El Salvador,SV,SLV,222,ISO 3166-2:SV,Americas,Latin America and the Caribbean,Central America,019,419,013
@@ -216,7 +217,7 @@ Swaziland,SZ,SWZ,748,ISO 3166-2:SZ,Africa,Sub-Saharan Africa,Southern Africa,002
 Sweden,SE,SWE,752,ISO 3166-2:SE,Europe,Northern Europe,,150,154,
 Switzerland,CH,CHE,756,ISO 3166-2:CH,Europe,Western Europe,,150,155,
 Syrian Arab Republic,SY,SYR,760,ISO 3166-2:SY,Asia,Western Asia,,142,145,
-Taiwan, Province of China,TW,TWN,158,ISO 3166-2:TW,Asia,Eastern Asia,,142,030,
+Taiwan Province of China,TW,TWN,158,ISO 3166-2:TW,Asia,Eastern Asia,,142,030,
 Tajikistan,TJ,TJK,762,ISO 3166-2:TJ,Asia,Central Asia,,142,143,
 United Republic of Tanzania,TZ,TZA,834,ISO 3166-2:TZ,Africa,Sub-Saharan Africa,Eastern Africa,002,202,014
 Thailand,TH,THA,764,ISO 3166-2:TH,Asia,South-eastern Asia,,142,035,

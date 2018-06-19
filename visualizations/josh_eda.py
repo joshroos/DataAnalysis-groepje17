@@ -134,8 +134,8 @@ def make_dist(xname, xax=False, yax=False):
         xaxis.axis_label = xname
         plot.add_layout(xaxis, 'below')
         xticker = xaxis.ticker
-        yticker = BasicTicker()
-    
+        
+    yticker = BasicTicker()
     if yax:
         yaxis = LinearAxis()
         yaxis.axis_label = xname

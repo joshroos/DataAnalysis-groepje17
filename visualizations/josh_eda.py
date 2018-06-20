@@ -24,6 +24,8 @@ from bokeh.resources import INLINE
 from bokeh.sampledata.iris import flowers
 from bokeh.util.browser import view
 
+from sklearn.metrics import mean_squared_error
+
 data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
 goods = ['Milk', 'Sour cream', 'Butter', 'Curd']
 country = data_WFP['adm0_name'] == 'Ukraine'
@@ -69,21 +71,23 @@ data = dict(
     )
 source = ColumnDataSource(data)
 
-def make_corr(xname, yname, xax=False, yax=False):
+def make_scatter(xname, yname, xax=False, yax=False):
     xdr = DataRange1d(bounds=None)
     ydr = DataRange1d(bounds=None)
     mbl = 40 if yax else 0
     mbb = 40 if xax else 0
-    plot = Plot(
+    plot = figure(
         x_range=xdr, y_range=ydr, background_fill_color="#efe8e2",
         border_fill_color='white', plot_width=200 + mbl, plot_height=200 + mbb,
         min_border_left=2+mbl, min_border_right=2, min_border_top=2, min_border_bottom=2+mbb)
 
     circle = Circle(x=xname, y=yname, fill_color="blue", fill_alpha=0.2, size=4, line_color="blue")
-    r = plot.add_glyph(source, circle)
+    plot.add_glyph(source, circle)
 
-    xdr.renderers.append(r)
-    ydr.renderers.append(r)
+    a, b, mse = make_regression_line(data, xname, yname)
+    x = data[xname]
+    plot.line(x, a * x + b, color='red')
+    plot.axis.visible = False
 
     xticker = BasicTicker()
     if xax:
@@ -134,8 +138,8 @@ def make_dist(xname, xax=False, yax=False):
         xaxis.axis_label = xname
         plot.add_layout(xaxis, 'below')
         xticker = xaxis.ticker
-        yticker = BasicTicker()
-    
+        
+    yticker = BasicTicker()
     if yax:
         yaxis = LinearAxis()
         yaxis.axis_label = xname
@@ -165,7 +169,8 @@ def show_coeff(xname, yname, xax=False, yax=False):
         min_border_left=2+mbl, min_border_right=2, min_border_top=2, min_border_bottom=2+mbb)
     
     plot.text(text_align='center', text_baseline='middle', text=[round(coeff[0][1], 3)], text_font_size='35pt', x = 0, y=-5)
-
+    a, b, mse = make_regression_line(data, xname, yname)
+   
     xticker = BasicTicker()
     plot.axis.visible = False
     if xax:
@@ -187,6 +192,23 @@ def show_coeff(xname, yname, xax=False, yax=False):
 
     return plot
 
+
+def make_regression_line(data, xname, yname):
+    # Creating [X 1] (remember the useful np.ones function from the first notebook?)
+    X = np.vstack(data[xname])
+    X = np.column_stack((X, np.ones(X.shape[0])))
+    Y = data[yname]
+
+    # Now get out m and b values for our best fit line
+    a, b = np.linalg.lstsq(X, Y)[0]
+
+    r = np.array(data[yname])
+    x = np.array(data[xname])
+    y = a * x + b
+    
+    mse = mean_squared_error(r, y)
+    return a, b, mse
+
 goods = ['Milk', 'Sour_cream', 'Butter', 'Curd' ]
 yattrs = list(reversed(goods))
 plots = []
@@ -203,7 +225,7 @@ for y in yattrs:
         elif x != y:
             xax = (y == yattrs[-1])
             yax = (x == goods[0])
-            plot = make_corr(x, y, xax, yax)
+            plot = make_scatter(x, y, xax, yax)
             row.append(plot)
             done.append((x, y))
         elif x == y:

@@ -28,6 +28,7 @@ def rainfall_correlation(rainfall, data_WFP):
 
         val = data_WFP.loc[(data_WFP['cm_name'] == k), 'adm0_name']
         countries = val.unique()
+        country_withcorrelation = []
 
         for j in countries:
             n = 0
@@ -48,24 +49,25 @@ def rainfall_correlation(rainfall, data_WFP):
                 else:
                     prices.append(val1.mean())
                     rainfall_country.append(val2.mean())
-                    all_products.append(k)
                     n += 1
             
             correlation = np.corrcoef(prices, rainfall_country)
+            all_products.append(k)
+            country_withcorrelation.append(j)
             print(j, k, correlation)
             correlations.append(correlation[0,1])
             Amount_of_n.append(n)
      
 
-    print(countries, Amount_of_n, correlations)
+    print(country_withcorrelation, Amount_of_n, all_products, correlations)
 
-    download = "rainfall_wheat_correlations.csv" 
+    download = "rainfall_correlations.csv" 
     csv = open(download, "w") 
     columnTitleRow = "product, country, n, correlation\n"
     csv.write(columnTitleRow)
 
-    for i in range(len(countries)):
-        row = str(all_products[i])  + "," + str(countries[i]) + "," + str(Amount_of_n[i]) + "," + str(correlations[i]) + "\n"
+    for i in range(len(country_withcorrelation)):
+        row = str(all_products[i])  + "," + str(country_withcorrelation[i]) + "," + str(Amount_of_n[i]) + "," + str(correlations[i]) + "\n"
         csv.write(row)
 
     return

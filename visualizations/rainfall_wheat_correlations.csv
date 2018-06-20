@@ -1,21 +1,21 @@
-country, n, product, correlation
-Afghanistan,1,Bread,nan
-Algeria,0,Bread,nan
-Bolivia,0,Bread,nan
-Congo,0,Bread,nan
-Djibouti,3,Bread,0.06665327899092491
-Gambia,0,Bread,0.06665327899092491
-Guatemala,14,Bread,0.772228773348039
-Guinea,3,Bread,0.7552415229921478
-Iraq,3,Bread,0.8107195081822556
-Jordan,4,Bread,0.8409877666034703
-Kenya,9,Bread,0.7852764654678489
-Kyrgyzstan,10,Bread,0.7029816692454574
-Lebanon,3,Bread,0.6968560803320392
-Lesotho,5,Bread,0.6895904822620118
-Nigeria,1,Bread,0.679986131869006
-Syrian Arab Republic,4,Bread,0.6956670077887699
-Tajikistan,13,Bread,0.5619403659142662
-Turkey,2,Bread,0.554960763821041
-Ukraine,1,Bread,0.5566289410700617
-State of Palestine,0,Bread,0.5566289410700617
+product, country, n, correlation
+Wheat,Algeria,12,-0.2232031031371777
+Wheat,Armenia,10,0.263876383257135
+Wheat,Azerbaijan,8,0.8015156467133162
+Wheat,Colombia,21,0.5277098706932029
+Wheat,Ethiopia,8,0.6135360009066715
+Wheat,Gambia,10,0.5504973059286806
+Wheat,Guatemala,7,-0.24348859913717977
+Wheat,India,14,-0.25474543775675873
+Wheat,Indonesia,3,-0.2503564367533192
+Wheat,Jordan,2,-0.24086694968129704
+Wheat,Kenya,7,-0.24310829551043714
+Wheat,Kyrgyzstan,13,-0.207856149418431
+Wheat,Lebanon,6,-0.194754982858334
+Wheat,Pakistan,1,-0.194290689590427
+Wheat,Rwanda,7,-0.18176219448677494
+Wheat,Somalia,10,-0.18733901759304408
+Wheat,Tajikistan,23,-0.17432194047233288
+Wheat,Turkey,11,-0.1639393625899256
+Wheat,Ukraine,12,-0.14573594924519376
+Wheat,State of Palestine,3,-0.14831734183407064

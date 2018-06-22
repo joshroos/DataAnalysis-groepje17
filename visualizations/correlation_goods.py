@@ -78,20 +78,50 @@ def best_correlation(data_correlation):
 
 data_combinations = pd.read_csv('../visualizations/combination_correlations.csv', encoding='latin-1')
 
-def find_things(data_combinations):
+def find_things(data_combinations, n):
 
-    correlations_combinations = data_combinations.loc[data_combinations['n'] >= 10, 'combinations']
-    correlations_countries = data_combinations.loc[data_combinations['n'] >= 10, 'country']
-    correlations = data_combinations.loc[data_combinations['n'] >= 10, 'correlation']
+    correlations_combinations = data_combinations.loc[data_combinations['n'] == n, 'combinations']
+    correlations_countries = data_combinations.loc[data_combinations['n'] == n, 'country']
+    correlations = data_combinations.loc[data_combinations['n'] == n, 'correlation']
     combinations = correlations_combinations.tolist()
     countries = correlations_countries.tolist()
     correlations = correlations.tolist()
+
     print(countries)
     print(combinations)
     print(correlations)
-    return 
 
-print(find_things(data_combinations))
+    countriesnew = []
+    combinationsnew = []
+    correlationsnew = []
+
+    for x in range(len(combinations)):
+        countriesnew.append(countries[x].split(' & '))
+        combinationsnew.append(combinations[x].split(' & '))
+        correlationsnew.append(correlations[x].split(' & '))
+
+    print(countriesnew)
+    print(combinationsnew)
+    print(correlationsnew)
+    return combinationsnew
+
+#print(find_things(data_combinations, 1))
+
+def compare_amount(data_correlation):
+
+
+    country = data_correlation.loc[data_correlation['combinations'] == 'Bulgur & Salt', 'country']
+    country = country.tolist()
+    countrynew = []
+
+    for x in range(len(country)):
+        countrynew.append(country[x].split(' & '))
+
+    print(len(countrynew[0]))
+
+    return
+
+compare_amount(data_correlation)
 
 #best_correlation(data_correlation)
 

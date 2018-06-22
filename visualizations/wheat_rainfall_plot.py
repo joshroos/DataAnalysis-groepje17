@@ -36,7 +36,7 @@ def wheat_rainfall_Afghanistan(rainfall, data_WFP):
     s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
     s1.line(years, prices, color="red")
     s1.line(years, rainfall_afghanistan, color="blue", y_range_name="foo")
-    output_file("wheat_rainfall_afghanistan.html")
+    output_file("../visualizations/plots/wheat_rainfall_afghanistan.html")
     show(s1)
     
     correlation = np.corrcoef(prices, rainfall_afghanistan)
@@ -67,7 +67,7 @@ def wheat_rainfall_Ethiopia(rainfall, data_WFP):
     s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
     s1.line(years, prices, color="red")
     s1.line(years, rainfall_Ethiopia, color="blue", y_range_name="foo")
-    output_file("wheat_rainfall_ethiopia.html")
+    output_file("../visualizations/plots/wheat_rainfall_ethiopia.html")
     show(s1)
     
     correlation = np.corrcoef(prices, rainfall_Ethiopia)
@@ -98,7 +98,7 @@ def wheat_rainfall_India(rainfall, data_WFP):
     s1.add_layout(LinearAxis(y_range_name="foo"), 'right')   
     s1.line(years, prices, color="red")
     s1.line(years, rainfall_India, color="blue", y_range_name="foo")
-    output_file("wheat_rainfall_India.html")
+    output_file("../visualizations/plots/wheat_rainfall_India.html")
     show(s1)
     
     correlation = np.corrcoef(prices, rainfall_India)

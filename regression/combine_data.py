@@ -5,44 +5,48 @@ import pandas as pd
 
 df = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
 df_rain = pd.read_csv('../data/rainfall_per_month.csv', encoding='latin-1')
-df_refugee = pd.read_csv('../data/refugees_per_year.csv', encoding='latin-1')
 df_bbp = pd.read_excel('../code/BBP_countries.xlsx')
-df_population = pd.read_csv('../data/population_1960_2017_GOEDE.csv')
-print(df_bbp)
+df_pop = pd.read_csv('../data/population_1960_2017_GOEDE.csv')
+
+
+# cleans world food price data
 def clean_wfp(df):
-    columns = columns = list(df.columns)
-    columns = [x for x in columns if x not in ['mp_year', 'mp_price', 'mp_month', 'adm0_name', 'cm_name']]
+    columns = list(df.columns)
+    not_needed = ['mp_year', 'mp_price', 'mp_month', 'adm0_name', 'cm_name']
+    columns = [x for x in columns if x not in not_needed]
     df = df.drop(columns, axis=1)
     return df
-df = clean_wfp(df)
 
-def combine_data(df, df_rain, df_population):
+
+# combines all the data into one dataframe
+def combine_data(df, df_rain, df_pop):
     countries = df['adm0_name'].unique()
+
+    # adds rain, bbp and population per data point
     for country in countries:
-        place_wfp = df['adm0_name'] == country
-        place_rain = df_rain['Country_Code'] == country
-        place_pop = df_population['Country_Name'] == country
-        place_bbp = df_bbp['Country Name'] == country
-        for year in range(1992, 2018):
-            year_wfp = df['mp_year'] == year
-            year_rain = df_rain['Year'] == year
-            for month in range(1, 13):
-                month_wfp = df['mp_month'] == month
-                month_rain = df_rain['Month'] == month
-                rain = list(df_rain.loc[place_rain & year_rain & month_rain, 'pr'])
-                population = list(df_population.loc[place_pop, str(year)])
-                bbp = list(df_bbp.loc[place_bbp, str(year)])
+        loc_wfp = df['adm0_name'] == country
+        loc_rain = df_rain['Country_Code'] == country
+        loc_pop = df_pop['Country_Name'] == country
+        loc_bbp = df_bbp['Country Name'] == country
+        for yr in range(1992, 2018):
+            yr_wfp = df['mp_year'] == yr
+            yr_rain = df_rain['Year'] == yr
+            for mnth in range(1, 13):
+                mnth_wfp = df['mp_month'] == mnth
+                mnth_rain = df_rain['Month'] == mnth
+                rain = list(df_rain.loc[loc_rain & yr_rain & mnth_rain, 'pr'])
+                pop = list(df_pop.loc[loc_pop, str(yr)])
+                bbp = list(df_bbp.loc[loc_bbp, str(yr)])
                 if len(rain) > 0:
-                    df.loc[place_wfp & year_wfp & month_wfp, 'rainfall'] = rain[0]
-                if len(population) > 0:
-                    df.loc[place_wfp & year_wfp & month_wfp, 'population'] = population[0]
+                    df.loc[loc_wfp & yr_wfp & mnth_wfp, 'rainfall'] = rain[0]
+                if len(pop) > 0:
+                    df.loc[loc_wfp & yr_wfp & mnth_wfp, 'population'] = pop[0]
                 if len(bbp) > 0 and bbp[0] != 'Unknown':
-                    df.loc[place_wfp & year_wfp & month_wfp, 'bbp'] = bbp[0]
-    #print(df)
+                    df.loc[loc_wfp & yr_wfp & mnth_wfp, 'bbp'] = bbp[0]
     return df
-                    
 
 
-df = combine_data(df, df_rain, df_population)
-
+# writes new dataframe to csv
+df = clean_wfp(df)
+df = combine_data(df, df_rain, df_pop)
 df.to_csv('all_data.csv')

@@ -1,6 +1,12 @@
+# Joshua de Roos
+# 21-06-2018
+# This program plots a choropleth map of the world with 
+# all countries having a shade according to the price of a product.
+
 from bokeh.io import show, output_notebook, output_file
 from bokeh.layouts import row, widgetbox
 from bokeh.models import (
+    Legend,
     GeoJSONDataSource,
     Slider,
     HoverTool,
@@ -13,90 +19,83 @@ import pandas as pd
 import math
 import random
 
+# import necessary files
 df_wfp = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
-countrycodes = pd.read_csv('../data/countrycodes.csv', header = 0, sep = ',', error_bad_lines=False, encoding = 'latin-1')
+countrycodes = pd.read_csv('../data/countrycodes.csv', header=0, sep=',',
+                           error_bad_lines=False, encoding='latin-1')
 
 with open(r'countries.geo.json', 'r') as f:
-    data = json.load(f)
+    geo_data = json.load(f)
 
-countries = df_wfp['adm0_name'].unique()
-df_wfp.loc[df_wfp['cm_name'].str.contains('Millet'), 'cm_name'] = 'Grain'
-df_wfp.loc[df_wfp['cm_name'].str.contains('Sorghum'), 'cm_name'] = 'Grain'
-df_wfp.loc[df_wfp['cm_name'].str.contains('Maize'), 'cm_name'] = 'Grain'
-df_wfp.loc[df_wfp['cm_name'] == 'Wheat', 'cm_name'] = 'Grain'
-df_wfp.loc[df_wfp['cm_name'].str.contains('Rice'), 'cm_name'] = 'Grain'
 
-good = df_wfp['cm_name'] == 'Grain'
-year = df_wfp['mp_year'] == 2017
+# makes new json file with geo and price data
+def make_data_source(geo_data, df_wfp, countrycodes):
+    countries = df_wfp['adm0_name'].unique()
 
-max_price = df_wfp.loc[df_wfp['cm_name'] == 'Grain', 'mp_price'].quantile(0.98)
+    # combines prices of different grains in foodprice data
+    df_wfp.loc[df_wfp['cm_name'].str.contains('Millet'), 'cm_name'] = 'Grain'
+    df_wfp.loc[df_wfp['cm_name'].str.contains('Sorghum'), 'cm_name'] = 'Grain'
+    df_wfp.loc[df_wfp['cm_name'].str.contains('Maize'), 'cm_name'] = 'Grain'
+    df_wfp.loc[df_wfp['cm_name'] == 'Wheat', 'cm_name'] = 'Grain'
+    df_wfp.loc[df_wfp['cm_name'].str.contains('Rice'), 'cm_name'] = 'Grain'
 
-colors = ['#084594', '#2171b5', '#4292c6', '#6baed6', '#9ecae1', '#c6dbef', '#deebf7', '#f7fbff']
-colors.reverse()
-borders = [df_wfp.loc[df_wfp['cm_name'] == 'Grain', 'mp_price'].quantile(x/8) for x in range(1, 9)]
-counter = 0
-for country in data['features']:
-    #country["properties"]["fill"] = "green"
-    code = country["id"]
-    entry = list(countrycodes.loc[countrycodes['alpha-3'] == code, 'name'])
+    # specifies year and product for world map
+    good = df_wfp['cm_name'] == 'Grain'
+    year = df_wfp['mp_year'] == 2017
 
-    if entry in countries:
-        entry = df_wfp['adm0_name'] == entry[0]
-        price = df_wfp.loc[good & year & entry, 'mp_price']
-        price = price.mean()
-        
-        if math.isnan(price):
+    # list of colors and border values for map
+    colors = ['#084594', '#2171b5', '#4292c6', '#6baed6', '#9ecae1', '#c6dbef',
+              '#deebf7', '#f7fbff']
+    colors.reverse()
+    quants = [df_wfp.loc[good, 'mp_price'].quantile(x/8) for x in range(1, 9)]
+
+    # assigns to every country a color based on price of product
+    for country in geo_data['features']:
+        code = country["id"]
+        entry = list(countrycodes.loc[countrycodes['alpha-3'] == code, 'name'])
+        if entry in countries:
+            entry = df_wfp['adm0_name'] == entry[0]
+            price = df_wfp.loc[good & year & entry, 'mp_price']
+            price = price.mean()
+            if math.isnan(price):
+                country["properties"]["fill"] = "white"
+                country["properties"]["price"] = "Unknown"
+            else:
+                for i in range(8):
+                    if price < quants[i]:
+                        country["properties"]["fill"] = colors[i]
+                        country["properties"]["price"] = price
+                        break
+        else:
             country["properties"]["fill"] = "white"
             country["properties"]["price"] = "Unknown"
-        else:
-            for i in range(8):
-                if price < borders[i]:
-                    country["properties"]["fill"] = colors[i]
-                    country["properties"]["price"] = price
 
-                    break
-    else:
-        country["properties"]["fill"] = "white"
-        country["properties"]["price"] = "Unknown"
+    # exports data to new json source
+    return json.dumps(geo_data, ensure_ascii=True)
 
-   
-test = json.dumps(data, ensure_ascii=True)
-geo_source = GeoJSONDataSource(geojson=test)
 
-TOOLS = "pan,wheel_zoom,box_zoom,reset,hover,save"
+# plots choropleth map of world
+def make_choropleth(data_source):
+    # converts data to right format
+    geo_source = GeoJSONDataSource(geojson=data_source)
 
-p = figure(title="Grain prices 2017", tools=TOOLS, x_axis_location=None, y_axis_location=None, width=1100, height=700)
-p.grid.grid_line_color = None
-p.patches(xs='xs', ys='ys', fill_color="fill",
-          line_color='black', line_width=0.5, source=geo_source, legend="fill")
+    # plots countries with colors
+    TOOLS = "pan,wheel_zoom,reset,hover,save"
+    p = figure(title="Grain prices 2017", tools=TOOLS, x_axis_location=None,
+               y_axis_location=None, width=1200, height=700)
+    p.grid.grid_line_color = None
+    p.patches(xs='xs', ys='ys', fill_color="fill",
+              line_color='black', line_width=0.5, source=geo_source,
+              legend="price")
 
-callback = CustomJS(args=dict(source=geo_source), code="""
-    var data = source.data;
-    var A = amp.value;
-    var k = freq.value;
-    var phi = phase.value;
-    var B = offset.value;
-    var x = data['x']
-    var y = data['y']
-    for (var i = 0; i < x.length; i++) {
-        y[i] = B + A*Math.sin(k*x[i]+phi);
-    }
-    source.change.emit();
-""")
+    # sets properties of hovertool
+    hover = p.select_one(HoverTool)
+    hover.point_policy = "follow_mouse"
+    hover.tooltips = [("Country:", "@name"), ("Grain price:", "@price")]
 
-amp_slider = Slider(start=1992, end=2018, value=1, step=1,
-                    title="Amplitude", callback=callback)
-#callback.args["amp"] = amp_slider
+    output_file("choropleth_grain.html", title="World map Bokeh")
+    show(p)
 
-hover = p.select_one(HoverTool)
-hover.point_policy = "follow_mouse"
-hover.tooltips = [("Country:", "@name"), ("Grain price:", "@price")]
 
-layout = row(
-    p,
-    widgetbox(amp_slider),
-)
-
-output_file("PBIar.html", title="World map Bokeh")
-
-show(p)
+data_source = make_data_source(geo_data, df_wfp, countrycodes)
+make_choropleth(data_source)

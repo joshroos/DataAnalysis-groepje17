@@ -124,7 +124,7 @@ def wheat_rainfall(rainfall, data_WFP, country):
         val2 = rainfall.loc[(year2) & (country2), 'pr_total']
         rainfall_country.append(val2)
 
-    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1))
+    s1 = figure(x_range=(1992, 2015), y_range=(0, 1.1), title = "Rainfall and wheat prices Afghanistan", x_axis_label = "Years", y_axis_label = "Wheat price")
     s1.extra_y_ranges = {"foo": Range1d(start=0, end=2000)}
     s1.add_layout(LinearAxis(y_range_name="foo", axis_label="rainfall per year in mm"), 'right')   
     s1.line(years, prices, color="red")
@@ -139,6 +139,7 @@ def wheat_rainfall(rainfall, data_WFP, country):
 #for country in countries:    
 #    wheat_rainfall(rainfall, data_WFP, country)
 
-wheat_rainfall_Afghanistan(rainfall, data_WFP)
-wheat_rainfall_Ethiopia(rainfall, data_WFP)
-wheat_rainfall_India(rainfall, data_WFP)
+#wheat_rainfall_Afghanistan(rainfall, data_WFP)
+#wheat_rainfall_Ethiopia(rainfall, data_WFP)
+#wheat_rainfall_India(rainfall, data_WFP)
+wheat_rainfall(rainfall, data_WFP, "Afghanistan")

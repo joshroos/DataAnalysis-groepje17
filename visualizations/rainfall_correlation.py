@@ -14,9 +14,9 @@ data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
 
 
 def rainfall_correlation(rainfall, data_WFP):
-    #products = data_WFP['cm_name'].unique()
+    products = data_WFP['cm_name'].unique()
     years = [x for x in range(1992, 2016)]
-    products = ["Wheat", "Millet", "Milk"]
+    #products = ["Wheat", "Millet", "Milk"]
     #countries = ['Afghanistan', 'Ethiopia', 'Guinea-Bissau', 'India']
     correlations = []
     prices = []

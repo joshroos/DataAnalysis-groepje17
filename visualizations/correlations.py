@@ -76,7 +76,7 @@ def correlations_per_country(data_WFP):
                             if coeff[0][1] > 0.75 or coeff[0][1] < -0.75:
                                 print("{}:  {} and  {}  =   {}      {}".format
                                 (land, i, j, round(coeff[0][1], 4), len(prices1)))
-correlations_per_country(data_WFP)
+#correlations_per_country(data_WFP)
 
 def correlations_per_good(data_WFP):
     done = []

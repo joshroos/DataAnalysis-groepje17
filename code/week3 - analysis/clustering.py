@@ -20,8 +20,8 @@ import sklearn.metrics as sm
 
 #rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 #exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
-data_correlation = pd.read_csv('../visualizations/corrcoef.csv', encoding='latin-1')
+data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
+data_correlation = pd.read_csv('../../data/corrcoef.csv', encoding='latin-1')
 
 
 
@@ -43,7 +43,9 @@ def rijst_olie_chart(data_WFP):
         olie_prijzen = (data_WFP.loc[(data_WFP['adm0_name'] == x) & (data_WFP['cm_name'] == 'Oil'), 'mp_price'])
         #olie_prijzen.append(gemiddelde_olie_prijs)
     
-    
+    olie_prijzen = olie_prijzen.to_frame()
+    rijst_prijzen = rijst_prijzen.to_frame()
+
     olie_cds = ColumnDataSource(olie_prijzen)
     rijst_cds = ColumnDataSource(rijst_prijzen)
  

@@ -1,0 +1,111 @@
+food_combination,correlation,data_amount
+Bread & Soybeans,0.803,78
+Bread & Coffee,0.7996,130
+Wheat & Sugar,0.8449,232
+Wheat & Flour,0.7911,191
+Wheat & Millet,0.8125,287
+Wheat & Peas,0.7938,154
+Wheat & Tortilla (maize),0.8045,180
+Rice & Wage,0.7679,94
+Rice & Potatoes,0.8515,190
+Rice & Meat,0.7746,190
+Rice & Oil,0.9106,232
+Rice & Onions,0.7855,164
+Rice & Soybeans,0.9634,78
+Rice & Salt,0.9287,191
+Rice & Chickpeas,0.9219,154
+Wage & Fuel (diesel),0.7747,94
+Wage & Potatoes,0.8378,70
+Wage & Oil,0.756,87
+Wage & Flour,0.8708,70
+Wage & Maize,0.776,94
+Wage & Tortilla (maize),0.8137,60
+Livestock & Cheese,-0.8818,82
+Livestock & Bananas,0.8601,82
+Livestock & Apples,-0.778,70
+Livestock & Sweet potatoes,0.8437,82
+Livestock & Spinach,0.8211,82
+Livestock & Bulgur,-0.7602,65
+Livestock & Yogurt,-0.8519,41
+Livestock & Cocoa (powder),-0.8542,47
+Fuel (diesel) & Flour,0.8495,150
+Exchange rate & Flour,0.9261,82
+Exchange rate & Sorghum,0.929,82
+Beans & Cucumbers,0.9784,70
+Beans & Soybeans,-0.8091,78
+Beans & Tortilla (maize),0.8378,180
+Potatoes & Tomatoes,0.9006,118
+Potatoes & Fish,-0.8221,118
+Potatoes & Soybeans,0.91,78
+Potatoes & Salt,0.78,190
+Meat & Oil,0.8687,190
+Meat & Soybeans,0.836,78
+Meat & Passion fruit,-0.8051,96
+Sugar & Cucumbers,0.7693,70
+Lentils & Peas,0.7534,153
+Lentils & Cocoa (powder),-0.7524,47
+Lentils & Buckwheat grits,0.7692,43
+Tomatoes & Cucumbers,0.9331,70
+Tomatoes & Soybeans,0.7656,78
+Oil & Soybeans,0.8494,78
+Oil & Salt,0.8447,191
+Oil & Chickpeas,0.8094,154
+Oil & Passion fruit,-0.7653,96
+Cheese & Bananas,-0.7578,106
+Cheese & Spinach,-0.786,82
+Cheese & Bulgur,0.8128,65
+Cheese & Yogurt,0.9136,41
+Cheese & Cocoa (powder),0.8125,47
+Carrots & Cabbage,0.8739,190
+Onions & Soybeans,0.8682,78
+Onions & Garlic,0.8611,118
+Onions & Chickpeas,0.7929,154
+Bananas & Yogurt,-0.7763,41
+Tea & Noodles,0.8549,83
+Tea & Soybeans,-0.7831,78
+Tea & Coffee,-0.7614,130
+Tea & Tortilla (maize),0.8616,168
+Fuel (petrol-gasoline) & Millet,0.8041,204
+Fuel (petrol-gasoline) & Cocoa (powder),0.875,47
+Fuel (petrol-gasoline) & Curd,0.8093,43
+Fish & Soybeans,-0.8315,78
+Fish & Cassava,0.7756,118
+Fish & Transport (public),0.9071,79
+Apples & Yogurt,0.8305,41
+Apples & Cocoa (powder),0.8018,47
+Flour & Sorghum,0.7652,191
+Flour & Maize,0.8164,191
+Cabbage & Yogurt,-0.7766,41
+Cucumbers & Garlic,0.9878,70
+Fuel (kerosene) & Soybeans,-0.7726,78
+Sorghum & Tortilla (maize),0.8545,180
+Maize & Soybeans,0.8308,78
+Millet & Yam,0.7628,139
+Millet & Cocoa (powder),0.8045,47
+Millet & Curd,0.9149,43
+Millet & Sour cream,0.8962,43
+Noodles & Tortilla (maize),0.8102,63
+Noodles & Pulses,-0.7946,68
+Sweet potatoes & Spinach,0.812,82
+Sweet potatoes & Yogurt,-0.8732,41
+Groundnuts & Peas,0.7615,154
+Groundnuts & Soybeans,-0.8732,78
+Groundnuts & Tortilla (maize),0.8397,156
+Peas & Tortilla (maize),0.8189,132
+Soybeans & Cassava,-0.804,78
+Soybeans & Coffee,0.8705,78
+Soybeans & Salt,0.8602,78
+Soybeans & Chickpeas,0.9082,78
+Soybeans & Tortilla (maize),-0.9165,75
+Soybeans & Passion fruit,-0.7703,75
+Cocoa & Cocoa (powder),0.8363,47
+Salt & Chickpeas,0.8862,154
+Spinach & Yogurt,-0.8424,41
+Butter & Curd,0.8401,43
+Butter & Fat (salo),0.7665,43
+Pulses & Yogurt,-0.8144,41
+Peppers (green) & Eggplants,0.8058,60
+Eggplants & Passion fruit,0.7567,71
+Eggplants & Zucchini,0.9671,68
+Curd & Sour cream,0.9562,43
+Curd & Fat (salo),0.754,43

@@ -8,10 +8,10 @@ import io
 from pandas import ExcelWriter
 import numpy as np
 
-#rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
+rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 #exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
-correlation_rainfall = pd.read_csv('../../data/rainfall_correlations.csv', encoding='latin-1')
+data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
+
 
 def rainfall_correlation(rainfall, data_WFP):
     products = data_WFP['cm_name'].unique()
@@ -72,15 +72,4 @@ def rainfall_correlation(rainfall, data_WFP):
 
     return
 
-#rainfall_correlation(rainfall, data_WFP)
-
-def rainfall_better(correlation_rainfall):
-    rainfall_correlations = correlation_rainfall.iloc[::2]
-    print(rainfall_correlations)
-
-    writer = ExcelWriter('rainfall_correlations1.xlsx')
-    rainfall_correlations.to_excel(writer, 'Sheet1')
-    writer.save()  
-    return
-
-rainfall_better(correlation_rainfall)
+rainfall_correlation(rainfall, data_WFP)

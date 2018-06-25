@@ -1,0 +1,743 @@
+correlation,country,n,combinations
+0.8875 & 0.8304,Afghanistan & Tajikistan,2,Bread & Wheat
+0.8959999999999999,Guatemala,1,Bread & Rice
+0.8438 & 0.8968,Guatemala & Turkey,2,Bread & Beans
+0.8929,Guatemala,1,Bread & Potatoes
+0.9523 & 0.7762,Guatemala & Kyrgyzstan,2,Bread & Eggs
+0.9562 & 0.8151 & 0.8064 & 0.8185,Guatemala & Lebanon & Turkey & Ukraine,4,Bread & Meat
+0.8724 & 0.8124 & 0.7925,Guatemala & Lebanon & Turkey,3,Bread & Sugar
+0.9751,Guatemala,1,Bread & Pasta
+0.8084,Guatemala,1,Bread & Tomatoes
+0.9855 & 0.8077 & 0.9426 & 0.7821 & 0.8597 & 0.8354,Guatemala & Kyrgyzstan & Lesotho & Tajikistan & Turkey & Lebanon,6,Bread & Oil
+0.9774,Guatemala,1,Bread & Cheese
+0.8023,Guatemala,1,Bread & Onions
+0.9608,Guatemala,1,Bread & Bananas
+0.9299,Turkey,1,Bread & Fish
+0.9841 & 0.7863 & 0.7766,Guatemala & Kenya & Turkey,3,Bread & Milk
+0.8602 & 0.9689 & 0.9403 & 0.8268 & 0.7536,Tajikistan & Iraq & Lesotho & Turkey & Ukraine,5,Bread & Flour
+0.7692 & 0.7647,Guatemala & Tajikistan,2,Bread & Maize
+0.9553,Guatemala,1,Bread & Plantains
+0.9427 & 0.9049,Guatemala & Turkey,2,Bread & Coffee
+0.9897 & 0.7588 & 0.9221,Guatemala & Tajikistan & Turkey,3,Bread & Salt
+0.8340000000000001,State of Palestine,1,Bread & Chickpeas
+0.9767,Guatemala,1,Bread & Tortilla (maize)
+0.9089,Turkey,1,Bread & Bulgur
+0.9205,Turkey,1,Bread & Cocoa (powder)
+0.9429,State of Palestine,1,Bread & Water
+0.7669,Ukraine,1,Bread & Fat (salo)
+0.8875 & 0.8304,Afghanistan & Tajikistan,2,Wheat & Bread
+0.9436 & 0.9729 & 0.8111,India & Nepal & Tajikistan,3,Wheat & Rice
+0.8859,Afghanistan,1,Wheat & Fuel (diesel)
+0.8116,Tajikistan,1,Wheat & Eggs
+0.868,Tajikistan,1,Wheat & Meat
+0.8293,India,1,Wheat & Sugar
+0.8678 & 0.8285 & 0.9522 & 0.8251,Indonesia & Mauritania & Tajikistan & India,4,Wheat & Oil
+0.7594 & 0.7651,Indonesia & Tajikistan,2,Wheat & Milk
+0.965 & 0.9749 & 0.9052,Tajikistan & India & Yemen,3,Wheat & Flour
+0.8443,Indonesia,1,Wheat & Fuel (kerosene)
+0.8544,Ethiopia,1,Wheat & Sorghum
+0.9048 & 0.9563,Ethiopia & Tajikistan,2,Wheat & Maize
+0.8577,Sudan,1,Wheat & Millet
+0.8361,Tajikistan,1,Wheat & Salt
+0.8959999999999999,Guatemala,1,Rice & Bread
+0.9436 & 0.9729 & 0.8111,India & Nepal & Tajikistan,3,Rice & Wheat
+0.8941,Afghanistan,1,Rice & Wage
+0.9058 & 0.8709 & 0.9246 & 0.8676 & 0.7699,Afghanistan & Armenia & Democratic Republic of the Congo & Pakistan & Ukraine,5,Rice & Fuel (diesel)
+0.8540000000000001 & 0.8704 & 0.8617 & 0.8435 & 0.8373 & 0.9075 & 0.7872,Mozambique & Turkey & Yemen & Zambia & Colombia & Guatemala & Lebanon,7,Rice & Beans
+0.8713 & 0.7874 & 0.8573 & 0.75,Indonesia & Iran(Islamic Republic of) & Philippines & Tajikistan,4,Rice & Eggs
+0.8751 & 0.753 & 0.9024 & 0.8753,Democratic Republic of the Congo & Guinea & Indonesia & Tajikistan,4,Rice & Meat
+0.7662 & 0.8675 & 0.8515 & 0.9652 & 0.8046 & 0.7845 & 0.8074 & 0.8036,Guinea & India & Indonesia & Iran(Islamic Republic of) & Mozambique & Tajikistan & Turkey & Yemen,8,Rice & Sugar
+0.9088 & 0.9413,Iran(Islamic Republic of) & Yemen,2,Rice & Lentils
+0.8983 & 0.8736 & 0.8181,Turkey & Ukraine & Armenia,3,Rice & Pasta
+0.8604 & 0.9714 & 0.8221 & 0.8265 & 0.8669 & 0.8218 & 0.8742 & 0.9809 & 0.8767 & 0.8026 & 0.8421 & 0.7974 & 0.9884,Djibouti & Haiti & India & Iran(Islamic Republic of) & Jordan & Mozambique & Pakistan & Somalia & Swaziland  & Syrian Arab Republic & Tajikistan & Congo & Myanmar,13,Rice & Oil
+0.9228,Syrian Arab Republic,1,Rice & Tea
+0.8824,Tajikistan,1,Rice & Milk
+0.8744 & 0.9329999999999999 & 0.7742 & 0.9065 & 0.8798 & 0.8128 & 0.8173 & 0.8151 & 0.8623,Haiti & Mozambique & Tajikistan & Turkey & Ukraine & Cape Verde & Colombia & Pakistan & Yemen,9,Rice & Flour
+0.8598,Indonesia,1,Rice & Fuel (kerosene)
+0.8645 & 0.8557 & 0.7652,Benin & Nigeria & Burkina Faso,3,Rice & Sorghum
+0.7964 & 0.8213 & 0.7665 & 0.8169 & 0.7679 & 0.7964 & 0.8959999999999999 & 0.8501 & 0.8383 & 0.9452,Guatemala & Burkina Faso & Colombia & Costa Rica & Mali & Niger & Nigeria & Senegal & Tajikistan & Timor-Leste,10,Rice & Maize
+0.8618 & 0.7653 & 0.8387,Nigeria & Senegal & Burkina Faso,3,Rice & Millet
+0.9392,Bolivia,1,Rice & Noodles
+0.76 & 0.795,Mozambique & Zambia,2,Rice & Groundnuts
+0.8288,Liberia,1,Rice & Cassava
+0.9195 & 0.8775 & 0.9265,Myanmar & Tajikistan & Yemen,3,Rice & Salt
+0.9336,Myanmar,1,Rice & Chickpeas
+0.9194,Democratic Republic of the Congo,1,Rice & Transport (public)
+0.8140000000000001,Guatemala,1,Rice & Tortilla (maize)
+0.905,Pakistan,1,Rice & Butter
+0.8652,Turkey,1,Rice & Bulgur
+0.7597,Syrian Arab Republic,1,Rice & Fuel (gas)
+0.81,Turkey,1,Rice & Cocoa (powder)
+0.8941,Afghanistan,1,Wage & Rice
+0.9808,Colombia,1,Wage & Fuel (diesel)
+0.9687,Colombia,1,Wage & Cheese
+0.9590000000000001,Colombia,1,Wage & Bananas
+0.9863,Colombia,1,Wage & Fuel (petrol-gasoline)
+0.8906,Colombia,1,Wage & Flour
+0.7819,Colombia,1,Wage & Peas
+0.8911,Colombia,1,Wage & Cocoa
+0.8859,Afghanistan,1,Fuel (diesel) & Wheat
+0.9058 & 0.8709 & 0.9246 & 0.8676 & 0.7699,Afghanistan & Armenia & Democratic Republic of the Congo & Pakistan & Ukraine,5,Fuel (diesel) & Rice
+0.9808,Colombia,1,Fuel (diesel) & Wage
+0.8926 & 0.8718,South Sudan & Democratic Republic of the Congo,2,Fuel (diesel) & Beans
+0.8991 & 0.9002,Democratic Republic of the Congo & Ukraine,2,Fuel (diesel) & Meat
+0.8625,Ukraine,1,Fuel (diesel) & Pasta
+0.9218 & 0.8298 & 0.9368,South Sudan & Myanmar & Pakistan,3,Fuel (diesel) & Oil
+0.9690000000000001,Colombia,1,Fuel (diesel) & Cheese
+0.9561,Colombia,1,Fuel (diesel) & Bananas
+0.9844 & 0.9967 & 0.9753 & 0.8746 & 0.9862 & 0.9883 & 0.9275,Armenia & Colombia & Guatemala & Sri Lanka & Ukraine & Yemen & South Sudan,7,Fuel (diesel) & Fuel (petrol-gasoline)
+0.8774 & 0.8037,Democratic Republic of the Congo & Colombia,2,Fuel (diesel) & Fish
+0.7995,Colombia,1,Fuel (diesel) & Milk
+0.8943 & 0.9419 & 0.8926 & 0.8374 & 0.9655 & 0.8154 & 0.7724,South Sudan & Colombia & Democratic Republic of the Congo & Pakistan & Sri Lanka & Ukraine & Yemen,7,Fuel (diesel) & Flour
+0.9044,South Sudan,1,Fuel (diesel) & Sorghum
+0.8428,South Sudan,1,Fuel (diesel) & Maize
+0.9138,South Sudan,1,Fuel (diesel) & Millet
+0.8405,South Sudan,1,Fuel (diesel) & Groundnuts
+0.9276,South Sudan,1,Fuel (diesel) & Sesame
+0.7873,Colombia,1,Fuel (diesel) & Peas
+0.8846,South Sudan,1,Fuel (diesel) & Cassava
+0.9464,Colombia,1,Fuel (diesel) & Cocoa
+0.8752,Democratic Republic of the Congo,1,Fuel (diesel) & Transport (public)
+0.9437,Pakistan,1,Fuel (diesel) & Butter
+0.8394,Ukraine,1,Fuel (diesel) & Curd
+0.8968 & 0.8438,Turkey & Guatemala,2,Beans & Bread
+0.8373 & 0.9075 & 0.7872 & 0.8540000000000001 & 0.8704 & 0.8617 & 0.8435,Colombia & Guatemala & Lebanon & Mozambique & Turkey & Yemen & Zambia,7,Beans & Rice
+0.8718 & 0.8926,Democratic Republic of the Congo & South Sudan,2,Beans & Fuel (diesel)
+0.7939 & 1.0 & 0.7818,Turkey & Jordan & Mozambique,3,Beans & Sugar
+0.9023,Yemen,1,Beans & Lentils
+0.7555,Turkey,1,Beans & Pasta
+0.9998,Jordan,1,Beans & Tomatoes
+0.9084,Turkey,1,Beans & Oil
+0.8140000000000001,South Sudan,1,Beans & Fuel (petrol-gasoline)
+0.8093,Turkey,1,Beans & Fish
+0.8966,Colombia,1,Beans & Milk
+0.8111 & 0.8372 & 0.8472 & 0.7723 & 0.855,Burundi & Democratic Republic of the Congo & Turkey & Yemen & South Sudan,5,Beans & Flour
+0.9999,Jordan,1,Beans & Cucumbers
+0.7551 & 0.8792 & 0.7887 & 0.8651,Cameroon & South Sudan & Kenya & Niger,4,Beans & Sorghum
+0.7573 & 0.8331 & 0.8406 & 0.7896,Guatemala & Kenya & Niger & South Sudan,4,Beans & Maize
+0.8657 & 0.8937,South Sudan & Niger,2,Beans & Millet
+0.8373 & 0.879,Mozambique & Zambia,2,Beans & Groundnuts
+0.8793,South Sudan,1,Beans & Sesame
+0.7935,Lesotho,1,Beans & Peas
+0.843,South Sudan,1,Beans & Cassava
+0.9998,Jordan,1,Beans & Garlic
+0.7989,Turkey,1,Beans & Coffee
+0.8229 & 0.8032,Turkey & Swaziland ,2,Beans & Salt
+0.9666,Democratic Republic of the Congo,1,Beans & Transport (public)
+0.8,Guatemala,1,Beans & Tortilla (maize)
+0.8789,Turkey,1,Beans & Bulgur
+0.863,Turkey,1,Beans & Cocoa (powder)
+0.8244,South Sudan,1,Beans & Exchange rate (unofficial)
+0.8929,Guatemala,1,Potatoes & Bread
+0.8989,Guatemala,1,Potatoes & Eggs
+0.9502,Guatemala,1,Potatoes & Meat
+0.8938,Guatemala,1,Potatoes & Pasta
+0.8424,Guatemala,1,Potatoes & Tomatoes
+0.8747,Guatemala,1,Potatoes & Oil
+0.9490000000000001,Guatemala,1,Potatoes & Cheese
+0.8739 & 0.8848,Guatemala & Ukraine,2,Potatoes & Onions
+0.9513,Guatemala,1,Potatoes & Bananas
+0.9209,Guatemala,1,Potatoes & Milk
+0.9522,Guatemala,1,Potatoes & Plantains
+0.9183 & 0.7602,Guatemala & Tajikistan,2,Potatoes & Salt
+0.8926,Guatemala,1,Potatoes & Tortilla (maize)
+0.7824,Rwand a,1,Potatoes & Eggplants
+0.9523 & 0.7762,Guatemala & Kyrgyzstan,2,Eggs & Bread
+0.8116,Tajikistan,1,Eggs & Wheat
+0.8713 & 0.7874 & 0.8573 & 0.75,Indonesia & Iran(Islamic Republic of) & Philippines & Tajikistan,4,Eggs & Rice
+0.8989,Guatemala,1,Eggs & Potatoes
+0.9576 & 0.7559 & 0.9117,Guatemala & Tajikistan & Indonesia,3,Eggs & Meat
+0.7528 & 0.7894,Guatemala & Indonesia,2,Eggs & Sugar
+0.7635,Iran(Islamic Republic of),1,Eggs & Lentils
+0.9086,Guatemala,1,Eggs & Pasta
+0.8203,Guatemala,1,Eggs & Tomatoes
+0.9442 & 0.7953 & 0.823 & 0.8647,Guatemala & Iran(Islamic Republic of) & Kyrgyzstan & Tajikistan,4,Eggs & Oil
+0.9603,Guatemala,1,Eggs & Cheese
+0.8312,Guatemala,1,Eggs & Onions
+0.9675,Guatemala,1,Eggs & Bananas
+0.7768,Jordan,1,Eggs & Apples
+0.7746 & 0.9439 & 0.8127,Indonesia & Guatemala & Tajikistan,3,Eggs & Milk
+0.7789,Tajikistan,1,Eggs & Flour
+0.9167,Indonesia,1,Eggs & Fuel (kerosene)
+0.7861,Tajikistan,1,Eggs & Maize
+0.7694,Philippines,1,Eggs & Sweet potatoes
+0.9584,Guatemala,1,Eggs & Plantains
+0.8383,Guatemala,1,Eggs & Coffee
+0.9691 & 0.7789,Guatemala & Tajikistan,2,Eggs & Salt
+0.9314,Guatemala,1,Eggs & Tortilla (maize)
+0.7795,Ukraine,1,Eggs & Fat (salo)
+0.8151 & 0.8064 & 0.8185 & 0.9562,Lebanon & Turkey & Ukraine & Guatemala,4,Meat & Bread
+0.868,Tajikistan,1,Meat & Wheat
+0.8751 & 0.753 & 0.9024 & 0.8753,Democratic Republic of the Congo & Guinea & Indonesia & Tajikistan,4,Meat & Rice
+0.8991 & 0.9002,Democratic Republic of the Congo & Ukraine,2,Meat & Fuel (diesel)
+0.9502,Guatemala,1,Meat & Potatoes
+0.9117 & 0.9576 & 0.7559,Indonesia & Guatemala & Tajikistan,3,Meat & Eggs
+0.7525 & 0.7954 & 0.8167 & 0.8089 & 0.7526,Guatemala & Indonesia & Lebanon & Tajikistan & Ukraine,5,Meat & Sugar
+0.7916 & 0.9421 & 0.7923,Armenia & Guatemala & Ukraine,3,Meat & Pasta
+0.8686,Guatemala,1,Meat & Tomatoes
+0.9426 & 0.7817 & 0.7796 & 0.8808,Guatemala & Lebanon & Peru & Tajikistan,4,Meat & Oil
+0.9872,Guatemala,1,Meat & Cheese
+0.8981,Guatemala,1,Meat & Onions
+0.9918,Guatemala,1,Meat & Bananas
+0.8142,Kyrgyzstan,1,Meat & Tea
+0.9372,Ukraine,1,Meat & Fuel (petrol-gasoline)
+0.787 & 0.8076 & 0.8440000000000001,Armenia & Philippines & Turkey,3,Meat & Fish
+0.7861,Armenia,1,Meat & Apples
+0.9940000000000001 & 0.9405 & 0.9587 & 0.9052 & 0.8333,Jordan & Lebanon & Guatemala & Tajikistan & Ukraine,5,Meat & Milk
+0.8944 & 0.8658,Peru & Tajikistan,2,Meat & Flour
+0.8747,Indonesia,1,Meat & Fuel (kerosene)
+0.9125 & 0.9044,Peru & Tajikistan,2,Meat & Maize
+0.9864,Guatemala,1,Meat & Plantains
+0.8322 & 0.8502,Guatemala & Turkey,2,Meat & Coffee
+0.9775 & 0.8864 & 0.8532,Guatemala & Tajikistan & Turkey,3,Meat & Salt
+0.9213,Democratic Republic of the Congo,1,Meat & Transport (public)
+0.9601,Guatemala,1,Meat & Tortilla (maize)
+0.7601,Ukraine,1,Meat & Butter
+0.9279,Ukraine,1,Meat & Curd
+0.8299,Ukraine,1,Meat & Sour cream
+0.8921,Ukraine,1,Meat & Fat (salo)
+0.8124 & 0.7925 & 0.8724,Lebanon & Turkey & Guatemala,3,Sugar & Bread
+0.8293,India,1,Sugar & Wheat
+0.7662 & 0.8675 & 0.8515 & 0.9652 & 0.8046 & 0.7845 & 0.8074 & 0.8036,Guinea & India & Indonesia & Iran(Islamic Republic of) & Mozambique & Tajikistan & Turkey & Yemen,8,Sugar & Rice
+1.0 & 0.7818 & 0.7939,Jordan & Mozambique & Turkey,3,Sugar & Beans
+0.7528 & 0.7894,Guatemala & Indonesia,2,Sugar & Eggs
+0.8167 & 0.8089 & 0.7526 & 0.7525 & 0.7954,Lebanon & Tajikistan & Ukraine & Guatemala & Indonesia,5,Sugar & Meat
+0.9173 & 0.8140000000000001,Iran(Islamic Republic of) & Yemen,2,Sugar & Lentils
+0.8383 & 0.9382,Guatemala & Turkey,2,Sugar & Pasta
+0.9998,Jordan,1,Sugar & Tomatoes
+0.9385 & 0.8176 & 0.8323 & 0.7997 & 0.8935 & 0.7907,Lebanon & Armenia & Guatemala & Iran(Islamic Republic of) & Madagascar & Tajikistan,6,Sugar & Oil
+0.804,Guatemala,1,Sugar & Cheese
+0.7598,Guatemala,1,Sugar & Bananas
+0.7901,State of Palestine,1,Sugar & Tea
+0.8208 & 0.7607,Armenia & Ukraine,2,Sugar & Fuel (petrol-gasoline)
+0.7587 & 0.8219 & 0.8015 & 0.7827,Lebanon & Guatemala & Indonesia & Tajikistan,4,Sugar & Milk
+0.9484 & 0.848 & 0.965,Madagascar & Mozambique & Turkey,3,Sugar & Flour
+0.9999,Jordan,1,Sugar & Cucumbers
+0.9081,Indonesia,1,Sugar & Fuel (kerosene)
+0.7929,Tajikistan,1,Sugar & Maize
+0.7781,Mozambique,1,Sugar & Groundnuts
+0.9999,Jordan,1,Sugar & Garlic
+0.7514,Guatemala,1,Sugar & Plantains
+0.9387 & 0.8935,Guatemala & Turkey,2,Sugar & Coffee
+0.8433 & 0.7716 & 0.9145,Guatemala & Tajikistan & Turkey,3,Sugar & Salt
+0.821,Colombia,1,Sugar & Chickpeas
+0.8687,Guatemala,1,Sugar & Tortilla (maize)
+0.9439,Turkey,1,Sugar & Bulgur
+0.9374,Turkey,1,Sugar & Cocoa (powder)
+0.8321,Ukraine,1,Sugar & Curd
+0.7502,Ukraine,1,Sugar & Sour cream
+0.9088 & 0.9413,Iran(Islamic Republic of) & Yemen,2,Lentils & Rice
+0.9023,Yemen,1,Lentils & Beans
+0.7635,Iran(Islamic Republic of),1,Lentils & Eggs
+0.9173 & 0.8140000000000001,Iran(Islamic Republic of) & Yemen,2,Lentils & Sugar
+0.7841 & 0.7703,Turkey & Iran(Islamic Republic of),2,Lentils & Oil
+0.7659,India,1,Lentils & Tea
+0.7565,Turkey,1,Lentils & Milk
+0.8722,Yemen,1,Lentils & Flour
+0.8948,Yemen,1,Lentils & Salt
+0.9751,Guatemala,1,Pasta & Bread
+0.8181 & 0.8983 & 0.8736,Armenia & Turkey & Ukraine,3,Pasta & Rice
+0.8625,Ukraine,1,Pasta & Fuel (diesel)
+0.7555,Turkey,1,Pasta & Beans
+0.8938,Guatemala,1,Pasta & Potatoes
+0.9086,Guatemala,1,Pasta & Eggs
+0.7923 & 0.7916 & 0.9421,Ukraine & Armenia & Guatemala,3,Pasta & Meat
+0.8383 & 0.9382,Guatemala & Turkey,2,Pasta & Sugar
+0.7863,Guatemala,1,Pasta & Tomatoes
+0.8536 & 0.98,Armenia & Guatemala,2,Pasta & Oil
+0.9607,Guatemala,1,Pasta & Cheese
+0.7829999999999999,Guatemala,1,Pasta & Onions
+0.943,Guatemala,1,Pasta & Bananas
+0.9022 & 0.8359,Armenia & Ukraine,2,Pasta & Fuel (petrol-gasoline)
+0.9753,Turkey,1,Pasta & Milk
+0.9672 & 0.8195 & 0.9666 & 0.8432,Ukraine & Armenia & Turkey & Egypt,4,Pasta & Flour
+0.941,Guatemala,1,Pasta & Plantains
+0.9186 & 0.7532,Guatemala & Turkey,2,Pasta & Coffee
+0.9613 & 0.7986,Guatemala & Turkey,2,Pasta & Salt
+0.9798,Guatemala,1,Pasta & Tortilla (maize)
+0.9168,Turkey,1,Pasta & Bulgur
+0.8872,Turkey,1,Pasta & Cocoa (powder)
+0.8084,Turkey,1,Tomatoes & Bread
+0.9998,Jordan,1,Tomatoes & Beans
+0.8424,Guatemala,1,Tomatoes & Potatoes
+0.8203,Guatemala,1,Tomatoes & Eggs
+0.8686,Guatemala,1,Tomatoes & Meat
+0.9998,Jordan,1,Tomatoes & Sugar
+0.7863,Guatemala,1,Tomatoes & Pasta
+0.8429 & 0.7636,Turkey & Guatemala,2,Tomatoes & Oil
+0.8731,Guatemala,1,Tomatoes & Cheese
+0.8951,Guatemala,1,Tomatoes & Onions
+0.8723,Guatemala,1,Tomatoes & Bananas
+0.8482 & 0.8271,Turkey & Guatemala,2,Tomatoes & Milk
+0.8891 & 0.9998,Armenia & Jordan,2,Tomatoes & Cucumbers
+0.9997,Jordan,1,Tomatoes & Garlic
+0.8754,Guatemala,1,Tomatoes & Plantains
+0.8428,Guatemala,1,Tomatoes & Salt
+0.8341,Guatemala,1,Tomatoes & Tortilla (maize)
+0.8597 & 0.8354 & 0.9855 & 0.8077 & 0.9426 & 0.7821,Lebanon & Ukraine & Guatemala & Kyrgyzstan & Lesotho & Tajikistan,6,Oil & Bread
+0.8251 & 0.8678 & 0.8285 & 0.9522,India & Indonesia & Mauritania & Tajikistan,4,Oil & Wheat
+0.7974 & 0.9884 & 0.8604 & 0.9714 & 0.8221 & 0.8265 & 0.8669 & 0.8218 & 0.8742 & 0.9809 & 0.8767 & 0.8026 & 0.8421,Congo & Myanmar & Djibouti & Haiti & India & Iran(Islamic Republic of) & Jordan & Mozambique & Pakistan & Somalia & Swaziland  & Syrian Arab Republic & Tajikistan,13,Oil & Rice
+0.8298 & 0.9368 & 0.9218,Myanmar & Pakistan & South Sudan,3,Oil & Fuel (diesel)
+0.9084,Turkey,1,Oil & Beans
+0.8747,Guatemala,1,Oil & Potatoes
+0.9442 & 0.7953 & 0.823 & 0.8647,Guatemala & Iran(Islamic Republic of) & Kyrgyzstan & Tajikistan,4,Oil & Eggs
+0.8808 & 0.9426 & 0.7817 & 0.7796,Tajikistan & Guatemala & Lebanon & Peru,4,Oil & Meat
+0.8176 & 0.8323 & 0.7997 & 0.8935 & 0.7907 & 0.9385,Armenia & Guatemala & Iran(Islamic Republic of) & Madagascar & Tajikistan & Lebanon,6,Oil & Sugar
+0.7703 & 0.7841,Iran(Islamic Republic of) & Turkey,2,Oil & Lentils
+0.8536 & 0.98,Armenia & Guatemala,2,Oil & Pasta
+0.7636 & 0.8429,Guatemala & Turkey,2,Oil & Tomatoes
+0.9590000000000001,Guatemala,1,Oil & Cheese
+0.7606,Guatemala,1,Oil & Onions
+0.9439,Guatemala,1,Oil & Bananas
+0.787 & 0.7731 & 0.8301,Syrian Arab Republic & State of Palestine & India,3,Oil & Tea
+0.8875 & 0.8301,Armenia & South Sudan,2,Oil & Fuel (petrol-gasoline)
+0.7823 & 0.8565 & 0.9778 & 0.8147 & 0.8494,Lebanon & Turkey & Guatemala & Indonesia & Tajikistan,5,Oil & Milk
+0.8945 & 0.935 & 0.9097 & 0.7723 & 0.9579 & 0.8373 & 0.9147 & 0.8694,Mozambique & Peru & Tajikistan & Colombia & Lesotho & Madagascar & Swaziland  & Syrian Arab Republic,8,Oil & Flour
+0.9666,South Sudan,1,Oil & Sorghum
+0.8145 & 0.9343 & 0.9529,Peru & Tajikistan & South Sudan,3,Oil & Maize
+0.9513,South Sudan,1,Oil & Millet
+0.9182,South Sudan,1,Oil & Groundnuts
+0.9285,South Sudan,1,Oil & Sesame
+0.8916,South Sudan,1,Oil & Cassava
+0.938,Guatemala,1,Oil & Plantains
+0.9249,Guatemala,1,Oil & Coffee
+0.9709 & 0.8875 & 0.8527 & 0.8208,Guatemala & Myanmar & Swaziland  & Tajikistan,4,Oil & Salt
+0.9394,Myanmar,1,Oil & Chickpeas
+0.7532,Nigeria,1,Oil & Yam
+0.9763,Guatemala,1,Oil & Tortilla (maize)
+0.9927,Pakistan,1,Oil & Butter
+0.8313,Syrian Arab Republic,1,Oil & Fuel (gas)
+0.9214,South Sudan,1,Oil & Exchange rate (unofficial)
+0.9774,Guatemala,1,Cheese & Bread
+0.9687,Colombia,1,Cheese & Wage
+0.9690000000000001,Colombia,1,Cheese & Fuel (diesel)
+0.9490000000000001,Guatemala,1,Cheese & Potatoes
+0.9603,Guatemala,1,Cheese & Eggs
+0.9872,Guatemala,1,Cheese & Meat
+0.804,Guatemala,1,Cheese & Sugar
+0.9607,Guatemala,1,Cheese & Pasta
+0.8731,Guatemala,1,Cheese & Tomatoes
+0.9590000000000001,Guatemala,1,Cheese & Oil
+0.8768,Guatemala,1,Cheese & Onions
+0.9917 & 0.9597,Guatemala & Colombia,2,Cheese & Bananas
+0.9663,Colombia,1,Cheese & Fuel (petrol-gasoline)
+0.7522,Armenia,1,Cheese & Fish
+0.7757 & 0.9849,Colombia & Guatemala,2,Cheese & Milk
+0.8103 & 0.8867,Armenia & Colombia,2,Cheese & Flour
+0.8390000000000001,Colombia,1,Cheese & Peas
+0.991,Guatemala,1,Cheese & Plantains
+0.9036,Colombia,1,Cheese & Cocoa
+0.8702,Guatemala,1,Cheese & Coffee
+0.9890000000000001,Guatemala,1,Cheese & Salt
+0.9801,Guatemala,1,Cheese & Tortilla (maize)
+0.7896,Kyrgyzstan,1,Carrots & Onions
+0.7699,Tajikistan,1,Carrots & Maize
+0.9359999999999999,Ukraine,1,Carrots & Beetroots
+0.8023,Guatemala,1,Onions & Bread
+0.8739 & 0.8848,Guatemala & Ukraine,2,Onions & Potatoes
+0.8312,Guatemala,1,Onions & Eggs
+0.8981,Guatemala,1,Onions & Meat
+0.7829999999999999,Guatemala,1,Onions & Pasta
+0.8951,Guatemala,1,Onions & Tomatoes
+0.7606,Guatemala,1,Onions & Oil
+0.8768,Guatemala,1,Onions & Cheese
+0.7896,Kyrgyzstan,1,Onions & Carrots
+0.8963,Guatemala,1,Onions & Bananas
+0.813,Guatemala,1,Onions & Milk
+0.8968,Guatemala,1,Onions & Plantains
+0.8491,Guatemala,1,Onions & Salt
+0.8169,Guatemala,1,Onions & Tortilla (maize)
+0.9608,Guatemala,1,Bananas & Bread
+0.9590000000000001,Colombia,1,Bananas & Wage
+0.9561,Colombia,1,Bananas & Fuel (diesel)
+0.9513,Guatemala,1,Bananas & Potatoes
+0.9675,Guatemala,1,Bananas & Eggs
+0.9918,Guatemala,1,Bananas & Meat
+0.7598,Guatemala,1,Bananas & Sugar
+0.943,Guatemala,1,Bananas & Pasta
+0.8723,Guatemala,1,Bananas & Tomatoes
+0.9439,Guatemala,1,Bananas & Oil
+0.9597 & 0.9917,Colombia & Guatemala,2,Bananas & Cheese
+0.8963,Guatemala,1,Bananas & Onions
+0.9591,Colombia,1,Bananas & Fuel (petrol-gasoline)
+0.7577,Colombia,1,Bananas & Fish
+0.7782 & 0.9652,Colombia & Guatemala,2,Bananas & Milk
+0.8846,Colombia,1,Bananas & Flour
+0.7679,Colombia,1,Bananas & Peas
+0.9944,Guatemala,1,Bananas & Plantains
+0.8709,Colombia,1,Bananas & Cocoa
+0.8341,Guatemala,1,Bananas & Coffee
+0.9805,Guatemala,1,Bananas & Salt
+0.9599,Guatemala,1,Bananas & Tortilla (maize)
+0.9228,Syrian Arab Republic,1,Tea & Rice
+0.8142,Kyrgyzstan,1,Tea & Meat
+0.7901,State of Palestine,1,Tea & Sugar
+0.7659,India,1,Tea & Lentils
+0.8301 & 0.787 & 0.7731,India & Syrian Arab Republic & State of Palestine,3,Tea & Oil
+0.8116,State of Palestine,1,Tea & Labaneh
+0.9863,Colombia,1,Fuel (petrol-gasoline) & Wage
+0.9844 & 0.9967 & 0.9753 & 0.8746 & 0.9862 & 0.9883 & 0.9275,Armenia & Colombia & Guatemala & Sri Lanka & Ukraine & Yemen & South Sudan,7,Fuel (petrol-gasoline) & Fuel (diesel)
+0.8140000000000001,South Sudan,1,Fuel (petrol-gasoline) & Beans
+0.9372,Ukraine,1,Fuel (petrol-gasoline) & Meat
+0.8208 & 0.7607,Armenia & Ukraine,2,Fuel (petrol-gasoline) & Sugar
+0.9022 & 0.8359,Armenia & Ukraine,2,Fuel (petrol-gasoline) & Pasta
+0.8301 & 0.8875,South Sudan & Armenia,2,Fuel (petrol-gasoline) & Oil
+0.9663,Colombia,1,Fuel (petrol-gasoline) & Cheese
+0.9591,Colombia,1,Fuel (petrol-gasoline) & Bananas
+0.7948,Colombia,1,Fuel (petrol-gasoline) & Fish
+0.7795 & 0.7712,Colombia & Ukraine,2,Fuel (petrol-gasoline) & Milk
+0.8028 & 0.9319 & 0.8903 & 0.7771 & 0.8105,South Sudan & Colombia & Sri Lanka & Ukraine & Yemen,5,Fuel (petrol-gasoline) & Flour
+0.8213,South Sudan,1,Fuel (petrol-gasoline) & Sorghum
+0.7584,South Sudan,1,Fuel (petrol-gasoline) & Maize
+0.8507,South Sudan,1,Fuel (petrol-gasoline) & Millet
+0.7628,South Sudan,1,Fuel (petrol-gasoline) & Groundnuts
+0.8496,South Sudan,1,Fuel (petrol-gasoline) & Sesame
+0.7917,Colombia,1,Fuel (petrol-gasoline) & Peas
+0.7953,South Sudan,1,Fuel (petrol-gasoline) & Cassava
+0.9354,Colombia,1,Fuel (petrol-gasoline) & Cocoa
+0.8965,Ukraine,1,Fuel (petrol-gasoline) & Curd
+0.7733,Ukraine,1,Fuel (petrol-gasoline) & Sour cream
+0.774,Ukraine,1,Fuel (petrol-gasoline) & Fat (salo)
+0.9299,Turkey,1,Fish & Bread
+0.8037 & 0.8774,Colombia & Democratic Republic of the Congo,2,Fish & Fuel (diesel)
+0.8093,Turkey,1,Fish & Beans
+0.787 & 0.8076 & 0.8440000000000001,Armenia & Philippines & Turkey,3,Fish & Meat
+0.7522,Armenia,1,Fish & Cheese
+0.7577,Colombia,1,Fish & Bananas
+0.7948,Colombia,1,Fish & Fuel (petrol-gasoline)
+0.8685,Colombia,1,Fish & Flour
+0.8672,Congo,1,Fish & Groundnuts
+0.8174,Colombia,1,Fish & Cocoa
+0.8766,Turkey,1,Fish & Coffee
+0.8614,Turkey,1,Fish & Salt
+0.857,Democratic Republic of the Congo,1,Fish & Transport (public)
+0.8079999999999999,Turkey,1,Fish & Bulgur
+0.8183,Turkey,1,Fish & Cocoa (powder)
+0.7768,Jordan,1,Apples & Eggs
+0.7861,Armenia,1,Apples & Meat
+0.7766 & 0.9841 & 0.7863,Lebanon & Guatemala & Kenya,3,Milk & Bread
+0.7651 & 0.7594,Tajikistan & Indonesia,2,Milk & Wheat
+0.8824,Tajikistan,1,Milk & Rice
+0.7995,Colombia,1,Milk & Fuel (diesel)
+0.8966,Colombia,1,Milk & Beans
+0.9209,Guatemala,1,Milk & Potatoes
+0.9439 & 0.8127 & 0.7746,Guatemala & Tajikistan & Indonesia,3,Milk & Eggs
+0.9587 & 0.9052 & 0.8333 & 0.9940000000000001 & 0.9405,Guatemala & Tajikistan & Ukraine & Jordan & Lebanon,5,Milk & Meat
+0.8219 & 0.8015 & 0.7827 & 0.7587,Guatemala & Indonesia & Tajikistan & Lebanon,4,Milk & Sugar
+0.7565,Turkey,1,Milk & Lentils
+0.9753,Guatemala,1,Milk & Pasta
+0.8271 & 0.8482,Guatemala & Turkey,2,Milk & Tomatoes
+0.9778 & 0.8147 & 0.8494 & 0.7823 & 0.8565,Guatemala & Indonesia & Tajikistan & Lebanon & Turkey,5,Milk & Oil
+0.9849 & 0.7757,Guatemala & Colombia,2,Milk & Cheese
+0.813,Guatemala,1,Milk & Onions
+0.9652 & 0.7782,Guatemala & Colombia,2,Milk & Bananas
+0.7712 & 0.7795,Ukraine & Colombia,2,Milk & Fuel (petrol-gasoline)
+0.8563,Colombia,1,Milk & Flour
+0.9098,Indonesia,1,Milk & Fuel (kerosene)
+0.792,Tajikistan,1,Milk & Maize
+0.9667,Guatemala,1,Milk & Plantains
+0.7747,Colombia,1,Milk & Cocoa
+0.8995 & 0.9883,Guatemala & Colombia,2,Milk & Coffee
+0.9804 & 0.7702,Guatemala & Tajikistan,2,Milk & Salt
+0.9862,Guatemala,1,Milk & Tortilla (maize)
+0.9885,Ukraine,1,Milk & Butter
+0.9532,Ukraine,1,Milk & Curd
+0.9981,Ukraine,1,Milk & Sour cream
+0.9689 & 0.9403 & 0.8268 & 0.7536 & 0.8602,Iraq & Lesotho & Turkey & Ukraine & Tajikistan,5,Flour & Bread
+0.9749 & 0.9052 & 0.965,India & Yemen & Tajikistan,3,Flour & Wheat
+0.8128 & 0.8173 & 0.8151 & 0.8623 & 0.8744 & 0.9329999999999999 & 0.7742 & 0.9065 & 0.8798,Cape Verde & Colombia & Pakistan & Yemen & Haiti & Mozambique & Tajikistan & Turkey & Ukraine,9,Flour & Rice
+0.8906,Colombia,1,Flour & Wage
+0.9419 & 0.8926 & 0.8374 & 0.9655 & 0.8154 & 0.7724 & 0.8943,Colombia & Democratic Republic of the Congo & Pakistan & Sri Lanka & Ukraine & Yemen & South Sudan,7,Flour & Fuel (diesel)
+0.8472 & 0.7723 & 0.855 & 0.8111 & 0.8372,Turkey & Yemen & South Sudan & Burundi & Democratic Republic of the Congo,5,Flour & Beans
+0.7789,Tajikistan,1,Flour & Eggs
+0.8944 & 0.8658,Peru & Tajikistan,2,Flour & Meat
+0.9484 & 0.848 & 0.965,Madagascar & Mozambique & Turkey,3,Flour & Sugar
+0.8722,Yemen,1,Flour & Lentils
+0.8195 & 0.9666 & 0.8432 & 0.9672,Armenia & Turkey & Egypt & Ukraine,4,Flour & Pasta
+0.7723 & 0.9579 & 0.8373 & 0.9147 & 0.8694 & 0.8945 & 0.935 & 0.9097,Colombia & Lesotho & Madagascar & Swaziland  & Syrian Arab Republic & Mozambique & Peru & Tajikistan,8,Flour & Oil
+0.8103 & 0.8867,Armenia & Colombia,2,Flour & Cheese
+0.8846,Colombia,1,Flour & Bananas
+0.9319 & 0.8903 & 0.7771 & 0.8105 & 0.8028,Colombia & Sri Lanka & Ukraine & Yemen & South Sudan,5,Flour & Fuel (petrol-gasoline)
+0.8685,Colombia,1,Flour & Fish
+0.8563,Colombia,1,Flour & Milk
+0.9471,South Sudan,1,Flour & Sorghum
+0.8058 & 0.9479 & 0.8753 & 0.9276 & 0.9219 & 0.7621,Swaziland  & South Sudan & Democratic Republic of the Congo & Peru & Tajikistan & Ugand a,6,Flour & Maize
+0.9043 & 0.8221,South Sudan & Ugand a,2,Flour & Millet
+0.8929 & 0.915,Burundi & Rwand a,2,Flour & Sweet potatoes
+0.8836,South Sudan,1,Flour & Sesame
+0.7665 & 0.8422,Democratic Republic of the Congo & South Sudan,2,Flour & Cassava
+0.9416,Colombia,1,Flour & Cocoa
+0.8465,Turkey,1,Flour & Coffee
+0.7676 & 0.8388 & 0.8917 & 0.8393,Swaziland  & Tajikistan & Turkey & Yemen,4,Flour & Salt
+0.7639,Colombia,1,Flour & Chickpeas
+0.9357,Democratic Republic of the Congo,1,Flour & Transport (public)
+0.9627,Turkey,1,Flour & Bulgur
+0.8193,Syrian Arab Republic,1,Flour & Fuel (gas)
+0.9385,Turkey,1,Flour & Cocoa (powder)
+0.9999,Jordan,1,Cucumbers & Beans
+0.9999,Jordan,1,Cucumbers & Sugar
+0.8891 & 0.9998,Armenia & Jordan,2,Cucumbers & Tomatoes
+0.9997,Jordan,1,Cucumbers & Garlic
+0.8443,Indonesia,1,Fuel (kerosene) & Wheat
+0.8598,Indonesia,1,Fuel (kerosene) & Rice
+0.9167,Indonesia,1,Fuel (kerosene) & Eggs
+0.8747,Indonesia,1,Fuel (kerosene) & Meat
+0.9081,Indonesia,1,Fuel (kerosene) & Sugar
+0.9098,Indonesia,1,Fuel (kerosene) & Milk
+0.8544,Ethiopia,1,Sorghum & Wheat
+0.7652 & 0.8645 & 0.8557,Burkina Faso & Benin & Nigeria,3,Sorghum & Rice
+0.9044,South Sudan,1,Sorghum & Fuel (diesel)
+0.7887 & 0.8651 & 0.7551 & 0.8792,Kenya & Niger & Cameroon & South Sudan,4,Sorghum & Beans
+0.9666,South Sudan,1,Sorghum & Oil
+0.8213,South Sudan,1,Sorghum & Fuel (petrol-gasoline)
+0.9471,South Sudan,1,Sorghum & Flour
+0.8032 & 0.8892 & 0.8771 & 0.9493 & 0.8275 & 0.8588 & 0.9079 & 0.9621 & 0.9825 & 0.8829 & 0.9476,Benin & Ethiopia & Kenya & Burkina Faso & Cameroon & Chad & Mali & Niger & Nigeria & Senegal & South Sudan,11,Sorghum & Maize
+0.9687 & 0.7501 & 0.9732 & 0.9818 & 0.9833 & 0.9708 & 0.9712 & 0.956 & 0.9385,Burkina Faso & Guinea-Bissau & Mali & Niger & Nigeria & Senegal & Sudan & South Sudan & Chad,9,Sorghum & Millet
+0.9427,South Sudan,1,Sorghum & Sesame
+0.8546,South Sudan,1,Sorghum & Cassava
+0.8851,South Sudan,1,Sorghum & Exchange rate (unofficial)
+0.7647 & 0.7692,Tajikistan & Guatemala,2,Maize & Bread
+0.9048 & 0.9563,Ethiopia & Tajikistan,2,Maize & Wheat
+0.8213 & 0.7665 & 0.8169 & 0.7679 & 0.7964 & 0.8959999999999999 & 0.8501 & 0.8383 & 0.9452 & 0.7964,Burkina Faso & Colombia & Costa Rica & Mali & Niger & Nigeria & Senegal & Tajikistan & Timor-Leste & Guatemala,10,Maize & Rice
+0.8428,South Sudan,1,Maize & Fuel (diesel)
+0.8331 & 0.8406 & 0.7896 & 0.7573,Kenya & Niger & South Sudan & Guatemala,4,Maize & Beans
+0.7861,Tajikistan,1,Maize & Eggs
+0.9125 & 0.9044,Peru & Tajikistan,2,Maize & Meat
+0.7929,Tajikistan,1,Maize & Sugar
+0.8145 & 0.9343 & 0.9529,Peru & Tajikistan & South Sudan,3,Maize & Oil
+0.7699,Tajikistan,1,Maize & Carrots
+0.7584,South Sudan,1,Maize & Fuel (petrol-gasoline)
+0.792,Tajikistan,1,Maize & Milk
+0.8753 & 0.9276 & 0.9219 & 0.7621 & 0.8058 & 0.9479,Democratic Republic of the Congo & Peru & Tajikistan & Ugand a & Swaziland  & South Sudan,6,Maize & Flour
+0.9493 & 0.8275 & 0.8588 & 0.9079 & 0.9621 & 0.9825 & 0.8829 & 0.9476 & 0.8032 & 0.8892 & 0.8771,Burkina Faso & Cameroon & Chad & Mali & Niger & Nigeria & Senegal & South Sudan & Benin & Ethiopia & Kenya,11,Maize & Sorghum
+0.8256 & 0.9082 & 0.8922 & 0.8278 & 0.8716 & 0.9605 & 0.9725 & 0.882 & 0.8877,Benin & Burkina Faso & Chad & Gambia & Mali & Niger & Nigeria & Senegal & South Sudan,9,Maize & Millet
+0.8972,South Sudan,1,Maize & Sesame
+0.8159,South Sudan,1,Maize & Cassava
+0.8509,Tajikistan,1,Maize & Salt
+0.8301,Democratic Republic of the Congo,1,Maize & Transport (public)
+0.9455,South Sudan,1,Maize & Exchange rate (unofficial)
+0.8577,Sudan,1,Millet & Wheat
+0.8387 & 0.8618 & 0.7653,Burkina Faso & Nigeria & Senegal,3,Millet & Rice
+0.9138,South Sudan,1,Millet & Fuel (diesel)
+0.8937 & 0.8657,Niger & South Sudan,2,Millet & Beans
+0.9513,South Sudan,1,Millet & Oil
+0.8507,South Sudan,1,Millet & Fuel (petrol-gasoline)
+0.8221 & 0.9043,Ugand a & South Sudan,2,Millet & Flour
+0.9385 & 0.9687 & 0.7501 & 0.9732 & 0.9818 & 0.9833 & 0.9708 & 0.9712 & 0.956,Chad & Burkina Faso & Guinea-Bissau & Mali & Niger & Nigeria & Senegal & Sudan & South Sudan,9,Millet & Sorghum
+0.8256 & 0.9082 & 0.8922 & 0.8278 & 0.8716 & 0.9605 & 0.9725 & 0.882 & 0.8877,Benin & Burkina Faso & Chad & Gambia & Mali & Niger & Nigeria & Senegal & South Sudan,9,Millet & Maize
+0.9301,South Sudan,1,Millet & Sesame
+0.7596 & 0.8387,Central African Republic & South Sudan,2,Millet & Cassava
+0.9392,Bolivia,1,Noodles & Rice
+0.7694,Philippines,1,Sweet potatoes & Eggs
+0.8929 & 0.915,Burundi & Rwand a,2,Sweet potatoes & Flour
+0.787,Rwand a,1,Sweet potatoes & Cassava
+0.76 & 0.795,Mozambique & Zambia,2,Groundnuts & Rice
+0.8405,South Sudan,1,Groundnuts & Fuel (diesel)
+0.879 & 0.8373,Zambia & Mozambique,2,Groundnuts & Beans
+0.7781,Mozambique,1,Groundnuts & Sugar
+0.9182,South Sudan,1,Groundnuts & Oil
+0.7628,South Sudan,1,Groundnuts & Fuel (petrol-gasoline)
+0.8672,Congo,1,Groundnuts & Fish
+0.8825,South Sudan,1,Groundnuts & Exchange rate (unofficial)
+0.9276,South Sudan,1,Sesame & Fuel (diesel)
+0.8793,South Sudan,1,Sesame & Beans
+0.9285,South Sudan,1,Sesame & Oil
+0.8496,South Sudan,1,Sesame & Fuel (petrol-gasoline)
+0.8836,South Sudan,1,Sesame & Flour
+0.9427,South Sudan,1,Sesame & Sorghum
+0.8972,South Sudan,1,Sesame & Maize
+0.9301,South Sudan,1,Sesame & Millet
+0.8554,South Sudan,1,Sesame & Cassava
+0.8601,South Sudan,1,Sesame & Exchange rate (unofficial)
+0.7819,Colombia,1,Peas & Wage
+0.7873,Colombia,1,Peas & Fuel (diesel)
+0.7935,Lesotho,1,Peas & Beans
+0.8390000000000001,Colombia,1,Peas & Cheese
+0.7679,Colombia,1,Peas & Bananas
+0.7917,Colombia,1,Peas & Fuel (petrol-gasoline)
+0.8288,Liberia,1,Cassava & Rice
+0.8846,South Sudan,1,Cassava & Fuel (diesel)
+0.843,South Sudan,1,Cassava & Beans
+0.8916,South Sudan,1,Cassava & Oil
+0.7953,South Sudan,1,Cassava & Fuel (petrol-gasoline)
+0.7665 & 0.8422,Democratic Republic of the Congo & South Sudan,2,Cassava & Flour
+0.8546,South Sudan,1,Cassava & Sorghum
+0.8159,South Sudan,1,Cassava & Maize
+0.7596 & 0.8387,Central African Republic & South Sudan,2,Cassava & Millet
+0.787,Rwand a,1,Cassava & Sweet potatoes
+0.8554,South Sudan,1,Cassava & Sesame
+0.7783,Liberia,1,Cassava & Cowpeas
+0.9998,Jordan,1,Garlic & Beans
+0.9999,Jordan,1,Garlic & Sugar
+0.9997,Jordan,1,Garlic & Tomatoes
+0.9997,Jordan,1,Garlic & Cucumbers
+0.8141,Myanmar,1,Garlic & Chickpeas
+0.9553,Guatemala,1,Plantains & Bread
+0.9522,Guatemala,1,Plantains & Potatoes
+0.9584,Guatemala,1,Plantains & Eggs
+0.9864,Guatemala,1,Plantains & Meat
+0.7514,Guatemala,1,Plantains & Sugar
+0.941,Guatemala,1,Plantains & Pasta
+0.8754,Guatemala,1,Plantains & Tomatoes
+0.938,Guatemala,1,Plantains & Oil
+0.991,Guatemala,1,Plantains & Cheese
+0.8968,Guatemala,1,Plantains & Onions
+0.9944,Guatemala,1,Plantains & Bananas
+0.9667,Guatemala,1,Plantains & Milk
+0.8269,Guatemala,1,Plantains & Coffee
+0.976,Guatemala,1,Plantains & Salt
+0.9593,Guatemala,1,Plantains & Tortilla (maize)
+0.8911,Colombia,1,Cocoa & Wage
+0.9464,Colombia,1,Cocoa & Fuel (diesel)
+0.9036,Colombia,1,Cocoa & Cheese
+0.8709,Colombia,1,Cocoa & Bananas
+0.9354,Colombia,1,Cocoa & Fuel (petrol-gasoline)
+0.8174,Colombia,1,Cocoa & Fish
+0.7747,Colombia,1,Cocoa & Milk
+0.9416,Colombia,1,Cocoa & Flour
+0.9427 & 0.9049,Guatemala & Turkey,2,Coffee & Bread
+0.7989,Turkey,1,Coffee & Beans
+0.8383,Guatemala,1,Coffee & Eggs
+0.8322 & 0.8502,Guatemala & Turkey,2,Coffee & Meat
+0.9387 & 0.8935,Guatemala & Turkey,2,Coffee & Sugar
+0.9186 & 0.7532,Guatemala & Turkey,2,Coffee & Pasta
+0.9249,Guatemala,1,Coffee & Oil
+0.8702,Guatemala,1,Coffee & Cheese
+0.8341,Guatemala,1,Coffee & Bananas
+0.8766,Turkey,1,Coffee & Fish
+0.9883 & 0.8995,Colombia & Guatemala,2,Coffee & Milk
+0.8465,Turkey,1,Coffee & Flour
+0.8269,Guatemala,1,Coffee & Plantains
+0.909 & 0.9790000000000001,Guatemala & Turkey,2,Coffee & Salt
+0.9359,Guatemala,1,Coffee & Tortilla (maize)
+0.9233,Turkey,1,Coffee & Bulgur
+0.9478,Turkey,1,Coffee & Cocoa (powder)
+0.9897 & 0.7588 & 0.9221,Guatemala & Tajikistan & Turkey,3,Salt & Bread
+0.8361,Tajikistan,1,Salt & Wheat
+0.9195 & 0.8775 & 0.9265,Myanmar & Tajikistan & Yemen,3,Salt & Rice
+0.8032 & 0.8229,Swaziland  & Turkey,2,Salt & Beans
+0.9183 & 0.7602,Guatemala & Tajikistan,2,Salt & Potatoes
+0.9691 & 0.7789,Guatemala & Tajikistan,2,Salt & Eggs
+0.9775 & 0.8864 & 0.8532,Guatemala & Tajikistan & Turkey,3,Salt & Meat
+0.8433 & 0.7716 & 0.9145,Guatemala & Tajikistan & Turkey,3,Salt & Sugar
+0.8948,Yemen,1,Salt & Lentils
+0.9613 & 0.7986,Guatemala & Turkey,2,Salt & Pasta
+0.8428,Guatemala,1,Salt & Tomatoes
+0.9709 & 0.8875 & 0.8527 & 0.8208,Guatemala & Myanmar & Swaziland  & Tajikistan,4,Salt & Oil
+0.9890000000000001,Guatemala,1,Salt & Cheese
+0.8491,Guatemala,1,Salt & Onions
+0.9805,Guatemala,1,Salt & Bananas
+0.8614,Turkey,1,Salt & Fish
+0.9804 & 0.7702,Guatemala & Tajikistan,2,Salt & Milk
+0.7676 & 0.8388 & 0.8917 & 0.8393,Swaziland  & Tajikistan & Turkey & Yemen,4,Salt & Flour
+0.8509,Tajikistan,1,Salt & Maize
+0.976,Guatemala,1,Salt & Plantains
+0.909 & 0.9790000000000001,Guatemala & Turkey,2,Salt & Coffee
+0.8828,Myanmar,1,Salt & Chickpeas
+0.9840000000000001,Guatemala,1,Salt & Tortilla (maize)
+0.9465,Turkey,1,Salt & Bulgur
+0.9665,Turkey,1,Salt & Cocoa (powder)
+0.8340000000000001,State of Palestine,1,Chickpeas & Bread
+0.9336,Myanmar,1,Chickpeas & Rice
+0.821,Colombia,1,Chickpeas & Sugar
+0.9394,Myanmar,1,Chickpeas & Oil
+0.7639,Colombia,1,Chickpeas & Flour
+0.8141,Myanmar,1,Chickpeas & Garlic
+0.8828,Myanmar,1,Chickpeas & Salt
+0.8054,Myanmar,1,Chickpeas & Pulses
+0.8435,State of Palestine,1,Chickpeas & Water
+0.8192,Rwand a,1,Spinach & Peppers (green)
+0.8281,Rwand a,1,Spinach & Eggplants
+0.7532,Nigeria,1,Yam & Oil
+0.9194,Democratic Republic of the Congo,1,Transport (public) & Rice
+0.8752,Democratic Republic of the Congo,1,Transport (public) & Fuel (diesel)
+0.9666,Democratic Republic of the Congo,1,Transport (public) & Beans
+0.9213,Democratic Republic of the Congo,1,Transport (public) & Meat
+0.857,Democratic Republic of the Congo,1,Transport (public) & Fish
+0.9357,Democratic Republic of the Congo,1,Transport (public) & Flour
+0.8301,Democratic Republic of the Congo,1,Transport (public) & Maize
+0.9767,Guatemala,1,Tortilla (maize) & Bread
+0.8140000000000001,Guatemala,1,Tortilla (maize) & Rice
+0.8,Guatemala,1,Tortilla (maize) & Beans
+0.8926,Guatemala,1,Tortilla (maize) & Potatoes
+0.9314,Guatemala,1,Tortilla (maize) & Eggs
+0.9601,Guatemala,1,Tortilla (maize) & Meat
+0.8687,Guatemala,1,Tortilla (maize) & Sugar
+0.9798,Guatemala,1,Tortilla (maize) & Pasta
+0.8341,Guatemala,1,Tortilla (maize) & Tomatoes
+0.9763,Guatemala,1,Tortilla (maize) & Oil
+0.9801,Guatemala,1,Tortilla (maize) & Cheese
+0.8169,Guatemala,1,Tortilla (maize) & Onions
+0.9599,Guatemala,1,Tortilla (maize) & Bananas
+0.9862,Guatemala,1,Tortilla (maize) & Milk
+0.9593,Guatemala,1,Tortilla (maize) & Plantains
+0.9359,Guatemala,1,Tortilla (maize) & Coffee
+0.9840000000000001,Guatemala,1,Tortilla (maize) & Salt
+0.905,Pakistan,1,Butter & Rice
+0.9437,Pakistan,1,Butter & Fuel (diesel)
+0.7601,Ukraine,1,Butter & Meat
+0.9927,Pakistan,1,Butter & Oil
+0.9885,Ukraine,1,Butter & Milk
+0.9238,Ukraine,1,Butter & Curd
+0.9886,Ukraine,1,Butter & Sour cream
+0.8054,Myanmar,1,Pulses & Chickpeas
+0.9089,Turkey,1,Bulgur & Bread
+0.8652,Turkey,1,Bulgur & Rice
+0.8789,Turkey,1,Bulgur & Beans
+0.9439,Turkey,1,Bulgur & Sugar
+0.9168,Turkey,1,Bulgur & Pasta
+0.8079999999999999,Turkey,1,Bulgur & Fish
+0.9627,Turkey,1,Bulgur & Flour
+0.9233,Turkey,1,Bulgur & Coffee
+0.9465,Turkey,1,Bulgur & Salt
+0.9889,Turkey,1,Bulgur & Cocoa (powder)
+0.7783,Liberia,1,Cowpeas & Cassava
+0.8192,Rwand a,1,Peppers (green) & Spinach
+0.8133,Rwand a,1,Peppers (green) & Eggplants
+0.7824,Rwand a,1,Eggplants & Potatoes
+0.8281,Rwand a,1,Eggplants & Spinach
+0.8133,Rwand a,1,Eggplants & Peppers (green)
+0.7527,Rwand a,1,Eggplants & Passion fruit
+0.7527,Rwand a,1,Passion fruit & Eggplants
+0.7597,Syrian Arab Republic,1,Fuel (gas) & Rice
+0.8313,Syrian Arab Republic,1,Fuel (gas) & Oil
+0.8193,Syrian Arab Republic,1,Fuel (gas) & Flour
+0.9205,Turkey,1,Cocoa (powder) & Bread
+0.81,Turkey,1,Cocoa (powder) & Rice
+0.863,Turkey,1,Cocoa (powder) & Beans
+0.9374,Turkey,1,Cocoa (powder) & Sugar
+0.8872,Turkey,1,Cocoa (powder) & Pasta
+0.8183,Turkey,1,Cocoa (powder) & Fish
+0.9385,Turkey,1,Cocoa (powder) & Flour
+0.9478,Turkey,1,Cocoa (powder) & Coffee
+0.9665,Turkey,1,Cocoa (powder) & Salt
+0.9889,Turkey,1,Cocoa (powder) & Bulgur
+0.9429,State of Palestine,1,Water & Bread
+0.8435,State of Palestine,1,Water & Chickpeas
+0.8394,Ukraine,1,Curd & Fuel (diesel)
+0.9279,Ukraine,1,Curd & Meat
+0.8321,Ukraine,1,Curd & Sugar
+0.8965,Ukraine,1,Curd & Fuel (petrol-gasoline)
+0.9532,Ukraine,1,Curd & Milk
+0.9238,Ukraine,1,Curd & Butter
+0.9562,Ukraine,1,Curd & Sour cream
+0.754,Ukraine,1,Curd & Fat (salo)
+0.8299,Ukraine,1,Sour cream & Meat
+0.7502,Ukraine,1,Sour cream & Sugar
+0.7733,Ukraine,1,Sour cream & Fuel (petrol-gasoline)
+0.9981,Ukraine,1,Sour cream & Milk
+0.9886,Ukraine,1,Sour cream & Butter
+0.9562,Ukraine,1,Sour cream & Curd
+0.9359999999999999,Ukraine,1,Beetroots & Carrots
+0.7669,Ukraine,1,Fat (salo) & Bread
+0.7795,Ukraine,1,Fat (salo) & Eggs
+0.8921,Ukraine,1,Fat (salo) & Meat
+0.774,Ukraine,1,Fat (salo) & Fuel (petrol-gasoline)
+0.754,Ukraine,1,Fat (salo) & Curd
+0.8116,State of Palestine,1,Labaneh & Tea
+0.8244,South Sudan,1,Exchange rate (unofficial) & Beans
+0.9214,South Sudan,1,Exchange rate (unofficial) & Oil
+0.8851,South Sudan,1,Exchange rate (unofficial) & Sorghum
+0.9455,South Sudan,1,Exchange rate (unofficial) & Maize
+0.8825,South Sudan,1,Exchange rate (unofficial) & Groundnuts
+0.8601,South Sudan,1,Exchange rate (unofficial) & Sesame

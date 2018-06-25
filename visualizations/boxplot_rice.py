@@ -24,16 +24,16 @@ lower = q1 - 1.5*iqr
 i_range = ['Armenia', 'Iraq', 'Iran  (Islamic Republic of)','Turkey','Syrian Arab Republic', 'Jordan', 'Yemen','Afghanistan']
 # countries West Afrika
 j_range = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger', 'Guinea', 'Guinea-Bissau', 'Ghana', 'Afghanistan']
-
+h_range = ['Guatemala', 'El Salvador', 'Honduras', 'Costa Rica', 'Panama', 'Afghanistan']
 # plot figure
-p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="Price of Rice West Africa", x_range=i_range)
+p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="Price of Rice Central America", x_range=h_range)
 
 # shrink lengths of stems to be no longer than the minimums or maximums
 qmin = groups.quantile(q=0.00)
 qmax = groups.quantile(q=1.00)
 upper.score = [min([x,y]) for (x,y) in zip(list(qmax.loc[:,'score']),upper.score)]
 lower.score = [max([x,y]) for (x,y) in zip(list(qmin.loc[:,'score']),lower.score)]
-print(lower.score)
+# print(lower.score)
 # stems
 p.segment(countries, upper.score, countries, q3.score, line_color="black")
 p.segment(countries, lower.score, countries, q1.score, line_color="black")
@@ -42,12 +42,9 @@ p.segment(countries, lower.score, countries, q1.score, line_color="black")
 p.vbar(countries, 0.7, q2.score, q3.score, fill_color="#9B59B6", line_color="black")
 p.vbar(countries, 0.7, q1.score, q2.score, fill_color="#C0392B", line_color="black")
 
-<<<<<<< HEAD
 # whiskers
 p.rect(countries, lower.score, 0.2, 0.01, line_color="black")
-=======
 # whiskers (almost-0 height rects simpler than segments)
->>>>>>> 0d46b3fb714d5d0151b0443bf6e186edf0695c31
 p.rect(countries, upper.score, 0.2, 0.01, line_color="black")
 p.rect(countries, lower.score, 0.2, 0.01, line_color="black")
 
@@ -86,3 +83,14 @@ def calculate_median_j():
     # average median
     median_j_range = (median_j_range/len(j_range2))
     return median_j_range
+
+def calculate_median_h():
+    median_h_range = 0
+    h_range2 = ['Guatemala', 'El Salvador', 'Honduras', 'Costa Rica', 'Panama']
+    # add all median scores
+    for h in h_range2:
+        median_h_range += q2.score[h]
+    # average median
+    median_h_range = (median_h_range/len(h_range2))
+    # print(median_h_range)
+    return median_h_range

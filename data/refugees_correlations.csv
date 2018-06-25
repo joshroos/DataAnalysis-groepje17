@@ -1,0 +1,72 @@
+country, correlation, n 
+Afghanistan,0.301,14
+Algeria,1.0,2
+Armenia,-0.928,6
+Bangladesh,0.512,13
+Benin,-0.353,14
+Bhutan,nan,7
+Bolivia,0.735,7
+Burkina Faso,0.12,25
+Burundi,0.792,10
+Cambodia,-0.449,14
+Cameroon,-0.91,6
+Cape Verde,nan,0
+Central African Republic,0.538,13
+Chad,0.826,14
+Colombia,0.837,12
+Congo,nan,0
+Costa Rica,0.09,10
+Cote d'Ivoire,-0.693,12
+Democratic Republic of the Congo,nan,0
+Djibouti,-0.811,9
+El Salvador,-0.389,12
+Ethiopia,0.379,12
+Gambia,nan,0
+Ghana,0.032,9
+Guatemala,-0.839,15
+Guinea-Bissau,-0.516,10
+Guinea,0.777,9
+Haiti,nan,12
+Honduras,0.28,10
+India,0.037,23
+Indonesia,0.175,10
+Iran  (Islamic Republic of),nan,0
+Iraq,0.881,5
+Jordan,0.979,6
+Kenya,0.883,11
+Kyrgyzstan,nan,0
+Lao People's Democratic Republic,nan,0
+Lebanon,0.403,5
+Liberia,0.578,11
+Madagascar,nan,13
+Malawi,0.751,14
+Mali,0.443,14
+Mauritania,0.087,9
+Mozambique,0.853,14
+Myanmar,nan,9
+Nepal,-0.693,16
+Niger,0.368,23
+Nigeria,0.608,14
+Pakistan,0.684,13
+Panama,0.801,9
+Peru,0.407,11
+Philippines,0.719,17
+Rwanda,0.341,8
+Senegal,-0.008,17
+Somalia,0.995,5
+Sri Lanka,0.332,13
+Swaziland,-0.431,13
+Syrian Arab Republic,-0.694,6
+Tajikistan,0.016,15
+Timor-Leste,nan,6
+Turkey,-0.603,4
+Uganda,0.421,6
+Ukraine,-0.298,3
+United Republic of Tanzania,nan,0
+Yemen,nan,0
+Zambia,-0.737,14
+Zimbabwe,0.942,7
+State of Palestine,nan,0
+Sudan,0.477,14
+Egypt,nan,0
+South Sudan,nan,11

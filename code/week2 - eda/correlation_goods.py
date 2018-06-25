@@ -6,10 +6,10 @@ import io
 from pandas import ExcelWriter
 import numpy as np
 
-#rainfall = pd.read_csv('../../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-#exchangerate = pd.read_excel('../../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
-data_correlation = pd.read_csv('../../data/corrcoef.csv', encoding='latin-1')
+#rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
+#exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
+data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
+data_correlation = pd.read_csv('../visualizations/corrcoef.csv', encoding='latin-1')
 
 def best_correlation(data_correlation):
     
@@ -20,6 +20,7 @@ def best_correlation(data_correlation):
     combinations = []
     correlations = []
 
+    #compares the correlations of all products per country
     for product1 in products:
         for product2 in products:
             if product1 != product2:
@@ -76,7 +77,7 @@ def best_correlation(data_correlation):
 
     return         
 
-data_combinations = pd.read_csv('../../data/combination_correlations.csv', encoding='latin-1')
+data_combinations = pd.read_csv('../visualizations/combination_correlations.csv', encoding='latin-1')
 
 def find_things(data_combinations, n):
 
@@ -99,7 +100,7 @@ def find_things(data_combinations, n):
         countriesnew.append(countries[x].split(' & '))
         combinationsnew.append(combinations[x].split(' & '))
         correlationsnew.append(correlations[x].split(' & '))
-
+    
     print(countriesnew)
     print(combinationsnew)
     print(correlationsnew)
@@ -108,8 +109,6 @@ def find_things(data_combinations, n):
 #print(find_things(data_combinations, 1))
 
 def compare_amount(data_correlation):
-
-
     country = data_correlation.loc[data_correlation['combinations'] == 'Bulgur & Salt', 'country']
     country = country.tolist()
     countrynew = []

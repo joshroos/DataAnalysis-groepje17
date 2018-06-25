@@ -10,7 +10,14 @@ wfp_df = pd.read_csv(file_wfp, encoding='latin-1', error_bad_lines=False)
 
 # variables for retrieving specific correlations of specific country
 # country = 'Jordan'
-good = 'Rice'
+
+wfp_df.loc[wfp_df['cm_name'].str.contains('Millet'), 'cm_name'] = 'Grain'
+wfp_df.loc[wfp_df['cm_name'].str.contains('Sorghum'), 'cm_name'] = 'Grain'
+wfp_df.loc[wfp_df['cm_name'].str.contains('Maize'), 'cm_name'] = 'Grain'
+wfp_df.loc[wfp_df['cm_name'] == 'Wheat', 'cm_name'] = 'Grain'
+wfp_df.loc[wfp_df['cm_name'].str.contains('Rice'), 'cm_name'] = 'Grain'
+
+good = 'Grain'
 
 
 # calculates the correlation of prices of a good with number of refugees
@@ -35,10 +42,11 @@ def scatter_refugees(df, wfp_df, country, good):
             prices.append(val.mean())
 
     # calculates correlation coefficient
-    if prices and refugees:
+    if prices is not None and refugees is not None:
         coeff = np.corrcoef(refugees, prices)
         coeff = round(coeff[0][1], 3)
         print('{} : {} of length {}'.format(country, coeff, len(prices)))
+        return coeff, len(prices)
 
     # possible code for a specific plot of the correlation
     # p = figure(title="Refugees Jordan", toolbar_location=None, tools='hover')
@@ -54,7 +62,15 @@ def scatter_refugees(df, wfp_df, country, good):
 
 
 # calculates coefficients for all countries
-countries = wfp_df.loc[wfp_df['cm_name'] == 'Rice', 'adm0_name']
+countries = wfp_df.loc[wfp_df['cm_name'] == good, 'adm0_name']
 countries = countries.unique()
+list_coeff = []
+download = "../../data/refugees_correlations.csv" 
+csv = open(download, "w") 
+columnTitleRow = "country, correlation, n \n"
+csv.write(columnTitleRow)
 for country in countries:
-    scatter_refugees(df, wfp_df, country, good)
+    coeff, n = scatter_refugees(df, wfp_df, country, good)
+    row = country  + "," + str(coeff) + "," + str(n) + "\n"
+    csv.write(row)
+

@@ -42,7 +42,7 @@ def data_aggregate(data):
 
     
     categories = ['Apples', 'Bananas', 'Beans', 'Bread', 'Cassava', 'Cheese', 'Chickpeas',
-    'Chili', 'Coffee', 'Cowpeas','Cucumbers', 'Eggs', 'Fish', 'Gari',
+    'Chili', 'Coffee', 'Cowpeas','Cucumbers', 'Eggs', 'Exchange Rate', 'Fish', 'Gari',
     'Garlic', 'Groundnuts', 'Lentils', 'Livestock', 'Maize', 'Meat', 'Milk', 'Millet',
     'Noodles', 'Oil', 'Onions', 'Oranges', 'Peas', 'Plantains', 'Potatoes',
     'Salt', 'Sorghum', 'Sugar', 'Tea', 'Tomatoes', 'Wage', 'Water', 'Wheat flour', 'Yam', 'Rice']

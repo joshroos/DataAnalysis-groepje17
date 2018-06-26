@@ -18,8 +18,8 @@ from sklearn.metrics import mean_squared_error
 data_wfp = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
 
 # goods and country to be plotted
-goods = ['Bread', 'Eggs', 'Meat', 'Tea']
-country = data_wfp['adm0_name'] == 'Kyrgyzstan'
+goods = ['Oil', 'Rice', 'Flour', 'Tea']
+#country = data_wfp['adm0_name'] == 'Syrian Arab Republic'
 
 
 # makes ColumnDataSource of necessary data
@@ -58,9 +58,9 @@ def make_source(goods, country, data_wfp):
 
     # makes dict, manual changes of names necessary
     data = dict(
-            Bread=prices1,
-            Eggs=prices2,
-            Meat=prices3,
+            Oil=prices1,
+            Rice=prices2,
+            Flour=prices3,
             Tea=prices4,)
 
     source = ColumnDataSource(data)
@@ -78,7 +78,7 @@ def make_scatter(source, data, xname, yname, xax=False, yax=False):
         x_range=xdr, y_range=ydr, background_fill_color="#efe8e2",
         border_fill_color='white', plot_width=200 + mbl, plot_height=200 + mbb,
         min_border_left=2+mbl, min_border_right=2, min_border_top=2,
-        min_border_bottom=2+mbb)
+        min_border_bottom=2+mbb, title= 'Syria')
 
     # plots points
     circle = Circle(x=xname, y=yname, fill_color="blue", fill_alpha=0.2,
@@ -87,6 +87,8 @@ def make_scatter(source, data, xname, yname, xax=False, yax=False):
 
     # calculates and plots regression line
     a, b, mse = make_regression_line(data, xname, yname)
+    mse_mean = mse.mean()
+    print(xname, yname, mse_mean)
     x = data[xname]
     plot.line(x, a * x + b, color='red')
     plot.axis.visible = False
@@ -120,7 +122,7 @@ def make_dist(data, xname, xax=False, yax=False):
     ydr = DataRange1d(bounds=None)
     mbl = 40 if yax else 0
     mbb = 40 if xax else 0
-    plot = figure(x_range=xdr, y_range=ydr, tools="save", x_axis_label="",
+    plot = figure(x_range=xdr, y_range=ydr, tools="hover, save, reset", x_axis_label="",
                   y_axis_label="", background_fill_color="#E8DDCB",
                   plot_width=200+mbl, plot_height=200+mbb,
                   min_border_left=2+mbl, min_border_right=2, min_border_top=2,
@@ -214,6 +216,7 @@ def make_regression_line(data, xname, yname):
     y = a * x + b
 
     mse = mean_squared_error(r, y)
+
     return a, b, mse
 
 
@@ -249,5 +252,87 @@ def make_gridplot(goods, country, data_wfp):
     output_file(filename, title="Scatter Matrix")
     show(grid)
 
+def gridplot_middleeast(goods, oil_rice_range, data_wfp):
+    x = 0
 
-make_gridplot(goods, country, data_wfp)
+    for country in oil_rice_range_middle_east:
+        x+=1
+        country = data_wfp['adm0_name'] == country
+ 
+        source, data = make_source(goods, country, data_wfp)
+        name = 'p' + str(x)
+        name = make_scatter(source, data,'Oil', 'Rice', 40, 40)
+
+    
+    filename = "riceandoil_middleeast.html"
+    output_file(filename, title="Rice and Oil Middle East")
+    p = gridplot([[p1, p2, p3, p4], [p5, p6, p7, p8]])
+    show(p)
+
+    return
+
+
+#make_gridplot(goods, country, data_wfp)
+
+oil_rice_range_ middle_east = ['Armenia', 'Iran  (Islamic Republic of)', 'Iraq', 'Jordan', 'Syrian Arab Republic', 'Turkey', 'Yemen']
+oil_rice_range_ west_africa = ['Algeria', "Cote d'Ivoire", 'Guinea-Bissau', 'Guinea']
+oil_rice_range_east_africa = ['Madagascar', 'Mozambique']
+oil_rice_range_south_asia = ['Bangladesh', 'India', 'Pakistan']
+
+# countries East Africa
+h_range = ['Mozambique', 'Zambia','United Republic of Tanzania', 'Madagascar', 'Malawi', 'Burundi', 'Afghanistan']
+# countries Middle East
+i_range = ['Armenia', 'Iraq', 'Iran  (Islamic Republic of)','Turkey','Syrian Arab Republic', 'Jordan', 'Yemen','Afghanistan']
+# countries West Afrika
+j_range = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger', 'Guinea', 'Guinea-Bissau', 'Ghana', 'Afghanistan']
+# countries South Asia
+k_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka', 'Afghanistan']
+
+gridplot_middleeast(goods,i_range,data_wfp)
+
+# finds the countries withing the regions that has data about two given goods
+def find_countries_with_goods(data_wfp, good1, good2, i_range, j_range, h_range, k_range):
+
+    good1 = data_wfp.loc[(data_wfp['cm_name'] == good1), 'adm0_name'].unique()
+    good2 = data_wfp.loc[(data_wfp['cm_name'] == good2), 'adm0_name'].unique()
+
+    countries = []
+
+    for x in good1:
+        if x in good2:
+            countries.append(x)
+
+    print(countries)
+
+    middleeast = []
+
+    for i in countries:
+        if i in i_range:
+            middleeast.append(i)
+
+    westafrica = []
+
+    for i in countries:
+        if i in j_range:
+            westafrica.append(i)
+
+    eastafrica = []
+
+    for i in countries:
+        if i in h_range:
+            eastafrica.append(i)
+
+    southasia = []
+
+    for i in countries:
+        if i in k_range:
+            southasia.append(i)
+
+    print(middleeast)
+    print(westafrica)
+    print(eastafrica)
+    print(southasia)
+
+    return
+
+

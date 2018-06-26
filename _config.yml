@@ -1,4 +1,4 @@
-name: Hank Quinlan, Horrible Cop
+name: World Food Pricing
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-slate

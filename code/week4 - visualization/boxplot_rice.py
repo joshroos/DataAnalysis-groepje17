@@ -42,7 +42,7 @@ if not out.empty:
                 outx.append(country)
                 outy.append(value)
 
-i = ['Algeria', 'Armenia', 'Yemen']
+i = ['Algeria', 'Armenia', 'Yemen', 'Afghanistan']
 p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="", x_range=i)
 
 # if no outliers, shrink lengths of stems to be no longer than the minimums or maximums
@@ -68,6 +68,6 @@ p.ygrid.grid_line_color = "white"
 p.grid.grid_line_width = 2
 p.xaxis.major_label_text_font_size="12pt"
 
-output_file("../visualizations/plots/boxplot.html", title="boxplot.py example")
+output_file("box.html", title="boxplot.py example")
 
 show(p)

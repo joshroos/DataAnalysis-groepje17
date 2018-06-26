@@ -20,13 +20,19 @@ iqr = q3 - q1
 upper = q3 + 1.5*iqr
 lower = q1 - 1.5*iqr
 
+# countries East Africa
+h_range = ['Mozambique', 'Zambia','United Republic of Tanzania', 'Madagascar', 'Malawi', 'Burundi', 'Afghanistan']
 # countries Middle East
 i_range = ['Armenia', 'Iraq', 'Iran  (Islamic Republic of)','Turkey','Syrian Arab Republic', 'Jordan', 'Yemen','Afghanistan']
 # countries West Afrika
 j_range = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger', 'Guinea', 'Guinea-Bissau', 'Ghana', 'Afghanistan']
-h_range = ['Guatemala', 'El Salvador', 'Honduras', 'Costa Rica', 'Panama', 'Afghanistan']
+# countries South Asia
+k_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka', 'Afghanistan']
+
+
+
 # plot figure
-p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="Price of Rice Central America", x_range=h_range)
+p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5", title="Price of Rice South Asia", x_range=k_range)
 
 # shrink lengths of stems to be no longer than the minimums or maximums
 qmin = groups.quantile(q=0.00)
@@ -71,6 +77,7 @@ def calculate_median_i():
         median_i_range += q2.score[i]
     # average median
     median_i_range = (median_i_range/len(i_range2))
+    print('midden oosten', median_i_range)
     return median_i_range
 
 # calculate average median West Africa
@@ -82,15 +89,31 @@ def calculate_median_j():
         median_j_range += q2.score[j]
     # average median
     median_j_range = (median_j_range/len(j_range2))
+    print('west afrika', median_j_range)
     return median_j_range
 
 def calculate_median_h():
     median_h_range = 0
-    h_range2 = ['Guatemala', 'El Salvador', 'Honduras', 'Costa Rica', 'Panama']
+    h_range2 = ['Mozambique', 'Zambia','United Republic of Tanzania', 'Madagascar', 'Malawi', 'Burundi']
     # add all median scores
     for h in h_range2:
         median_h_range += q2.score[h]
     # average median
     median_h_range = (median_h_range/len(h_range2))
-    # print(median_h_range)
+    print('oost afrika', median_h_range)
     return median_h_range
+
+def calculate_median_k():
+    median_k_range = 0
+    k_range2 = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka']
+    # add all median scores
+    for k in k_range2:
+        median_k_range += q2.score[k]
+    # average median
+    median_k_range = (median_k_range/len(k_range2))
+    print('zuid azie', median_k_range)
+    return median_k_range
+calculate_median_i()
+calculate_median_j()
+calculate_median_h()
+calculate_median_k()

@@ -1,2 +1,16 @@
 product, country, n, correlation
-Bread,South Sudan,2,-1.0
+Bread,Afghanistan,2,-1.0
+Bread,Ethiopia,1,-0.9940580192176464
+Bread,Guinea-Bissau,4,0.6523309553221416
+Bread,India,1,-0.007457583483304438
+Bread,Indonesia,4,0.13879947324048394
+Bread,Kyrgyzstan,3,-0.006337766910784462
+Bread,Mauritania,15,0.19052497841748783
+Bread,Nepal,4,0.19145498975010553
+Bread,Nigeria,4,-0.059772978219077816
+Bread,Pakistan,5,-0.0008264374703985039
+Bread,Rwanda,10,0.07485312080389527
+Bread,Tajikistan,11,0.06629591834695397
+Bread,Yemen,4,0.06038100446338358
+Bread,Zimbabwe,6,0.04302733169756731
+Bread,Sudan,2,0.1779840217603892

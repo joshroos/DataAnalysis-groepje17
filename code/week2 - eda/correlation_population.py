@@ -55,10 +55,10 @@ def correlation_population(data_all):
             correlation = np.corrcoef(prices, population_country)
             all_products.append(k)
             country_withcorrelation.append(j)
-            print(j, k, correlation)
             correlations.append(correlation[0,1])
             Amount_of_n.append(n)
-    
+            print(j, ",", k, ",", n, ",", correlation[0,1])
+        
 
     #print(country_withcorrelation, Amount_of_n, all_products, correlations)
 
@@ -73,7 +73,7 @@ def correlation_population(data_all):
 
     return
 
-#correlation_population(data_all)
+correlation_population(data_all)
 
 correlation_goods = pd.read_csv('../../data/correlation_between_goods.csv', encoding='latin-1')
 
@@ -82,4 +82,4 @@ def negative_correlations(correlation_goods):
     negative_correlation = correlation_goods.loc[correlation_goods['correlation'] < 0, 'food_combination']
     return negative_correlation
 
-print(negative_correlations(correlation_goods))
+#print(negative_correlations(correlation_goods))

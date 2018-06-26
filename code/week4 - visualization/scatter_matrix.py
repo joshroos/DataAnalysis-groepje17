@@ -18,8 +18,8 @@ from sklearn.metrics import mean_squared_error
 data_wfp = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
 
 # goods and country to be plotted
-goods = ['Milk', 'Sour cream', 'Butter', 'Curd']
-country = data_wfp['adm0_name'] == 'Ukraine'
+goods = ['Bread', 'Eggs', 'Meat', 'Tea']
+country = data_wfp['adm0_name'] == 'Kyrgyzstan'
 
 
 # makes ColumnDataSource of necessary data
@@ -58,10 +58,10 @@ def make_source(goods, country, data_wfp):
 
     # makes dict, manual changes of names necessary
     data = dict(
-            Milk=prices1,
-            Sour_cream=prices2,
-            Curd=prices3,
-            Butter=prices4,)
+            Bread=prices1,
+            Eggs=prices2,
+            Meat=prices3,
+            Tea=prices4,)
 
     source = ColumnDataSource(data)
     return source, data
@@ -245,7 +245,7 @@ def make_gridplot(goods, country, data_wfp):
 
         plots.append(row)
     grid = gridplot(plots)
-    filename = "../visualizations/plots/scatter_matrix.html"
+    filename = "scatter_matrix_kyrgyzstan.html"
     output_file(filename, title="Scatter Matrix")
     show(grid)
 

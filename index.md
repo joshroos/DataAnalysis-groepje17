@@ -1,2 +1,1 @@
-theme: jekyll-theme-slate
 ### Dit is een test voor de website

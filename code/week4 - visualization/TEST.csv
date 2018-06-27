@@ -1,0 +1,700 @@
+Afghanistan,Bread,-0.190738619753,4
+Afghanistan,Wheat,0.627563948995,15
+Afghanistan,Rice,0.207606429588,11
+Afghanistan,Wage,0.921134160471,6
+Afghanistan,Fuel (diesel),0.08975510933,8
+Afghanistan,Exchange rate,-0.279863258602,4
+Armenia,Flour,0.67159301963,7
+Armenia,Milk,0.544767180443,6
+Armenia,Potatoes,0.181777240358,6
+Armenia,Eggs,0.682761725462,6
+Armenia,Meat,0.135066249715,6
+Armenia,Oil,0.0789926103472,6
+Armenia,Sugar,0.147629135157,6
+Armenia,Lentils,-0.288407192427,6
+Armenia,Pasta,0.170116146014,6
+Armenia,Tomatoes,0.704644218977,6
+Armenia,Rice,-0.406274251294,7
+Armenia,Cheese,0.488542074448,6
+Armenia,Carrots,0.681242792298,6
+Armenia,Onions,0.566819728276,6
+Armenia,Cabbage,0.878894885283,6
+Armenia,Apples,0.26935240397,6
+Armenia,Cucumbers,-0.129014065565,6
+Armenia,Fuel (diesel),0.941945098447,17
+Armenia,Fuel (petrol-gasoline),0.936888560036,18
+Armenia,Fish,0.553086726242,6
+Armenia,Exchange rate,0.550563303291,4
+Azerbaijan,Flour,0.766125647879,4
+Bangladesh,Flour,0.1693215008,13
+Bangladesh,Rice,0.598740988671,14
+Bangladesh,Lentils,0.534705404651,13
+Bangladesh,Oil,0.104741159985,13
+Benin,Rice,0.926205077073,14
+Benin,Sorghum,0.764706686406,14
+Benin,Beans,0.246385961987,10
+Benin,Maize,0.549704436729,14
+Benin,Flour,0.154762879342,10
+Benin,Millet,0.866914863699,10
+Bhutan,Flour,0.836733432309,7
+Bhutan,Rice,0.966040056501,7
+Bolivia,Meat,0.526277882105,8
+Bolivia,Noodles,0.739922533433,8
+Bolivia,Potatoes,0.341930575237,8
+Bolivia,Rice,0.652014206943,8
+Bolivia,Bread,0.273250790863,6
+Burkina Faso,Maize,0.718864811649,16
+Burkina Faso,Sorghum,0.778763379261,16
+Burkina Faso,Millet,0.847191162853,26
+Burkina Faso,Beans,0.151147882693,6
+Burkina Faso,Rice,0.960214188198,8
+Burundi,Beans,0.807836842731,15
+Burundi,Maize,0.790936435894,11
+Burundi,Flour,0.757734892662,15
+Burundi,Sweet potatoes,0.617824822653,15
+Burundi,Rice,0.034586686348,9
+Cambodia,Oil,-0.481908254402,4
+Cambodia,Rice,0.77850692681,15
+Cambodia,Wage,0.898041797629,5
+Cambodia,Meat,-0.979397456052,4
+Cameroon,Maize,-0.374076787306,7
+Cameroon,Rice,-0.50654213757,7
+Cameroon,Groundnuts,-0.0625386168383,7
+Cameroon,Beans,-0.11508400283,7
+Cameroon,Sorghum,-0.0936791420631,7
+Cameroon,Sesame,0.920256726846,6
+Cameroon,Onions,0.398818568539,7
+Cameroon,Peas,-0.0424077047163,6
+Cameroon,Soybeans,-0.992318985379,4
+Cameroon,Cassava,-0.403412615973,6
+Cape Verde,Flour,0.966253830777,4
+Cape Verde,Rice,0.905741478783,4
+Central African Republic,Maize,-0.160529187749,14
+Central African Republic,Rice,0.276487055054,13
+Central African Republic,Flour,0.626223122605,9
+Central African Republic,Oil,-0.598089455442,5
+Central African Republic,Millet,-0.0323881786127,14
+Central African Republic,Groundnuts,-0.912789044546,4
+Central African Republic,Cassava,0.0516265128769,14
+Chad,Rice,0.841131015218,15
+Chad,Maize,0.916572822115,15
+Chad,Millet,0.90694434902,15
+Chad,Sorghum,0.830232134326,15
+Chad,Livestock,0.937694215294,4
+Chad,Exchange rate,-0.269049809877,4
+Colombia,Flour,0.44037657625,13
+Colombia,Maize,0.906442655928,13
+Colombia,Beans,0.178807031311,13
+Colombia,Potatoes,0.816406054023,13
+Colombia,Meat,0.777987584294,13
+Colombia,Oil,0.184857727336,13
+Colombia,Sugar,0.858421694517,13
+Colombia,Onions,-0.286428993588,6
+Colombia,Tomatoes,0.903671722532,6
+Colombia,Rice,0.641096391437,6
+Colombia,Plantains,0.580700099717,6
+Colombia,Cocoa,0.907459224523,5
+Colombia,Coffee,-0.34158821176,10
+Colombia,Carrots,0.305226675386,5
+Colombia,Fish,0.79057279555,5
+Colombia,Chickpeas,0.656911613022,11
+Colombia,Eggs,0.877378521914,13
+Colombia,Peas,0.778154535164,13
+Colombia,Oranges,0.313675210482,5
+Colombia,Bananas,0.991507023141,5
+Colombia,Fuel (diesel),0.978090595935,5
+Colombia,Fuel (petrol-gasoline),0.984262240227,5
+Colombia,Cassava,0.452172438547,5
+Colombia,Cheese,0.986432348368,5
+Colombia,Lentils,0.277722928946,13
+Colombia,Milk,-0.0746809477128,7
+Colombia,Wage,0.998547528499,5
+Congo,Flour,0.933203024923,7
+Congo,Oil,0.691509637356,6
+Congo,Beans,0.630503128953,7
+Congo,Groundnuts,-0.204289376033,6
+Congo,Meat,0.353329189489,6
+Congo,Rice,0.796207182475,7
+Congo,Cassava,0.726794550535,7
+Congo,Fish,-0.612469689319,6
+Costa Rica,Maize,0.837363008936,10
+Costa Rica,Beans,0.613924450693,10
+Costa Rica,Rice,0.538171936869,10
+Cote d'Ivoire,Maize,0.775882624008,13
+Cote d'Ivoire,Oil,-0.217481304111,7
+Cote d'Ivoire,Rice,0.800927923378,13
+Cote d'Ivoire,Yam,0.924853277353,10
+Cote d'Ivoire,Meat,0.64213764168,7
+Cote d'Ivoire,Cornstarch,0.585896808617,7
+Cote d'Ivoire,Fish,0.957922522746,7
+Cote d'Ivoire,Groundnuts,-0.0507105951322,7
+Cote d'Ivoire,Cassava,-0.199982006797,12
+Cote d'Ivoire,Cocoa,0.755392485145,7
+Democratic Republic of the Congo,Beans,-0.638836494945,10
+Democratic Republic of the Congo,Maize,-0.584552605513,10
+Democratic Republic of the Congo,Flour,-0.595656065734,10
+Democratic Republic of the Congo,Oil,0.447266998937,10
+Democratic Republic of the Congo,Rice,-0.274550190384,10
+Democratic Republic of the Congo,Cassava,-0.472672028569,10
+Democratic Republic of the Congo,Meat,-0.297736464773,10
+Democratic Republic of the Congo,Sugar,-0.269721143492,9
+Democratic Republic of the Congo,Plantains,-0.517014510173,10
+Democratic Republic of the Congo,Salt,0.356189793322,9
+Democratic Republic of the Congo,Fuel (diesel),-0.759016856365,7
+Democratic Republic of the Congo,Fuel (petrol-gasoline),-0.553429518993,4
+Democratic Republic of the Congo,Fish,0.435537518815,10
+Democratic Republic of the Congo,Transport (public),-0.7518319925,7
+Democratic Republic of the Congo,Exchange rate,-0.531954473685,7
+Democratic Republic of the Congo,Sweet potatoes,-0.187482669106,4
+Democratic Republic of the Congo,Groundnuts,-0.220137756179,4
+Djibouti,Bread,-0.748916835087,6
+Djibouti,Flour,-0.384845267651,10
+Djibouti,Rice,-0.871326434742,10
+Djibouti,Sorghum,-0.326342930394,6
+Djibouti,Beans,0.374345995772,6
+Djibouti,Millet,-0.16857353737,6
+Djibouti,Oil,-0.950439672302,6
+Djibouti,Sugar,-0.616238471446,6
+Djibouti,Pasta,-0.710847753246,6
+Djibouti,Fuel (kerosene),-0.899818005426,6
+El Salvador,Rice,0.408737406315,13
+El Salvador,Maize,0.373649800206,13
+El Salvador,Beans,0.323788012638,13
+Ethiopia,Sorghum,0.623593082371,13
+Ethiopia,Maize,0.352296284772,13
+Ethiopia,Wheat,0.435543154795,13
+Ethiopia,Rice,0.0856698818927,4
+Ethiopia,Milk,0.916427429607,4
+Ethiopia,Sugar,0.92396978701,4
+Ethiopia,Pasta,0.901927241011,4
+Ethiopia,Flour,-0.209097473174,4
+Ethiopia,Fuel (kerosene),-0.706135950952,4
+Ethiopia,Fuel (diesel),-0.758126245216,4
+Ethiopia,Fuel (petrol-gasoline),-0.878253219056,4
+Ethiopia,Exchange rate,0.668433794704,4
+Gambia,Maize,0.534858486917,12
+Gambia,Sorghum,0.795818090649,12
+Gambia,Millet,0.71788214525,12
+Gambia,Groundnuts,0.805409588674,12
+Gambia,Rice,0.792339969228,12
+Gambia,Bread,0.599299829077,5
+Gambia,Oil,0.664755103616,5
+Gambia,Cassava,0.962884163915,5
+Gambia,Flour,0.0205770691342,5
+Gambia,Milk,0.883116098933,5
+Gambia,Sweet potatoes,0.848393681455,4
+Gambia,Eggs,0.593473457311,5
+Gambia,Meat,0.944508484297,5
+Gambia,Sugar,0.611008306019,5
+Gambia,Garlic,0.858479830803,5
+Gambia,Tomatoes,0.0176134225073,5
+Gambia,Potatoes,0.82440190384,4
+Gambia,Fish,0.944395328473,5
+Gambia,Carrots,-0.5724782198,5
+Gambia,Cashew,0.383305918627,4
+Gambia,Onions,0.374384829838,5
+Gambia,Cabbage,0.330071124784,5
+Gambia,Salt,-0.152976064738,5
+Gambia,Coffee,0.936165487672,5
+Gambia,Peas,-0.0415597493156,4
+Gambia,Apples,0.66172467609,5
+Gambia,Oranges,0.981485932091,5
+Gambia,Bananas,-0.37998729055,5
+Gambia,Beans,-0.268866463273,5
+Gambia,Tea,0.874173231624,5
+Gambia,Fuel (kerosene),0.741648195323,5
+Gambia,Fuel (diesel),-0.756318733837,5
+Gambia,Fuel (petrol-gasoline),-0.792683497192,5
+Georgia,Flour,0.95483552359,5
+Ghana,Maize,-0.178456327328,10
+Ghana,Rice,0.427127159652,10
+Ghana,Cassava,0.7819953675,10
+Ghana,Plantains,0.74441304111,10
+Ghana,Yam,0.785769430046,10
+Guatemala,Bread,0.989722951033,15
+Guatemala,Milk,0.986143007869,7
+Guatemala,Potatoes,0.94339438301,7
+Guatemala,Beans,0.884634715486,15
+Guatemala,Eggs,0.964051816024,7
+Guatemala,Meat,0.97863851367,7
+Guatemala,Oil,0.970420480937,7
+Guatemala,Sugar,0.89504421012,7
+Guatemala,Pasta,0.97936071717,7
+Guatemala,Tomatoes,0.930654047247,7
+Guatemala,Cheese,0.990166695147,7
+Guatemala,Plantains,0.976816992248,7
+Guatemala,Coffee,0.926973566569,7
+Guatemala,Onions,0.911188752238,7
+Guatemala,Salt,0.995680303269,7
+Guatemala,Rice,0.882572429812,15
+Guatemala,Bananas,0.977253831124,7
+Guatemala,Tortilla (maize),0.984151176225,15
+Guatemala,Fuel (diesel),0.276628940373,7
+Guatemala,Fuel (petrol-gasoline),0.235106654735,7
+Guatemala,Maize,0.838547398792,14
+Guinea-Bissau,Maize,-0.648598160673,11
+Guinea-Bissau,Oil,-0.175106469058,11
+Guinea-Bissau,Rice,-0.0887201108886,11
+Guinea-Bissau,Sorghum,-0.706928522947,11
+Guinea-Bissau,Millet,-0.664566089625,10
+Guinea-Bissau,Wheat,0.615344574067,10
+Guinea-Bissau,Sugar,0.493923212434,10
+Guinea-Bissau,Fonio,-0.68047315163,11
+Guinea-Bissau,Salt,-0.793215987764,5
+Guinea,Oil,-0.333041513084,8
+Guinea,Rice,-0.797298628977,10
+Guinea,Bread,-0.289170222297,6
+Guinea,Sugar,-0.857867565041,7
+Guinea,Tomatoes,0.758791337464,6
+Guinea,Meat,-0.356008476458,6
+Guinea,Salt,-0.627661334893,6
+Guinea,Flour,-0.0848270464556,5
+Guinea,Beans,-0.528569620819,5
+Haiti,Rice,0.380961526305,13
+Haiti,Beans,-0.456706768542,6
+Haiti,Oil,0.084834994246,6
+Haiti,Flour,0.525607021629,13
+Honduras,Maize,8.56989100455e-05,11
+Honduras,Beans,-0.20671846024,11
+Honduras,Rice,0.276781171231,11
+Honduras,Flour,0.329210523538,7
+Honduras,Sorghum,0.404101207371,11
+India,Rice,0.949645951068,24
+India,Flour,0.598482740529,6
+India,Lentils,0.7075124879,6
+India,Potatoes,-0.607208261597,6
+India,Sugar,0.847950710194,20
+India,Tomatoes,0.0997201547835,6
+India,Onions,-0.471185967005,6
+India,Tea,-0.826672393191,5
+India,Oil,0.788797420986,20
+India,Salt,-0.130504064716,6
+India,Milk,0.858858155356,6
+India,Wheat,0.944056313106,24
+Indonesia,Rice,0.933903799737,11
+Indonesia,Wheat,0.12690435782,11
+Indonesia,Meat,0.962775421563,11
+Indonesia,Chili,0.80486730477,11
+Indonesia,Eggs,0.891331273921,11
+Indonesia,Milk,0.587134012967,11
+Indonesia,Oil,0.128133300226,11
+Indonesia,Sugar,0.777787537183,11
+Indonesia,Fuel (kerosene),0.938590441751,7
+Iran  (Islamic Republic of),Rice,-0.704521314239,6
+Iran  (Islamic Republic of),Eggs,-0.794461822762,6
+Iran  (Islamic Republic of),Oil,-0.944762613065,6
+Iran  (Islamic Republic of),Sugar,-0.704796822122,6
+Iran  (Islamic Republic of),Lentils,-0.73238544138,6
+Iraq,Rice,-0.596735048114,5
+Iraq,Flour,-0.969568184392,5
+Iraq,Sugar,0.908516500459,5
+Iraq,Bread,-0.927351279082,5
+Iraq,Oil,0.716780027089,4
+Jordan,Rice,0.946906585926,7
+Jordan,Potatoes,-0.0382503738422,6
+Jordan,Eggs,-0.887745574728,6
+Jordan,Meat,0.601056609186,6
+Jordan,Oil,0.872174065529,7
+Jordan,Sugar,0.597893379526,6
+Jordan,Garlic,0.604469483808,6
+Jordan,Lentils,0.312708514948,6
+Jordan,Tomatoes,0.598037757052,6
+Jordan,Onions,-0.27577408362,6
+Jordan,Apples,-0.594760741386,6
+Jordan,Oranges,-0.926992880976,6
+Jordan,Chickpeas,0.411754333738,6
+Jordan,Bananas,-0.398458322786,6
+Jordan,Cheese,0.31322844622,6
+Jordan,Bread,0.562116775747,7
+Jordan,Beans,0.608305570162,6
+Jordan,Cucumbers,0.602569943477,6
+Jordan,Milk,0.628018198433,6
+Kenya,Bread,0.591152576017,12
+Kenya,Sorghum,0.819582601923,12
+Kenya,Maize,0.665377412686,12
+Kenya,Oil,-0.0182882764527,12
+Kenya,Potatoes,0.806634964593,12
+Kenya,Beans,0.765813199043,12
+Kenya,Fuel (kerosene),-0.530473758375,4
+Kenya,Fuel (diesel),-0.574140612993,4
+Kenya,Fuel (petrol-gasoline),-0.653381693704,4
+Kenya,Milk,0.899900135894,12
+Kyrgyzstan,Maize,0.922034686238,4
+Kyrgyzstan,Rice,-0.195140599305,9
+Kyrgyzstan,Bread,0.847274396519,11
+Kyrgyzstan,Potatoes,0.554245105688,13
+Kyrgyzstan,Wheat,0.371999068458,11
+Kyrgyzstan,Eggs,0.446314002443,9
+Kyrgyzstan,Meat,0.878200503047,13
+Kyrgyzstan,Sugar,-0.222394196616,9
+Kyrgyzstan,Milk,0.129706596355,9
+Kyrgyzstan,Carrots,0.729621100143,9
+Kyrgyzstan,Oil,0.452196103034,9
+Kyrgyzstan,Onions,0.574076272314,6
+Kyrgyzstan,Tea,-0.943352515055,6
+Kyrgyzstan,Flour,-0.249088853033,9
+Kyrgyzstan,Cabbage,0.504220613089,9
+Kyrgyzstan,Salt,0.976630481865,4
+Kyrgyzstan,Peas,0.94167515497,4
+Kyrgyzstan,Apples,0.613193623203,4
+Kyrgyzstan,Beans,0.75319031661,4
+Lao People's Democratic Republic,Oil,-0.971100323283,4
+Lao People's Democratic Republic,Eggs,-0.335268907674,5
+Lao People's Democratic Republic,Meat,0.751774695549,6
+Lao People's Democratic Republic,Rice,0.654144057745,6
+Lao People's Democratic Republic,Sugar,-0.62445310784,4
+Lao People's Democratic Republic,Fuel (diesel),-0.724940812846,4
+Lao People's Democratic Republic,Fuel (petrol-gasoline),-0.790256189857,4
+Lao People's Democratic Republic,Garlic,-0.99108079539,4
+Lao People's Democratic Republic,Fish,-0.957247106102,4
+Lebanon,Beans,0.440758314653,5
+Lebanon,Eggs,-0.870699977092,5
+Lebanon,Sugar,-0.944491011369,5
+Lebanon,Lentils,0.89281755142,4
+Lebanon,Pasta,0.871848716878,5
+Lebanon,Meat,-0.768218875752,5
+Lebanon,Cabbage,-0.18963695318,4
+Lebanon,Oil,-0.958762741075,5
+Lebanon,Salt,-0.173621775255,4
+Lebanon,Milk,-0.804703098188,5
+Lebanon,Bulgur,0.257797454603,5
+Lebanon,Rice,-0.00705524417072,5
+Lebanon,Tomatoes,-0.822599962321,4
+Lebanon,Lettuce,0.604613384578,4
+Lebanon,Cheese,-0.785754842083,5
+Lebanon,Fish,-0.984205443866,5
+Lebanon,Bread,-0.938905197105,5
+Lesotho,Flour,0.400237166145,8
+Lesotho,Bread,0.496900938548,8
+Lesotho,Peas,0.247051939707,8
+Lesotho,Oil,0.551445094404,8
+Lesotho,Beans,0.201623818326,8
+Liberia,Oil,0.62785829919,11
+Liberia,Rice,0.825844849953,12
+Liberia,Cowpeas,-0.862823494699,6
+Liberia,Fuel (diesel),-0.786214939036,4
+Liberia,Fuel (petrol-gasoline),-0.131274277461,9
+Liberia,Cassava,0.875717458004,10
+Liberia,Exchange rate,-0.782993394965,4
+Liberia,Cocoa,-0.326632759466,6
+Madagascar,Rice,0.0723925358212,14
+Madagascar,Flour,-0.16010660846,7
+Madagascar,Oil,-0.139818319542,7
+Madagascar,Sugar,-0.0126675847132,7
+Madagascar,Fuel (diesel),0.346768631412,4
+Madagascar,Fuel (petrol-gasoline),0.525221610947,4
+Malawi,Beans,0.457318519143,6
+Malawi,Maize,0.377688119787,15
+Malawi,Rice,-0.0354531932649,6
+Malawi,Cassava,0.763997114154,4
+Malawi,Groundnuts,0.224577257639,6
+Mali,Maize,0.59987339172,15
+Mali,Sorghum,0.506236750801,15
+Mali,Millet,0.563121202018,15
+Mali,Rice,0.707352838471,15
+Mali,Beans,-0.78108122268,4
+Mauritania,Rice,-0.349478896423,10
+Mauritania,Wheat,0.105722431678,10
+Mauritania,Oil,0.28206887225,10
+Mauritania,Sugar,0.474692788026,10
+Mauritania,Sorghum,-0.0690134362984,10
+Mozambique,Rice,0.876913270521,15
+Mozambique,Maize,0.714348954306,15
+Mozambique,Oil,0.617856750964,15
+Mozambique,Flour,0.602046210966,7
+Mozambique,Cowpeas,0.165504739204,7
+Mozambique,Sugar,0.910797910073,15
+Mozambique,Beans,0.946939800625,15
+Mozambique,Groundnuts,0.833564964209,15
+Myanmar,Oil,-0.753674133116,10
+Myanmar,Rice,-0.813597888282,10
+Myanmar,Chickpeas,-0.62246326066,10
+Myanmar,Pulses,0.258618580679,6
+Myanmar,Salt,-0.824729909132,10
+Myanmar,Fuel (diesel),-0.132965463757,4
+Myanmar,Wage,-0.393837089047,4
+Myanmar,Onions,0.98711225528,4
+Myanmar,Garlic,0.987856593501,4
+Myanmar,Maize,-0.667487384378,4
+Myanmar,Meat,0.55759757388,4
+Myanmar,Potatoes,0.793593277597,4
+Myanmar,Tomatoes,0.615910880468,4
+Myanmar,Soybeans,-0.493777556112,4
+Nepal,Rice,0.866267708712,17
+Nepal,Wheat,0.855217887928,17
+Niger,Maize,0.838338397805,24
+Niger,Rice,-0.413614147724,10
+Niger,Sorghum,0.847400552441,24
+Niger,Millet,0.869914154057,24
+Niger,Beans,0.892611868543,19
+Nigeria,Maize,-0.376643768678,15
+Nigeria,Rice,-0.432682170531,15
+Nigeria,Sorghum,-0.405325937912,15
+Nigeria,Millet,-0.319531540829,15
+Nigeria,Bread,0.98474282227,4
+Nigeria,Oil,0.788697748697,4
+Nigeria,Yam,0.817823720342,4
+Nigeria,Groundnuts,0.904151649736,4
+Nigeria,Fuel (diesel),0.938512280288,4
+Nigeria,Fuel (petrol-gasoline),0.952705237683,4
+Nigeria,Cowpeas,0.464969604985,4
+Nigeria,Gari,-0.144125198629,4
+Pakistan,Flour,0.858798498797,14
+Pakistan,Rice,0.617085053989,14
+Pakistan,Lentils,0.214871513172,5
+Pakistan,Milk,0.0167293949725,4
+Pakistan,Oil,-0.90877153415,5
+Pakistan,Wheat,-0.80328609603,5
+Pakistan,Eggs,-0.795485517069,5
+Pakistan,Sugar,0.540497017042,5
+Pakistan,Butter,-0.899901728645,5
+Pakistan,Meat,-0.674159679156,5
+Pakistan,Salt,-0.872720152658,4
+Pakistan,Fuel (diesel),-0.822567206708,4
+Pakistan,Fuel (petrol-gasoline),-0.789918264987,4
+Pakistan,Beans,0.367641413707,4
+Pakistan,Wage,0.410971418753,5
+Panama,Rice,0.276564939148,9
+Panama,Maize,0.812168203597,9
+Peru,Maize,0.925054047667,12
+Peru,Rice,0.128455098455,12
+Peru,Potatoes,0.897721167365,12
+Peru,Meat,0.942919097835,12
+Peru,Oil,0.687869891725,12
+Peru,Sugar,0.608289931184,12
+Peru,Flour,0.85191146696,12
+Philippines,Rice,0.890758968101,18
+Philippines,Sweet potatoes,0.893828716021,10
+Philippines,Eggs,0.873954602208,10
+Philippines,Garlic,0.500235679183,9
+Philippines,Onions,0.282066408141,9
+Philippines,Tomatoes,0.0162091672365,9
+Philippines,Meat,0.620668676064,10
+Philippines,Potatoes,0.818473270877,9
+Philippines,Carrots,0.198135422207,10
+Philippines,Cabbage,0.410413321104,10
+Philippines,Fish,0.820361302358,10
+Rwanda,Maize,0.0165449802191,8
+Rwanda,Rice,-0.380487641572,8
+Rwanda,Flour,0.872496674111,8
+Rwanda,Sorghum,0.576338054514,8
+Rwanda,Cassava,0.856761909705,8
+Rwanda,Milk,-0.549805778549,4
+Rwanda,Wheat,0.356369229951,8
+Rwanda,Sweet potatoes,0.894759491495,8
+Rwanda,Chili,-0.983527032019,4
+Rwanda,Eggs,-0.930622769016,4
+Rwanda,Garlic,-0.794021121879,4
+Rwanda,Onions,-0.866507948097,4
+Rwanda,Tomatoes,-0.877962859537,4
+Rwanda,Groundnuts,-0.0423923021673,4
+Rwanda,Meat,-0.907982159808,5
+Rwanda,Potatoes,0.702484885868,8
+Rwanda,Carrots,-0.775845526565,4
+Rwanda,Cabbage,-0.721813832256,4
+Rwanda,Oranges,-0.23414990663,4
+Rwanda,Soybeans,0.380172543307,4
+Rwanda,Bananas,-0.869749385795,8
+Rwanda,Beans,0.544039097369,8
+Rwanda,Peppers (green),0.0312481331362,5
+Rwanda,Livestock,0.0957192539266,5
+Rwanda,Spinach,0.109180016011,5
+Rwanda,Guava,-0.704104529478,5
+Rwanda,Papaya,0.914329892403,5
+Rwanda,Mangoes,0.391353045152,5
+Rwanda,Eggplants,0.815401128492,7
+Rwanda,Charcoal,0.386779994897,8
+Rwanda,Passion fruit,0.920474942447,8
+Rwanda,Zucchini,-0.519423714775,5
+Rwanda,Avocados,0.819973829659,4
+Rwanda,Peas,0.824838555776,5
+Rwanda,Cucumbers,-0.989414240588,4
+Rwanda,Apples,-0.711886986598,4
+Rwanda,Cauliflower,-0.439045455127,4
+Senegal,Maize,0.920642617699,18
+Senegal,Rice,0.797531801744,18
+Senegal,Sorghum,0.886483822809,18
+Senegal,Millet,0.842586319794,18
+Somalia,Rice,0.985016704936,5
+Somalia,Oil,0.987835385707,5
+Somalia,Sorghum,0.688435977646,5
+Somalia,Fuel (diesel),0.972516423295,4
+Sri Lanka,Flour,0.704902989891,14
+Sri Lanka,Sugar,-0.777930626472,6
+Sri Lanka,Rice,0.511562453647,14
+Sri Lanka,Fuel (diesel),-0.838872879154,5
+Sri Lanka,Fuel (petrol-gasoline),-0.7151246433,5
+Swaziland,Rice,0.769961641866,10
+Swaziland,Flour,0.87261098431,10
+Swaziland,Maize,0.821299169888,14
+Swaziland,Oil,0.94760100496,7
+Swaziland,Salt,0.978608004675,7
+Swaziland,Sugar,0.500604133037,7
+Swaziland,Beans,0.628327697914,7
+Tajikistan,Maize,0.814407261551,16
+Tajikistan,Rice,0.866143495809,16
+Tajikistan,Bread,0.542509240023,16
+Tajikistan,Milk,0.900903745926,14
+Tajikistan,Potatoes,0.734699195082,16
+Tajikistan,Wheat,0.756904360009,16
+Tajikistan,Eggs,0.586139767704,14
+Tajikistan,Oil,0.765825913013,16
+Tajikistan,Sugar,0.814752195884,16
+Tajikistan,Meat,0.915269933705,16
+Tajikistan,Carrots,0.714297771441,16
+Tajikistan,Onions,0.631074595541,14
+Tajikistan,Tea,0.93806759885,16
+Tajikistan,Flour,0.733861218816,16
+Tajikistan,Cabbage,0.693008963432,16
+Tajikistan,Salt,0.75993187157,16
+Timor-Leste,Maize,0.575684713293,7
+Timor-Leste,Rice,0.667866592644,7
+Timor-Leste,Flour,-0.0543303687357,4
+Timor-Leste,Oil,-0.811501774963,4
+Timor-Leste,Fuel (kerosene),0.595395538401,4
+Timor-Leste,Fuel (diesel),-0.568902414795,4
+Timor-Leste,Fuel (petrol-gasoline),-0.610811993334,4
+Timor-Leste,Eggs,-0.825969746608,4
+Timor-Leste,Meat,-0.908233763399,4
+Turkey,Rice,0.807067667009,5
+Turkey,Flour,0.977905941909,5
+Turkey,Beans,0.883031045796,5
+Turkey,Eggs,0.945464440855,5
+Turkey,Meat,0.916563973322,5
+Turkey,Sugar,0.979458434718,5
+Turkey,Garlic,-0.309752312035,5
+Turkey,Lentils,-0.841707940167,5
+Turkey,Pasta,0.925575754488,5
+Turkey,Tomatoes,-0.862366106009,5
+Turkey,Groundnuts,0.549443936734,5
+Turkey,Bread,0.940933817007,5
+Turkey,Coffee,0.967283045952,5
+Turkey,Onions,0.706501713058,5
+Turkey,Tea,0.959369769093,5
+Turkey,Cabbage,0.911517302414,5
+Turkey,Oil,-0.814248354536,5
+Turkey,Salt,0.971415733298,5
+Turkey,Apples,0.875854876459,5
+Turkey,Cauliflower,0.724242754814,5
+Turkey,Cucumbers,0.543459451099,5
+Turkey,Chickpeas,-0.0235817353076,5
+Turkey,Bananas,0.74226845778,5
+Turkey,Bulgur,0.983246227324,5
+Turkey,Oranges,0.724175532449,5
+Turkey,Fish,0.879929420341,5
+Turkey,Milk,-0.965266538783,5
+Turkey,Cocoa (powder),0.978213008164,5
+Uganda,Beans,0.421437024319,7
+Uganda,Sorghum,0.492925277087,7
+Uganda,Maize,-0.215127110702,7
+Uganda,Millet,0.467498490313,7
+Uganda,Flour,0.613523989183,8
+Ukraine,Rice,0.561105732322,4
+Ukraine,Milk,0.920893590609,4
+Ukraine,Potatoes,0.996563640921,4
+Ukraine,Eggs,0.670282421915,4
+Ukraine,Sugar,0.991666489684,4
+Ukraine,Pasta,0.758509928269,4
+Ukraine,Meat,0.97173846001,4
+Ukraine,Carrots,-0.315883983146,4
+Ukraine,Onions,0.833190609564,4
+Ukraine,Flour,0.73161900686,4
+Ukraine,Cabbage,0.148835671791,4
+Ukraine,Oil,0.702699532482,4
+Ukraine,Fuel (diesel),0.933209502466,4
+Ukraine,Fuel (petrol-gasoline),0.96297360021,4
+Ukraine,Curd,0.992902412647,4
+Ukraine,Sour cream,0.919540259113,4
+Ukraine,Beetroots,-0.11852201487,4
+Ukraine,Butter,0.897665049153,4
+Ukraine,Buckwheat grits,-0.808419437008,4
+Ukraine,Bread,0.903306518111,4
+Ukraine,Fat (salo),0.938955772047,4
+United Republic of Tanzania,Beans,0.80607946809,11
+United Republic of Tanzania,Maize,0.748196587573,12
+United Republic of Tanzania,Rice,0.503732359379,12
+Yemen,Flour,-0.15388882498,9
+Yemen,Rice,-0.947641334584,6
+Yemen,Beans,-0.684398851209,6
+Yemen,Potatoes,-0.547362080042,6
+Yemen,Wheat,-0.148657668729,9
+Yemen,Eggs,-0.573608239043,6
+Yemen,Oil,0.395152201055,6
+Yemen,Sugar,-0.832081936517,6
+Yemen,Lentils,-0.889815037294,6
+Yemen,Tomatoes,-0.367080407987,6
+Yemen,Onions,-0.0980693359612,6
+Yemen,Salt,-0.92172724332,6
+Yemen,Fuel (diesel),-0.10181509137,5
+Yemen,Fuel (petrol-gasoline),-0.153057238317,5
+Yemen,Peas,-0.957225340761,6
+Zambia,Sorghum,0.811286640344,5
+Zambia,Maize,0.601346470902,15
+Zambia,Rice,0.885963158994,6
+Zambia,Groundnuts,0.706933564769,6
+Zambia,Flour,0.907724313172,6
+Zambia,Beans,0.782993002407,6
+Zambia,Millet,0.915905667887,5
+Zimbabwe,Beans,0.40712792202,4
+Zimbabwe,Maize,0.845930454023,8
+Zimbabwe,Sorghum,-0.81122463771,4
+Zimbabwe,Millet,-0.717195822746,4
+Zimbabwe,Wheat,-0.418574601674,4
+Zimbabwe,Oil,0.234980537113,4
+Zimbabwe,Groundnuts,0.964151499503,4
+Zimbabwe,Cowpeas,-0.0730391562044,4
+Zimbabwe,Flour,0.821605362228,4
+State of Palestine,Bread,-0.64276738814,4
+State of Palestine,Eggs,-0.597089007467,4
+State of Palestine,Meat,-0.958764261959,4
+State of Palestine,Sugar,0.557706870484,4
+State of Palestine,Lentils,0.935417224243,4
+State of Palestine,Salt,0.523058102835,4
+State of Palestine,Rice,-0.441193515842,4
+State of Palestine,Apples,-0.396057691813,4
+State of Palestine,Bananas,0.454950054564,4
+State of Palestine,Cauliflower,-0.538678467202,4
+State of Palestine,Cucumbers,-0.207635771484,4
+State of Palestine,Fish,0.605283471663,4
+State of Palestine,Milk,-0.651387820602,4
+State of Palestine,Oil,0.823405186079,4
+State of Palestine,Onions,0.541272803893,4
+State of Palestine,Oranges,-0.741108918739,4
+State of Palestine,Potatoes,0.823907022095,4
+State of Palestine,Tomatoes,-0.827698476196,4
+State of Palestine,Chickpeas,-0.509352993622,4
+State of Palestine,Tea,0.445623318438,4
+State of Palestine,Labaneh,0.233005943858,4
+State of Palestine,Yogurt,-0.419120561381,4
+State of Palestine,Cheese,0.574905084682,4
+State of Palestine,Water,-0.653179695412,4
+Sudan,Sorghum,0.864910297885,15
+Sudan,Millet,0.915852229568,15
+Sudan,Wheat,0.907104202933,7
+Egypt,Rice,-0.14059526365,8
+Egypt,Flour,-0.300135923212,8
+Egypt,Potatoes,0.849214922116,8
+Egypt,Eggs,0.805478569995,5
+Egypt,Sugar,-0.517170019391,8
+Egypt,Garlic,-0.28073817788,8
+Egypt,Butter,0.423986630391,8
+Egypt,Lentils,0.218738493125,8
+Egypt,Onions,0.124201429159,8
+Egypt,Pasta,-0.515235886488,8
+Egypt,Tomatoes,-0.274388637706,8
+Egypt,Meat,0.323224220979,8
+Egypt,Oil,0.095840015585,8
+Egypt,Beans,0.490825790151,8
+South Sudan,Fuel (diesel),0.752554613014,6
+South Sudan,Fuel (petrol-gasoline),0.799394778806,6
+South Sudan,Exchange rate,0.695095793931,5
+South Sudan,Exchange rate (unofficial),0.391487025713,5
+South Sudan,Flour,0.0966851615844,9
+South Sudan,Maize,0.0313225201864,10
+South Sudan,Beans,0.495540070903,9
+South Sudan,Oil,0.771416201648,5
+South Sudan,Groundnuts,0.593550540277,10
+South Sudan,Sorghum,0.0787402789985,10
+South Sudan,Millet,-0.0296840031601,10
+South Sudan,Sesame,0.142141120048,10
+South Sudan,Cassava,0.298224197489,9

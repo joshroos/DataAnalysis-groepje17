@@ -8,7 +8,7 @@ import io
 from pandas import ExcelWriter
 import numpy as np
 
-#rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
+rainfall = pd.read_csv('../../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 #exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
 correlation_rainfall = pd.read_csv('../../data/rainfall_correlations.csv', encoding='latin-1')
@@ -52,11 +52,13 @@ def rainfall_correlation(rainfall, data_WFP):
                     n += 1
             
             correlation = np.corrcoef(prices, rainfall_country)
-            all_products.append(k)
-            country_withcorrelation.append(j)
-            print(j, k, correlation)
-            correlations.append(correlation[0,1])
-            Amount_of_n.append(n)
+            
+            if n != 0:
+                all_products.append(k)
+                country_withcorrelation.append(j)
+                correlations.append(correlation[0,1])
+                Amount_of_n.append(n)
+                print(j, ",", k, ",", n, ",", correlation[0,1])
      
 
     print(country_withcorrelation, Amount_of_n, all_products, correlations)
@@ -72,7 +74,7 @@ def rainfall_correlation(rainfall, data_WFP):
 
     return
 
-#rainfall_correlation(rainfall, data_WFP)
+rainfall_correlation(rainfall, data_WFP)
 
 def rainfall_better(correlation_rainfall):
     rainfall_correlations = correlation_rainfall.iloc[::2]
@@ -83,4 +85,4 @@ def rainfall_better(correlation_rainfall):
     writer.save()  
     return
 
-rainfall_better(correlation_rainfall)
+#rainfall_better(correlation_rainfall)

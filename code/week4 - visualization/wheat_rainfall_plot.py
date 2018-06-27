@@ -138,7 +138,7 @@ def wheat_rainfall(rainfall, data_WFP, country):
 #for country in countries:    
 #    wheat_rainfall(rainfall, data_WFP, country)
 
-#wheat_rainfall_Afghanistan(rainfall, data_WFP)
-#wheat_rainfall_Ethiopia(rainfall, data_WFP)
-#wheat_rainfall_India(rainfall, data_WFP)
-wheat_rainfall(rainfall, data_WFP, "Afghanistan")
+wheat_rainfall_Afghanistan(rainfall, data_WFP)
+wheat_rainfall_Ethiopia(rainfall, data_WFP)
+wheat_rainfall_India(rainfall, data_WFP)
+#wheat_rainfall(rainfall, data_WFP, "Afghanistan")

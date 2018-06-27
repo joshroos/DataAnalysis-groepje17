@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.16.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.16.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.16.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.16.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="5058a3dc-ee98-421e-8853-fc902cd5dcf6"></div>
+        </div>
+        
+        <script type="application/json" id="1fadc051-ce24-40f5-8735-e7150aeb4535">
+          {"e5798e3a-31aa-4b68-b9e8-6c1df73d97a1":{"roots":{"references":[{"attributes":{},"id":"6234e68f-8755-4ecf-853a-adb7be1b261e","type":"UnionRenderers"},{"attributes":{},"id":"1ee76169-6820-448f-8a1e-9bb7c78b8f74","type":"Selection"},{"attributes":{"source":{"id":"d27aa803-7596-434d-803e-f63fa5070c92","type":"ColumnDataSource"}},"id":"e88a1ae6-24fc-4f7f-ba62-4df93c6cc0f4","type":"CDSView"},{"attributes":{"editor":{"id":"43cb7e90-c260-43e9-973e-066ee2977b4a","type":"StringEditor"},"field":"correlation","formatter":{"id":"9cac0221-dff2-48e3-b191-0f90aa2dd65d","type":"StringFormatter"},"title":"Correlation Rice Price and Incoming Refugees"},"id":"8f5ff834-4772-44d7-92b9-e47da2f2df99","type":"TableColumn"},{"attributes":{},"id":"31d14bcb-04ae-4c28-bf25-a8fc79a7f5c1","type":"StringEditor"},{"attributes":{"columns":[{"id":"c41b2283-fabb-4a92-b713-719f438c0beb","type":"TableColumn"},{"id":"8f5ff834-4772-44d7-92b9-e47da2f2df99","type":"TableColumn"}],"source":{"id":"d27aa803-7596-434d-803e-f63fa5070c92","type":"ColumnDataSource"},"view":{"id":"e88a1ae6-24fc-4f7f-ba62-4df93c6cc0f4","type":"CDSView"}},"id":"8b80cece-0f87-4b2e-ace8-44c09d635920","type":"DataTable"},{"attributes":{},"id":"9cac0221-dff2-48e3-b191-0f90aa2dd65d","type":"StringFormatter"},{"attributes":{},"id":"43cb7e90-c260-43e9-973e-066ee2977b4a","type":"StringEditor"},{"attributes":{},"id":"56dd1ce6-88a6-4707-a360-d7d57f304541","type":"StringFormatter"},{"attributes":{"callback":null,"data":{"correlation":[0.403,0.684,0.379,0.826,0.979,0.421,0.792,0.995,0.881,0.443,-0.603,-0.693],"countries":["Lebanon","Pakistan","Ethiopia","Chad","Jordan","Uganda","Burundi","Somalia","Iraq","Mali","Turkey","Cote d'Ivoire"]},"selected":{"id":"1ee76169-6820-448f-8a1e-9bb7c78b8f74","type":"Selection"},"selection_policy":{"id":"6234e68f-8755-4ecf-853a-adb7be1b261e","type":"UnionRenderers"}},"id":"d27aa803-7596-434d-803e-f63fa5070c92","type":"ColumnDataSource"},{"attributes":{"editor":{"id":"31d14bcb-04ae-4c28-bf25-a8fc79a7f5c1","type":"StringEditor"},"field":"countries","formatter":{"id":"56dd1ce6-88a6-4707-a360-d7d57f304541","type":"StringFormatter"},"title":"Country Name"},"id":"c41b2283-fabb-4a92-b713-719f438c0beb","type":"TableColumn"}],"root_ids":["8b80cece-0f87-4b2e-ace8-44c09d635920"]},"title":"Bokeh Application","version":"0.12.16"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1fadc051-ce24-40f5-8735-e7150aeb4535').textContent;
+                  var render_items = [{"docid":"e5798e3a-31aa-4b68-b9e8-6c1df73d97a1","elementid":"5058a3dc-ee98-421e-8853-fc902cd5dcf6","modelid":"8b80cece-0f87-4b2e-ace8-44c09d635920"}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    </body>
+</html>

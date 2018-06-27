@@ -53,7 +53,7 @@ def make_data_source(geo_data, df_wfp, countrycodes):
     for country in geo_data['features']:
         code = country["id"]
         entry = list(countrycodes.loc[countrycodes['alpha-3'] == code, 'name'])
-        if entry in countries:
+        if entry in countries and entry[0] not in ['Somalia', 'Mauritania']:
             entry = df_wfp['adm0_name'] == entry[0]
             price = df_wfp.loc[good & year & entry, 'mp_price']
             price = price.mean()
@@ -123,7 +123,7 @@ def make_choropleth(data_source):
     hover.point_policy = "follow_mouse"
     hover.tooltips = [("Country:", "@name"), ("Grain price:", "@price")]
 
-    output_file("choropleth_grain.html", title="World map Bokeh")
+    output_file("choropleth_grain2017.html", title="World map Bokeh")
     show(p)
 
 

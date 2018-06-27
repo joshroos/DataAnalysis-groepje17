@@ -33,8 +33,8 @@ def rainfall_correlation(rainfall, data_WFP):
         for j in countries:
             n = 0
             for i in years:
-                
-                year = data_WFP['mp_year'] == i
+                x = i + 1
+                year = data_WFP['mp_year'] == x
                 country = data_WFP['adm0_name'] == j
                 cm_name = data_WFP['cm_name'] == k
                 val1 = data_WFP.loc[(year) & (country) & (cm_name), 'mp_price']
@@ -54,9 +54,9 @@ def rainfall_correlation(rainfall, data_WFP):
             correlation = np.corrcoef(prices, rainfall_country)
             all_products.append(k)
             country_withcorrelation.append(j)
-            print(j, k, correlation)
             correlations.append(correlation[0,1])
             Amount_of_n.append(n)
+            print(j, ",", k, ",", n, ",", correlation[0,1])
      
 
     print(country_withcorrelation, Amount_of_n, all_products, correlations)

@@ -19,7 +19,6 @@ def wheat_rainfall_Afghanistan(rainfall, data_WFP):
     rainfall_afghanistan = []
 
     for i in years:
-
         year = data_WFP['mp_year'] == i
         country = data_WFP['adm0_name'] == 'Afghanistan'
         cm_name = data_WFP['cm_name'] == 'Wheat'

@@ -1,9 +1,7 @@
 from bokeh.plotting import figure, ColumnDataSource
-from bokeh.models import FactorRange, LinearAxis, Range1d, HoverTool, CustomJS, Slider
+from bokeh.models import HoverTool, CustomJS, Slider
 from bokeh.io import output_file, show
-from bokeh.palettes import brewer
 from bokeh.layouts import row, widgetbox
-import matplotlib.pyplot as plt
 import math
 import pandas as pd
 import io
@@ -11,100 +9,93 @@ from pandas import ExcelWriter
 import numpy as np
 import csv
 
-# Read in data
-data_BNP = pd.read_excel('../code/BBP_countries.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-data_WFP = pd.read_csv('../data/WFP_data_normalised.csv', encoding='latin-1')
-data_population = pd.read_csv('../data/population_1960_2017_GOEDE.csv')
+data_BNP = pd.read_excel('../../../data/BBP_countries.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
+data_WFP = pd.read_csv('../../../data/WFP_data_normalised.csv', encoding='latin-1')
+data_population = pd.read_csv('../../../data/population_1960_2017_GOEDE.csv')
 
+'''
+This function computes the correlation coefficient
+between all of the countries and all of their commodities
+throughout the years. If either the GDP or the price of a commodity
+in some year is missing, the datapoint will be skipped.
+In adittion the correlation coeficcient is only computed if there is 
+data available from more than three years.
+Lastly the correlations are written to a csv file to make it easier to further
+analyze the data. 
+'''
 def correlations():
     countries = data_WFP["adm0_name"].unique()
     years = [x for x in range(1992, 2018)]
 
-
-    with open('TEST.csv', 'w') as csvfile:
+    with open('corrcoeffBNP.csv', 'w') as csvfile:
         wr = csv.writer(csvfile, quoting=csv.QUOTE_MINIMAL)
 
         for country in countries:
-            # BNP of country
+            # filter data by country
             BNP_country = data_BNP[data_BNP["Country Name"] == country]
-
-            # get all commodities in list
             commodities = data_WFP.loc[data_WFP['adm0_name'] == country, 'cm_name'].unique()
-
-            # filter by country
             data_country = data_WFP[data_WFP["adm0_name"] == country]
 
             for commodity in commodities:
                 average_commodity_prices = []
+                BNP_country_years = []
 
                 # filter by commodity
                 data_country_commodity = data_country[data_country["cm_name"] == commodity]
-                BNP_country_years = []
                 
                 for year in years:
-                    # filter by year
                     data_country_year = data_country_commodity[data_country_commodity["mp_year"] == year]
-                    commodity_price = list(data_country_year["mp_price"])
 
+                    #get data points
+                    commodity_price = list(data_country_year["mp_price"])
                     BNP = list(BNP_country["{}".format(year)])
+
+                    # check availability of data
                     if commodity_price and BNP[0] != 'Unknown':
                         average = sum(commodity_price)/len(commodity_price)
                         average_commodity_prices.append(average)
                         BNP_country_years.append(BNP[0] / 1000000000)
 
+                # check by amount of datapoints
                 if len(average_commodity_prices) > 3:
                     correlatie_coefficient = np.corrcoef(average_commodity_prices, BNP_country_years)
                     correlatie = correlatie_coefficient[0][1]
-
                     csvRow = [country, commodity, correlatie, len(average_commodity_prices)]
                     wr.writerow(csvRow)
+'''
+This function takes a country as an argument and generates
+a line of both the BNP and price of a commodity of that country. 
 
-def plot(country):
+'''
+def plot(country, commodity):
     years = [x for x in range(1992, 2018)]
-
-    multi_line_BNP = []
-    multi_line_CM_price = []
-
-    # plot
-    output_file("commodities.html")
+    output_file("{}, {}.html".format(country, commodity))
     g = figure()
     g.xaxis.axis_label = "BNP"
-    g.yaxis.axis_label = "commodity prices"
+    g.yaxis.axis_label = "{} price".format(commodity)
 
-    # BNP of country
     BNP_country = data_BNP[data_BNP["Country Name"] == country]
+    WFP_country = data_WFP.loc[data_WFP['adm0_name'] == country]
+    commodity_prices = WFP_country.loc[WFP_country['cm_name'] == commodity]
 
-    # get all commodities in list
-    commodities = data_WFP.loc[data_WFP['adm0_name'] == country, 'cm_name'].unique()
+    average_commodity_prices = []
+    BNP_country_years = []
 
-    # filter by country
-    data_country = data_WFP[data_WFP["adm0_name"] == country]
-    print(commodities)
-    for commodity in commodities[0:2]:
-        average_commodity_prices = []
+    for year in years:
+        # filter by year
+        commodity_price_year = commodity_prices[commodity_prices["mp_year"] == year]
+        commodity_price = list(commodity_price_year["mp_price"])
+        BNP = list(BNP_country["{}".format(year)])
+        if commodity_price and BNP[0] != 'Unknown':
+            average = sum(commodity_price)/len(commodity_price)
+            average_commodity_prices.append(average)
+            BNP_country_years.append(BNP[0] / 1000000000)
 
-        # filter by commodity
-        data_country_commodity = data_country[data_country["cm_name"] == commodity]
-        BNP_country_years = []
+    a, b, mse = make_regression_line(data, xname, yname)
+    r_x, r_y = zip(*((i, i*regression[0] + regression[1]) for i in range(len(BNP_country_years))))
 
-        for year in years:
-            # filter by year
-            data_country_year = data_country_commodity[data_country_commodity["mp_year"] == year]
-            commodity_price = list(data_country_year["mp_price"])
-
-            BNP = list(BNP_country["{}".format(year)])
-            if commodity_price and BNP[0] != 'Unknown':
-                average = sum(commodity_price)/len(commodity_price)
-                average_commodity_prices.append(average)
-                BNP_country_years.append(BNP[0] / 1000000000)
-
-        regression = np.polyfit(BNP_country_years, average_commodity_prices, 1)
-        r_x, r_y = zip(*((i, i*regression[0] + regression[1]) for i in range(len(BNP_country_years))))
-        multi_line_BNP.append(r_x)
-        multi_line_CM_price.append(r_y)
-        g.scatter(BNP_country_years, average_commodity_prices)
-
-    g.multi_line(multi_line_BNP, multi_line_CM_price, color=["red", "blue"])
+    g.scatter(BNP_country_years, average_commodity_prices)
+    g.multi_line(r_x, r_y)
     show(g)
 
 
@@ -206,6 +197,6 @@ def bubble_chart():
     layout = row(p, widgetbox(year_slider))
     show(layout)  
 
-# plot("Burkina Faso")
+plot("Burkina Faso", "Maize")
 # correlations()
-bubble_chart()
+# bubble_chart()

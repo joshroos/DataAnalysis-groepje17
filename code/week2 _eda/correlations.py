@@ -20,24 +20,6 @@ goed2 = data_WFP.loc[data_WFP['cm_name'].str.contains('Cheese'), 'adm0_name'].un
 goed = list(set(goed1) & set(goed2))
 goed.sort()
 
-# def compare_amount(data_combinations):
-
-
-#     country = data_combinations.loc[data_combinations['combinations'] == 'Rice & Maize', 'country']
-#     country = country.tolist()
-#     countrynew = []
-#     print(country)
-#     for x in range(len(country)):
-#         countrynew.append(country[x].split(' & '))
-
-#     amount_total = len(countrynew[0])
-#     print(amount_total)
-
-#     correlations = find_things(data_combinations,13)
-#     for x in range(len(correlations)):
-#         print(len(correlations[x]))
-
-#     return
 
 def correlations_per_country(data_WFP):
     years = [x for x in range(1992, 2018)]

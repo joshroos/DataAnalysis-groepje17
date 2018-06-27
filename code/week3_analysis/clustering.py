@@ -24,7 +24,7 @@ data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
 data_correlation = pd.read_csv('../../data/corrcoef.csv', encoding='latin-1')
 
 
-
+# makes scatter plot with rice and maize prices of countries that have a high correlation between the two
 def rijst_olie_chart(data_WFP):
     output_file("scatter_rice_and_oil.html")
 

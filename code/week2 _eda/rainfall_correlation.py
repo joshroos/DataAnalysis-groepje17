@@ -9,15 +9,13 @@ from pandas import ExcelWriter
 import numpy as np
 
 rainfall = pd.read_csv('../../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-#exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
 correlation_rainfall = pd.read_csv('../../data/rainfall_correlations.csv', encoding='latin-1')
 
+# prints all correlations for all products in all countries for all years
 def rainfall_correlation(rainfall, data_WFP):
     products = data_WFP['cm_name'].unique()
     years = [x for x in range(1992, 2016)]
-    #products = ["Wheat", "Millet", "Milk"]
-    #countries = ['Afghanistan', 'Ethiopia', 'Guinea-Bissau', 'India']
     correlations = []
     prices = []
     rainfall_country = []
@@ -38,11 +36,10 @@ def rainfall_correlation(rainfall, data_WFP):
                 country = data_WFP['adm0_name'] == j
                 cm_name = data_WFP['cm_name'] == k
                 val1 = data_WFP.loc[(year) & (country) & (cm_name), 'mp_price']
-                #print(k, j, i, val1.mean())
+
                 year_info = rainfall['year'] == i
                 country = rainfall['country'] == j
                 val2 = rainfall.loc[(year_info) & (country), 'pr_total']
-                #print(k, j, i, val2.mean())
 
                 if math.isnan(val1.mean()) or math.isnan(val2.mean()):
                     pass
@@ -63,6 +60,7 @@ def rainfall_correlation(rainfall, data_WFP):
 
     print(country_withcorrelation, Amount_of_n, all_products, correlations)
 
+    # makes the csv
     download = "rainfall_and_correlations.csv" 
     csv = open(download, "w") 
     columnTitleRow = "product, country, n, correlation\n"
@@ -74,8 +72,8 @@ def rainfall_correlation(rainfall, data_WFP):
 
     return
 
-rainfall_correlation(rainfall, data_WFP)
 
+# writes the csv to an excel sheet where all second lines are deleted (makes it readable)
 def rainfall_better(correlation_rainfall):
     rainfall_correlations = correlation_rainfall.iloc[::2]
     print(rainfall_correlations)
@@ -83,6 +81,5 @@ def rainfall_better(correlation_rainfall):
     writer = ExcelWriter('rainfall_correlations1.xlsx')
     rainfall_correlations.to_excel(writer, 'Sheet1')
     writer.save()  
-    return
-
-#rainfall_better(correlation_rainfall)
+    retu
+rn

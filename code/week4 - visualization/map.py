@@ -73,6 +73,34 @@ def make_data_source(geo_data, df_wfp, countrycodes):
     # exports data to new json source
     return json.dumps(geo_data, ensure_ascii=True)
 
+# def make_regions(geo_data, df_wfp, countrycodes):
+#     # countries East Africa
+#     east_africa = ['Mozambique', 'Zambia','United Republic of Tanzania', 'Madagascar', 'Malawi', 'Burundi', 'Afghanistan']
+#     # countries Middle East
+#     middle_east = ['Armenia', 'Iraq', 'Iran  (Islamic Republic of)','Turkey','Syrian Arab Republic', 'Jordan', 'Yemen','Afghanistan']
+#     # countries West Afrika
+#     west_africa = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger', 'Guinea', 'Guinea-Bissau', 'Ghana', 'Afghanistan']
+#     # countries South Asia
+#     asia = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka', 'Afghanistan']
+#     countries = east_africa + west_africa + middle_east + asia
+#     regions = []
+#     print(len(geo_data['features']))
+#     for i in range(len(geo_data['features'])):
+#         print(i)
+#         country = geo_data['features'][i]
+#         code = country["id"]
+#         entry = list(countrycodes.loc[countrycodes['alpha-3'] == code, 'name'])
+
+#         if entry and entry[0] in countries:
+#             continue
+#         else:
+#             geo_data['features'].pop(i)
+
+#     return json.dumps(geo_data, ensure_ascii=True)
+
+
+# regions = make_regions(geo_data, df_wfp, countrycodes)
+
 
 # plots choropleth map of world
 def make_choropleth(data_source):
@@ -87,6 +115,8 @@ def make_choropleth(data_source):
     p.patches(xs='xs', ys='ys', fill_color="fill",
               line_color='black', line_width=0.5, source=geo_source,
               legend="price")
+    # p.patches(xs='xs', ys='ys', fill_color=None,
+    #           line_color='black', line_width=1.0, source=geo_regions)        
 
     # sets properties of hovertool
     hover = p.select_one(HoverTool)

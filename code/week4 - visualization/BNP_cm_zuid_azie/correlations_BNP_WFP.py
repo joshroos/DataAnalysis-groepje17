@@ -13,6 +13,12 @@ data_BNP = pd.read_excel('../../../data/BBP_countries.xlsx',header=0, sep=',', e
 data_WFP = pd.read_csv('../../../data/WFP_data_normalised.csv', encoding='latin-1')
 data_population = pd.read_csv('../../../data/population_1960_2017_GOEDE.csv')
 
+midden_oosten = ['Syrian Arab Republic', 'Turkey', 'Iran  (Islamic Republic of)', 'Yemen', 
+'Armenia', 'Jordan', 'Iraq']
+west_afrika = ['Algeria', "Cote d'Ivoire", 'Guinea-Bissau', 'Guinea']
+oost_afrika = ['Madagascar', 'Mozambique']
+zuid_azie = ['Bangladesh', 'India', 'Pakistan']
+
 '''
 This function computes the correlation coefficient
 between all of the countries and all of their commodities
@@ -24,10 +30,11 @@ Lastly the correlations are written to a csv file to make it easier to further
 analyze the data. 
 '''
 def correlations():
-    countries = data_WFP["adm0_name"].unique()
+    countries = ['Syrian Arab Republic', 'Turkey', 'Iran  (Islamic Republic of)', 'Yemen', 
+'Armenia', 'Jordan', 'Iraq']
     years = [x for x in range(1992, 2018)]
 
-    with open('corrcoeffBNP.csv', 'w') as csvfile:
+    with open('corrcoeffBNP_midden_oosten', 'w') as csvfile:
         wr = csv.writer(csvfile, quoting=csv.QUOTE_MINIMAL)
 
         for country in countries:
@@ -62,6 +69,10 @@ def correlations():
                     correlatie = correlatie_coefficient[0][1]
                     csvRow = [country, commodity, correlatie, len(average_commodity_prices)]
                     wr.writerow(csvRow)
+            if country == 'Turkey':
+                p = figure()
+                p.scatter(BNP_country_years, average_commodity_prices)
+                show(p)
 '''
 This function takes a country as an argument and generates
 a line of both the BNP and price of a commodity of that country. 
@@ -197,6 +208,6 @@ def bubble_chart():
     layout = row(p, widgetbox(year_slider))
     show(layout)  
 
-plot("Burkina Faso", "Maize")
-# correlations()
+# plot("Burkina Faso", "Maize")
+correlations()
 # bubble_chart()

@@ -124,6 +124,27 @@ def compare_amount(data_correlation):
 
     return
 
+
+def compare_amount2(data_combinations):
+
+
+    country = data_combinations.loc[data_combinations['combinations'] == 'Rice & Maize', 'country']
+    country = country.tolist()
+    countrynew = []
+    print(country)
+    for x in range(len(country)):
+        countrynew.append(country[x].split(' & '))
+
+    amount_total = len(countrynew[0])
+    print(amount_total)
+
+    correlations = find_things(data_combinations,13)
+    for x in range(len(correlations)):
+        print(len(correlations[x]))
+
+    return
+
+
 #compare_amount(data_correlation)
 
 #best_correlation(data_correlation)

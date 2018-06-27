@@ -81,5 +81,4 @@ def rainfall_better(correlation_rainfall):
     writer = ExcelWriter('rainfall_correlations1.xlsx')
     rainfall_correlations.to_excel(writer, 'Sheet1')
     writer.save()  
-    retu
-rn
+    return

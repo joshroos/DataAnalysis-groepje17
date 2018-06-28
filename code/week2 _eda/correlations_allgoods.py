@@ -100,7 +100,7 @@ def correlations_per_good(data_WFP):
                                     prices1.append(l_good1.mean())
                                     prices2.append(l_good2.mean())
 
-                    # calculates coefficient
+                    # calculates and prints coefficient
                     if prices1 and prices2 and len(prices1) > 40:
                         coeff = np.corrcoef(prices1, prices2)
                         if coeff[0][1] > 0.75 or coeff[0][1] < -0.75:

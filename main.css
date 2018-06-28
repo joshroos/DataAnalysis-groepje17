@@ -32,3 +32,17 @@ ul.posts li { list-style: none; }
 .worldmap {
     align: center;
 }
+
+/* West-Afrika */
+
+.wrapper {
+     width: 500px;
+}
+
+.west_afrika {
+    width: 250px;
+}
+
+/* .boxplot_west_afrika {
+
+} */

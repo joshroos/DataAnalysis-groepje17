@@ -304,10 +304,11 @@ def make_gridplot(goods, country, data_wfp):
 
         plots.append(row)
     grid = gridplot(plots)
-    filename = "plots/scatter_matrix_kyrgyzstan.html"
+    filename = "plots/scatter_matrix_ukraine2.html"
     output_file(filename, title="Scatter Matrix")
     show(grid)
 
+make_gridplot(goods, country, data_wfp)
 
 # makes scatterplots about countries in the Middle East for Oil and Rice
 def gridplot_middleeast(goods, data_wfp):

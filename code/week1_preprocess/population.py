@@ -25,7 +25,7 @@ countries_WFP = {'Afghanistan':1, 'Algeria':1,'Armenia':1,'Azerbaijan':1,'Bangla
  'Ukraine':1,'United Republic of Tanzania':1,'Yemen':1,'Zambia':1,'Zimbabwe':1,
  'State of Palestine':1,'Sudan':1,'Egypt':1,'South Sudan':1}
 
-# get all information from WFP data for the analyzed countries
+# finds countries from WFP that aren't in exchangerate.csv
 def Find_corresponding(data, countries_WFP):
     countries_population = data['Country_Name']
     corresponding = []
@@ -38,6 +38,7 @@ def Find_corresponding(data, countries_WFP):
             corresponding.append(country)
         else:
             not_corresponding.append(country)
+    
     # check missing countries from data
     for country in countries_WFP:
         if country not in corresponding:
@@ -57,6 +58,7 @@ def Find_corresponding(data, countries_WFP):
 for i in range(len(data["Country_Name"])):
     if data["Country_Name"][i] not in countries_WFP:
         data = data.drop(i)
+        
 # drop years that are not used in analysis
 years = [str(i) for i in range(1960, 1992)]
 data = data.drop(years, axis = 1)

@@ -1,6 +1,6 @@
 # Joshua de Roos
 # 21-06-2018
-# This program plots a choropleth map of the world with 
+# This program plots a choropleth map of the world with
 # all countries having a shade according to the price of a product.
 
 from bokeh.io import show, output_notebook, output_file
@@ -10,12 +10,12 @@ from bokeh.models import (
     GeoJSONDataSource,
     Slider,
     HoverTool,
-    CustomJS,
-    BasicTickFormatter
+    FixedTicker,
+    LinearColorMapper,
+    ColorBar,
 )
 from bokeh.plotting import figure
 from bokeh.transform import linear_cmap
-from bokeh.models import LinearColorMapper, FixedTicker, ColorBar, ContinuousColorMapper
 import json
 import pandas as pd
 import math
@@ -65,7 +65,7 @@ def make_data_source(geo_data, df_wfp, countrycodes):
             entry = df_wfp['adm0_name'] == entry[0]
             price = df_wfp.loc[good & year & entry, 'mp_price']
             price = price.mean()
-            
+
             if math.isnan(price):
                 country["properties"]["fill"] = "white"
                 country["properties"]["price"] = "Unknown"
@@ -96,7 +96,7 @@ def make_data_source(geo_data, df_wfp, countrycodes):
 
 
 def get_bbp(entry, time):
-    if len(entry) > 0:    
+    if len(entry) > 0:
         country = df_bbp['Country Name'] == entry[0]
         bbp = list(df_bbp.loc[country, str(time)])
         if len(bbp) > 0:
@@ -106,7 +106,7 @@ def get_bbp(entry, time):
 
 
 def get_pop(entry, time):
-    if len(entry) > 0:    
+    if len(entry) > 0:
         country = df_pop['Country_Name'] == entry[0]
         pop = list(df_pop.loc[country, str(time)])
         if len(pop) > 0:
@@ -114,14 +114,15 @@ def get_pop(entry, time):
         else:
             return "Unknown"
 
+
 # plots choropleth map of world
 def make_choropleth(data_source):
     # converts data to right format
     geo_source = GeoJSONDataSource(geojson=data_source)
     # plots countries with colors
     TOOLS = "pan,wheel_zoom,reset,hover,save"
-    p = figure(title="Grain prices 2015 in USD", tools=TOOLS, x_axis_location=None,
-               y_axis_location=None, width=1200, height=700)
+    p = figure(title="Grain prices 2015 in USD", x_axis_location=None,
+               y_axis_location=None, width=1200, height=700, tools=TOOLS,)
     p.grid.grid_line_color = None
     p.title.align = "center"
     p.title.text_color = "#084594"
@@ -131,25 +132,22 @@ def make_choropleth(data_source):
 
     p.patches(xs='xs', ys='ys', fill_color="fill",
               line_color='black', line_width=0.5, source=geo_source)
-    # p.patches(xs='xs', ys='ys', fill_color=None,
-    #           line_color='black', line_width=1.0, source=geo_regions) 
-    # 
     palette = Blues8
     palette.reverse()
-    mapper = LinearColorMapper( palette=palette, low=0, high=8/6)
+    mapper = LinearColorMapper(palette=palette, low=0, high=8/6)
     ticker = FixedTicker()
     ticker.ticks = [x/6 for x in range(1, 8)]
     color_bar = ColorBar(color_mapper=mapper, ticker=ticker,
-                 label_standoff=12, border_line_color=None, location=(0,0),
-                 orientation="horizontal")
-    
-    p.add_layout(color_bar, 'below')
+                         label_standoff=12, border_line_color=None,
+                         location=(0, 0), orientation="horizontal")
 
+    p.add_layout(color_bar, 'below')
 
     # sets properties of hovertool
     hover = p.select_one(HoverTool)
     hover.point_policy = "follow_mouse"
-    hover.tooltips = [("Country:", "@name"), ("Grain price:", "@price"), ("Population:", "@pop"), ("GDP (USD):", "@bbp")]
+    hover.tooltips = [("Country:", "@name"), ("Grain price:", "@price"),
+                      ("Population:", "@pop"), ("GDP (USD):", "@bbp")]
 
     output_file("plots/choropleth_grain2015.html", title="World map Bokeh")
     show(p)

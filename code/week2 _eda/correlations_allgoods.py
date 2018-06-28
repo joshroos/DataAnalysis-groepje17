@@ -60,9 +60,10 @@ def correlations_per_country(data_WFP):
                         # calculates coefficient
                         if prices1 and prices2 and len(prices1) > 40:
                             coeff = np.corrcoef(prices1, prices2)
+                            N = len(prices1)
                             if coeff[0][1] > 0.75 or coeff[0][1] < -0.75:
                                 print("{}:  {} and  {}  =   {}      {}".format
-                                (land, i, j, round(coeff[0][1], 4), len(prices1)))
+                                (land, i, j, round(coeff[0][1], 4), N))
 
 
 correlations_per_country(data_WFP)
@@ -73,13 +74,13 @@ def correlations_per_good(data_WFP):
     done = []
     goods = data_WFP['cm_name'].unique()
     years = [x for x in range(1992, 2018)]
-    
+
     # makes all combinations of two goods
     for i in goods:
         for j in goods:
             if i != j:
-                if (i,j) not in done and (j,i) not in done:
-                    done.append((i,j))
+                if (i, j) not in done and (j, i) not in done:
+                    done.append((i, j))
                     good1 = data_WFP['cm_name'] == i
                     good2 = data_WFP['cm_name'] == j
 
@@ -92,15 +93,15 @@ def correlations_per_good(data_WFP):
                         for month in range(1, 13):
                             data_month = data_WFP['mp_month'] == month
                             l_good1 = data_WFP.loc[good1 &
-                                time & data_month, 'mp_price']
-                            l_good2 = data_WFP.loc[good2 & 
-                            time & data_month, 'mp_price']
+                                            time & data_month, 'mp_price']
+                            l_good2 = data_WFP.loc[good2 &
+                                            time & data_month, 'mp_price']
                             if l_good2.empty is False:
                                 if l_good1.empty is False:
                                     prices1.append(l_good1.mean())
                                     prices2.append(l_good2.mean())
 
-                    # calculates coefficient
+                    # calculates and prints coefficient
                     if prices1 and prices2 and len(prices1) > 40:
                         coeff = np.corrcoef(prices1, prices2)
                         if coeff[0][1] > 0.75 or coeff[0][1] < -0.75:

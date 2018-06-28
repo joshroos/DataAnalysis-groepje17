@@ -43,6 +43,6 @@ ul.posts li { list-style: none; }
     width: 250px;
 }
 
-/* .boxplot_west_afrika {
-
-} */
+.rice_west_afrika, .rice_oost_afrika {
+    display: inline
+}

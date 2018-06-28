@@ -9,17 +9,15 @@ from pandas import ExcelWriter
 import numpy as np
 import csv
 
-def BNP_country(country):
+data_BNP = pd.read_excel('../../../data/BBP_countries.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
 
-    data_BNP = pd.read_excel('../../../data/BBP_countries.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-    BNP_country = data_BNP.loc[data_BNP["Country Name"] == country]
-    years = [x for x in range(1992, 2018)]
+BNP_country = data_BNP.loc[data_BNP["Country Name"] == 'Yemen']
+years = [x for x in range(1992, 2018)]
 
-    bnp_country = []
+bnp_country = []
 
-    for year in years:
-        BNP = BNP_country["{}".format(year)]
-        print(BNP)
-        bnp_country.append(BNP/1000000000)
+for year in years:
+    BNP = BNP_country["{}".format(year)]
+    print(BNP)
+    bnp_country.append(BNP/1000000000)
 
-BNP_country('Yemen')

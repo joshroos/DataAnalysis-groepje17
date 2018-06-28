@@ -9,7 +9,7 @@ df = pd.read_csv(file_refugee, encoding='latin-1', error_bad_lines=False)
 wfp_df = pd.read_csv(file_wfp, encoding='latin-1', error_bad_lines=False)
 
 # variables for retrieving specific correlations of specific country
-# country = 'Jordan'
+country = 'Jordan'
 
 wfp_df.loc[wfp_df['cm_name'].str.contains('Millet'), 'cm_name'] = 'Grain'
 wfp_df.loc[wfp_df['cm_name'].str.contains('Sorghum'), 'cm_name'] = 'Grain'
@@ -46,30 +46,36 @@ def scatter_refugees(df, wfp_df, country, good):
         coeff = np.corrcoef(refugees, prices)
         coeff = round(coeff[0][1], 3)
         print('{} : {} of length {}'.format(country, coeff, len(prices)))
-        return coeff, len(prices)
+        X = np.vstack(refugees)
+        X = np.column_stack((X, np.ones(X.shape[0])))
+        Y = prices
+
+        a, b = np.linalg.lstsq(X, Y)[0]
 
     # possible code for a specific plot of the correlation
-    # p = figure(title="Refugees Jordan", toolbar_location=None, tools='hover')
+    p = figure(title="Refugees Jordan", toolbar_location=None, tools='hover')
 
-    # p.scatter(refugees, prices, marker="circle", size=10,
-    #             line_color="navy", fill_color="orange", alpha=0.5)
-    # p.text(text_align='left', text=coeff, text_font_size='15pt',
-    #           x=2400000, y=1.7)
+    p.scatter(refugees, prices, marker="circle", size=10,
+                line_color="navy", fill_color="orange", alpha=0.5)
+    p.text(text_align='left', text=['MSE: {}'.format(coeff)], 
+           text_font_size='15pt', x=2400000, y=1.7)
+    p.line(pd.Series(refugees), a * pd.Series(refugees) + b, color='red')
+    p.background_fill_color = "#eeeeee"
+    output_file("refugees.html")
+    show(p)
+    return coeff, len(prices)
 
-    # p.background_fill_color = "#eeeeee"
-    # output_file("../visualizations/plots/markers.html")
-    # show(p)
+coeff, n = scatter_refugees(df, wfp_df, country, good)
 
-
-# calculates coefficients for all countries
-countries = wfp_df.loc[wfp_df['cm_name'] == good, 'adm0_name']
-countries = countries.unique()
-list_coeff = []
-download = "../../data/refugees_correlations.csv"
-csv = open(download, "w")
-columnTitleRow = "country, correlation, n \n"
-csv.write(columnTitleRow)
-for country in countries:
-    coeff, n = scatter_refugees(df, wfp_df, country, good)
-    row = country + "," + str(coeff) + "," + str(n) + "\n"
-    csv.write(row)
+# # calculates coefficients for all countries
+# countries = wfp_df.loc[wfp_df['cm_name'] == good, 'adm0_name']
+# countries = countries.unique()
+# list_coeff = []
+# download = "../../data/refugees_correlations.csv"
+# csv = open(download, "w")
+# columnTitleRow = "country, correlation, n \n"
+# csv.write(columnTitleRow)
+# for country in countries:
+#     coeff, n = scatter_refugees(df, wfp_df, country, good)
+#     row = country + "," + str(coeff) + "," + str(n) + "\n"
+#     csv.write(row)

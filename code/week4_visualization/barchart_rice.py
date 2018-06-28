@@ -1,7 +1,7 @@
 from bokeh.plotting import figure, show, output_file
 import boxplot_rice
 
-output_file('hbar.html', title="barchart.py Rice Price Regions")
+output_file('plots/barchartrice.html', title="Rice Price Regions")
 
 # value of median averages in Middle East, West Africa, East Africa, South Asia
 median_ME_range = boxplot_rice.calculate_median_ME()

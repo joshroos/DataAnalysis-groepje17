@@ -72,7 +72,7 @@ p.xaxis.major_label_text_font_size="12pt"
 p.axis.major_label_orientation = math.pi/4
 p.yaxis.axis_label = "Dollar per KG"
 
-output_file("boxplot_rice.html", title="boxplot_rice.py")
+output_file("plots/boxplotrice.html", title="Boxplot Rice Price")
 
 show(p)
 

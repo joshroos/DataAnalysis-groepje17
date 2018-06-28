@@ -117,6 +117,7 @@ def make_scatter(source, data, xname, yname, xax=False, yax=False):
 
     return plot
 
+
 # makes scatter plot
 def make_scatter_plot(source, data, country_name, xname, yname, xax=False, yax=False):
     # sets range and borders for plot
@@ -163,6 +164,7 @@ def make_scatter_plot(source, data, country_name, xname, yname, xax=False, yax=F
     plot.add_layout(Grid(dimension=1, ticker=yticker))
 
     return plot
+
 
 # makes plot of distribution of data points of good
 def make_dist(data, xname, xax=False, yax=False):
@@ -301,7 +303,6 @@ def make_gridplot(goods, country, data_wfp):
     output_file(filename, title="Scatter Matrix")
     show(grid)
 
-make_gridplot(goods,country,data_wfp)
 
 # makes scatterplots about countries in the Middle East for Oil and Rice
 def gridplot_middleeast(goods, data_wfp):
@@ -340,6 +341,7 @@ def gridplot_middleeast(goods, data_wfp):
     show(p)
 
     return
+
 
 # makes scatterplots about countries in West Africa for Oil and Rice
 def gridplot_westafrica(goods, data_wfp):
@@ -387,6 +389,7 @@ def gridplot_eastafrica(goods, data_wfp):
     show(p)
 
     return
+    
 
 # makes scatterplots about countries in South Asia for Oil and Rice
 def gridplot_SouthAsia(goods, data_wfp):
@@ -415,7 +418,6 @@ def gridplot_SouthAsia(goods, data_wfp):
 
     return
 
-#make_gridplot(goods, country, data_wfp)
 
 # all countries per region found with rice and oil
 oil_rice_range_middle_east = ['Armenia', 'Iran  (Islamic Republic of)', 'Iraq', 'Jordan', 'Syrian Arab Republic', 'Turkey', 'Yemen']
@@ -431,11 +433,6 @@ i_range = ['Armenia', 'Iraq', 'Iran  (Islamic Republic of)','Turkey','Syrian Ara
 j_range = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger', 'Guinea', 'Guinea-Bissau', 'Ghana', 'Cameroon', 'Gambia', 'Mauritania', 'Nigeria']
 # countries South Asia
 k_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka', 'Tajikistan']
-
-#gridplot_middleeast(goods,data_wfp)
-#gridplot_westafrica(goods, data_wfp)
-#gridplot_eastafrica(goods, data_wfp)
-#gridplot_SouthAsia(goods, data_wfp)
 
 
 # finds the countries within the regions that has data about two given goods
@@ -483,8 +480,6 @@ def find_countries_with_goods(data_wfp, good1, good2, i_range, j_range, h_range,
 
     return
 
-#maize, millet, sorghum, flour: Gambia
-#find_countries_with_goods(data_wfp, 'Maize', 'Millet', i_range, j_range, h_range, k_range)
 
 # prints the correlation of two given products in a given country
 def correlations(country, product1, product2, data_wfp):
@@ -511,6 +506,7 @@ def correlations(country, product1, product2, data_wfp):
     print(country, product1, product2, n, correlation)
 
     return
+
 
 # prints the average price of two products in a given country
 def average(country, product1, product2, data_wfp):
@@ -540,8 +536,6 @@ def average(country, product1, product2, data_wfp):
 
     return
 
-#correlations('Tajikistan', 'Oil', 'Rice', data_wfp)
-#correlations('Iraq', 'Oil', 'Rice', data_wfp)
 
 # prints all countries with data about two products (copied to amount_combinations.csv)
 def Countries_with_products(data_wfp, data_combination, product1, product2):
@@ -563,6 +557,7 @@ def Countries_with_products(data_wfp, data_combination, product1, product2):
 
     return
 
+
 # prints amount of all countries and amount with high correlation of all possible food combination
 def compare_countries_with_products(data_wfp, data_combination):
     all_products = data_wfp['cm_name'].unique()
@@ -573,7 +568,7 @@ def compare_countries_with_products(data_wfp, data_combination):
     
     return
 
-#compare_countries_with_products(data_wfp,data_combination)
+
 
 # finds productcombinations in amount_combinations.csv with relative high amount of countries with high correlation 
 def find_combination(data_amount):
@@ -584,5 +579,3 @@ def find_combination(data_amount):
     
     print(len(relevant.values.tolist()))
     return
-
-#find_combination(data_amount)

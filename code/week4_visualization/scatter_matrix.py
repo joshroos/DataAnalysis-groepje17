@@ -308,12 +308,6 @@ def make_gridplot(goods, country, data_wfp):
     output_file(filename, title="Scatter Matrix")
     show(grid)
 
-<<<<<<< HEAD
-=======
-
-make_gridplot(goods, country, data_wfp)
-
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
 
 # makes scatterplots about countries in the Middle East for Oil and Rice
 def gridplot_middleeast(goods, data_wfp):
@@ -431,11 +425,6 @@ def gridplot_SouthAsia(goods, data_wfp):
 
     return
 
-<<<<<<< HEAD
-=======
-
-# make_gridplot(goods, country, data_wfp)
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
 
 # all countries per region found with rice and oil
 oil_rice_range_middle_east = ['Armenia', 'Iran  (Islamic Republic of)', 'Iraq',
@@ -464,14 +453,6 @@ j_range = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger',
 k_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh', 'Nepal', 'Sri Lanka',
            'Tajikistan']
 
-<<<<<<< HEAD
-=======
-# gridplot_middleeast(goods,data_wfp)
-# gridplot_westafrica(goods, data_wfp)
-# gridplot_eastafrica(goods, data_wfp)
-# gridplot_SouthAsia(goods, data_wfp)
-
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
 
 # finds the countries within the regions that has data about two given goods
 def find_countries_with_goods(data_wfp, good1, good2, i_range, j_range,
@@ -511,12 +492,6 @@ def find_countries_with_goods(data_wfp, good1, good2, i_range, j_range,
     print(southasia)
     return
 
-<<<<<<< HEAD
-=======
-# find_countries_with_goods(data_wfp, 'Maize', 'Millet', i_range, j_range,
-#                           h_range, k_range)
-
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
 
 # prints the correlation of two given products in a given country
 def correlations(country, product1, product2, data_wfp):
@@ -583,12 +558,6 @@ def average(country, product1, product2, data_wfp):
 
     return
 
-<<<<<<< HEAD
-=======
-# correlations('Tajikistan', 'Oil', 'Rice', data_wfp)
-# correlations('Iraq', 'Oil', 'Rice', data_wfp)
-
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
 
 # prints all countries with data about two products
 def Countries_with_products(data_wfp, df_combi, product1, product2):
@@ -611,13 +580,8 @@ def Countries_with_products(data_wfp, df_combi, product1, product2):
     return
 
 
-<<<<<<< HEAD
 # prints amount of all countries and amount with high correlation of all possible food combination
 def compare_countries_with_products(data_wfp, data_combination):
-=======
-# prints amount of all countries and with high correlation of food combination
-def compare_countries_with_products(data_wfp, df_combi):
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
     all_products = data_wfp['cm_name'].unique()
 
     for product1 in all_products:
@@ -625,13 +589,6 @@ def compare_countries_with_products(data_wfp, df_combi):
             Countries_with_products(data_wfp, df_combi, product1, product2)
 
     return
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0
-
-# compare_countries_with_products(data_wfp,df_combi)
 
 
 # finds product combinations with high amount countries with high correlation
@@ -645,9 +602,3 @@ def find_combination(data_amount):
 
     print(len(relevant.values.tolist()))
     return
-<<<<<<< HEAD
-=======
-
-
-# find_combination(data_amount)
->>>>>>> 44ec5249c25120d7833cbf274b871e4df1ee99d0

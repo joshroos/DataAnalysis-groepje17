@@ -12,7 +12,7 @@ rainfall = pd.read_csv('../../data/rainfall_better.csv',header=0, sep=',', error
 data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
 correlation_rainfall = pd.read_csv('../../data/rainfall_correlations.csv', encoding='latin-1')
 
-# prints all correlations for all products in all countries for all years
+# prints all correlations between rainfall and all products in all countries for all years
 def rainfall_correlation(rainfall, data_WFP):
     products = data_WFP['cm_name'].unique()
     years = [x for x in range(1992, 2016)]

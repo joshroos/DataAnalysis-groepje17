@@ -8,17 +8,12 @@ import io
 from pandas import ExcelWriter
 import numpy as np
 
-#rainfall = pd.read_csv('../data/rainfall_better.csv',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-#exchangerate = pd.read_excel('../data/exchangerate_simple.xlsx',header=0, sep=',', error_bad_lines=False, encoding = 'latin-1')
-#data_WFP = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
-data_correlation = pd.read_csv('../../data/corrcoef.csv', encoding='latin-1')
-data_all = pd.read_csv('../week3 - analysis/all_data.csv', encoding='latin-1')
+data_all = pd.read_csv('../week3_analysis/all_data.csv', encoding='latin-1')
 
+# prints for every product for every country the amount of data points and correlation between population and productprice
 def correlation_population(data_all):
     products = data_all['cm_name'].unique()
     years = [x for x in range(1992, 2016)]
-    #products = ["Wheat", "Millet", "Milk"]
-    #countries = ['Afghanistan', 'Ethiopia', 'Guinea-Bissau', 'India']
     correlations = []
     prices = []
     population_country = []
@@ -39,11 +34,9 @@ def correlation_population(data_all):
                 country = data_all['adm0_name'] == j
                 cm_name = data_all['cm_name'] == k
                 val1 = data_all.loc[(year) & (country) & (cm_name), 'mp_price']
-                #print(k, j, i, val1.mean())
                 year_info = data_all['mp_year'] == i
                 country = data_all['adm0_name'] == j
                 val2 = data_all.loc[(year_info) & (country), 'population']
-                #print(k, j, i, val2.mean())
 
                 if math.isnan(val1.mean()) or math.isnan(val2.mean()):
                     pass
@@ -58,10 +51,8 @@ def correlation_population(data_all):
             correlations.append(correlation[0,1])
             Amount_of_n.append(n)
             print(j, ",", k, ",", n, ",", correlation[0,1])
-        
-
-    #print(country_withcorrelation, Amount_of_n, all_products, correlations)
-
+    
+    # makes the csv
     download = "population_and_correlations.csv" 
     csv = open(download, "w") 
     columnTitleRow = "product, country, n, correlation\n"
@@ -73,13 +64,4 @@ def correlation_population(data_all):
 
     return
 
-correlation_population(data_all)
 
-correlation_goods = pd.read_csv('../../data/correlation_between_goods.csv', encoding='latin-1')
-
-def negative_correlations(correlation_goods):
-
-    negative_correlation = correlation_goods.loc[correlation_goods['correlation'] < 0, 'food_combination']
-    return negative_correlation
-
-#print(negative_correlations(correlation_goods))

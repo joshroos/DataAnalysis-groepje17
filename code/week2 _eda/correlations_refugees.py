@@ -65,12 +65,11 @@ def scatter_refugees(df, wfp_df, country, good):
 countries = wfp_df.loc[wfp_df['cm_name'] == good, 'adm0_name']
 countries = countries.unique()
 list_coeff = []
-download = "../../data/refugees_correlations.csv" 
-csv = open(download, "w") 
+download = "../../data/refugees_correlations.csv"
+csv = open(download, "w")
 columnTitleRow = "country, correlation, n \n"
 csv.write(columnTitleRow)
 for country in countries:
     coeff, n = scatter_refugees(df, wfp_df, country, good)
-    row = country  + "," + str(coeff) + "," + str(n) + "\n"
+    row = country + "," + str(coeff) + "," + str(n) + "\n"
     csv.write(row)
-

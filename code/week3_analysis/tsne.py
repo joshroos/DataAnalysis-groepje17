@@ -10,7 +10,8 @@ from sklearn.cluster import KMeans
 
 # make usable dataframe
 df = pd.read_csv('all_data.csv')
-df = df[df['adm0_name'] == 'Afghanistan']
+df = df[df['adm0_name'] == 'Colombia']
+print(len(df['mp_price']))
 not_needed = ['Unnamed: 0', 'adm0_name', 'cm_name', 'mp_month', 'mp_year']
 df = df.drop(not_needed, axis=1)
 df = df.dropna()

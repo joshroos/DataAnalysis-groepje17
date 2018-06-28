@@ -1,0 +1,128 @@
+Mozambique,Rice,0.876913270521,15
+Mozambique,Maize,0.714348954306,15
+Mozambique,Oil,0.617856750964,15
+Mozambique,Flour,0.602046210966,7
+Mozambique,Cowpeas,0.165504739204,7
+Mozambique,Sugar,0.910797910073,15
+Mozambique,Beans,0.946939800625,15
+Mozambique,Groundnuts,0.833564964209,15
+Zambia,Sorghum,0.811286640344,5
+Zambia,Maize,0.601346470902,15
+Zambia,Rice,0.885963158994,6
+Zambia,Groundnuts,0.706933564769,6
+Zambia,Flour,0.907724313172,6
+Zambia,Beans,0.782993002407,6
+Zambia,Millet,0.915905667887,5
+United Republic of Tanzania,Beans,0.80607946809,11
+United Republic of Tanzania,Maize,0.748196587573,12
+United Republic of Tanzania,Rice,0.503732359379,12
+Madagascar,Rice,0.0723925358212,14
+Madagascar,Flour,-0.16010660846,7
+Madagascar,Oil,-0.139818319542,7
+Madagascar,Sugar,-0.0126675847132,7
+Madagascar,Fuel (diesel),0.346768631412,4
+Madagascar,Fuel (petrol-gasoline),0.525221610947,4
+Malawi,Beans,0.457318519143,6
+Malawi,Maize,0.377688119787,15
+Malawi,Rice,-0.0354531932649,6
+Malawi,Cassava,0.763997114154,4
+Malawi,Groundnuts,0.224577257639,6
+Burundi,Beans,0.807836842731,15
+Burundi,Maize,0.790936435894,11
+Burundi,Flour,0.757734892662,15
+Burundi,Sweet potatoes,0.617824822653,15
+Burundi,Rice,0.034586686348,9
+Ethiopia,Sorghum,0.623593082371,13
+Ethiopia,Maize,0.352296284772,13
+Ethiopia,Wheat,0.435543154795,13
+Ethiopia,Rice,0.0856698818927,4
+Ethiopia,Milk,0.916427429607,4
+Ethiopia,Sugar,0.92396978701,4
+Ethiopia,Pasta,0.901927241011,4
+Ethiopia,Flour,-0.209097473174,4
+Ethiopia,Fuel (kerosene),-0.706135950952,4
+Ethiopia,Fuel (diesel),-0.758126245216,4
+Ethiopia,Fuel (petrol-gasoline),-0.878253219056,4
+Ethiopia,Exchange rate,0.668433794704,4
+Djibouti,Bread,-0.748916835087,6
+Djibouti,Flour,-0.384845267651,10
+Djibouti,Rice,-0.871326434742,10
+Djibouti,Sorghum,-0.326342930394,6
+Djibouti,Beans,0.374345995772,6
+Djibouti,Millet,-0.16857353737,6
+Djibouti,Oil,-0.950439672302,6
+Djibouti,Sugar,-0.616238471446,6
+Djibouti,Pasta,-0.710847753246,6
+Djibouti,Fuel (kerosene),-0.899818005426,6
+Kenya,Bread,0.591152576017,12
+Kenya,Sorghum,0.819582601923,12
+Kenya,Maize,0.665377412686,12
+Kenya,Oil,-0.0182882764527,12
+Kenya,Potatoes,0.806634964593,12
+Kenya,Beans,0.765813199043,12
+Kenya,Fuel (kerosene),-0.530473758375,4
+Kenya,Fuel (diesel),-0.574140612993,4
+Kenya,Fuel (petrol-gasoline),-0.653381693704,4
+Kenya,Milk,0.899900135894,12
+Rwanda,Maize,0.0165449802191,8
+Rwanda,Rice,-0.380487641572,8
+Rwanda,Flour,0.872496674111,8
+Rwanda,Sorghum,0.576338054514,8
+Rwanda,Cassava,0.856761909705,8
+Rwanda,Milk,-0.549805778549,4
+Rwanda,Wheat,0.356369229951,8
+Rwanda,Sweet potatoes,0.894759491495,8
+Rwanda,Chili,-0.983527032019,4
+Rwanda,Eggs,-0.930622769016,4
+Rwanda,Garlic,-0.794021121879,4
+Rwanda,Onions,-0.866507948097,4
+Rwanda,Tomatoes,-0.877962859537,4
+Rwanda,Groundnuts,-0.0423923021673,4
+Rwanda,Meat,-0.907982159808,5
+Rwanda,Potatoes,0.702484885868,8
+Rwanda,Carrots,-0.775845526565,4
+Rwanda,Cabbage,-0.721813832256,4
+Rwanda,Oranges,-0.23414990663,4
+Rwanda,Soybeans,0.380172543307,4
+Rwanda,Bananas,-0.869749385795,8
+Rwanda,Beans,0.544039097369,8
+Rwanda,Peppers (green),0.0312481331362,5
+Rwanda,Livestock,0.0957192539266,5
+Rwanda,Spinach,0.109180016011,5
+Rwanda,Guava,-0.704104529478,5
+Rwanda,Papaya,0.914329892403,5
+Rwanda,Mangoes,0.391353045152,5
+Rwanda,Eggplants,0.815401128492,7
+Rwanda,Charcoal,0.386779994897,8
+Rwanda,Passion fruit,0.920474942447,8
+Rwanda,Zucchini,-0.519423714775,5
+Rwanda,Avocados,0.819973829659,4
+Rwanda,Peas,0.824838555776,5
+Rwanda,Cucumbers,-0.989414240588,4
+Rwanda,Apples,-0.711886986598,4
+Rwanda,Cauliflower,-0.439045455127,4
+Somalia,Rice,0.985016704936,5
+Somalia,Oil,0.987835385707,5
+Somalia,Sorghum,0.688435977646,5
+Somalia,Fuel (diesel),0.972516423295,4
+Uganda,Beans,0.421437024319,7
+Uganda,Sorghum,0.492925277087,7
+Uganda,Maize,-0.215127110702,7
+Uganda,Millet,0.467498490313,7
+Uganda,Flour,0.613523989183,8
+Sudan,Sorghum,0.864910297885,15
+Sudan,Millet,0.915852229568,15
+Sudan,Wheat,0.907104202933,7
+South Sudan,Fuel (diesel),0.752554613014,6
+South Sudan,Fuel (petrol-gasoline),0.799394778806,6
+South Sudan,Exchange rate,0.695095793931,5
+South Sudan,Exchange rate (unofficial),0.391487025713,5
+South Sudan,Flour,0.0966851615844,9
+South Sudan,Maize,0.0313225201864,10
+South Sudan,Beans,0.495540070903,9
+South Sudan,Oil,0.771416201648,5
+South Sudan,Groundnuts,0.593550540277,10
+South Sudan,Sorghum,0.0787402789985,10
+South Sudan,Millet,-0.0296840031601,10
+South Sudan,Sesame,0.142141120048,10
+South Sudan,Cassava,0.298224197489,9

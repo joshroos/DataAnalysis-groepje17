@@ -1,0 +1,108 @@
+Mali,Maize,0.59987339172,15
+Mali,Sorghum,0.506236750801,15
+Mali,Millet,0.563121202018,15
+Mali,Rice,0.707352838471,15
+Mali,Beans,-0.78108122268,4
+Cote d'Ivoire,Maize,0.725242422393,13
+Cote d'Ivoire,Oil,-0.663509306601,7
+Cote d'Ivoire,Rice,0.383574631712,13
+Cote d'Ivoire,Yam,0.799599629284,10
+Cote d'Ivoire,Meat,-0.271855221828,7
+Cote d'Ivoire,Cornstarch,0.416340413591,7
+Cote d'Ivoire,Fish,-0.137738684374,7
+Cote d'Ivoire,Groundnuts,-0.45770048525,7
+Cote d'Ivoire,Cassava,-0.540823163205,12
+Cote d'Ivoire,Cocoa,0.701099907315,7
+Burkina Faso,Maize,0.718864811649,16
+Burkina Faso,Sorghum,0.778763379261,16
+Burkina Faso,Millet,0.847191162853,26
+Burkina Faso,Beans,0.151147882693,6
+Burkina Faso,Rice,0.960214188198,8
+Niger,Maize,0.838338397805,24
+Niger,Rice,-0.413614147724,10
+Niger,Sorghum,0.847400552441,24
+Niger,Millet,0.869914154057,24
+Niger,Beans,0.892611868543,19
+Guinea,Oil,-0.333041513084,8
+Guinea,Rice,-0.797298628977,10
+Guinea,Bread,-0.289170222297,6
+Guinea,Sugar,-0.857867565041,7
+Guinea,Tomatoes,0.758791337464,6
+Guinea,Meat,-0.356008476458,6
+Guinea,Salt,-0.627661334893,6
+Guinea,Flour,-0.0848270464556,5
+Guinea,Beans,-0.528569620819,5
+Guinea-Bissau,Maize,-0.648598160673,11
+Guinea-Bissau,Oil,-0.175106469058,11
+Guinea-Bissau,Rice,-0.0887201108886,11
+Guinea-Bissau,Sorghum,-0.706928522947,11
+Guinea-Bissau,Millet,-0.664566089625,10
+Guinea-Bissau,Wheat,0.615344574067,10
+Guinea-Bissau,Sugar,0.493923212434,10
+Guinea-Bissau,Fonio,-0.68047315163,11
+Guinea-Bissau,Salt,-0.793215987764,5
+Ghana,Maize,-0.178456327328,10
+Ghana,Rice,0.427127159652,10
+Ghana,Cassava,0.7819953675,10
+Ghana,Plantains,0.74441304111,10
+Ghana,Yam,0.785769430046,10
+Cameroon,Maize,-0.374076787306,7
+Cameroon,Rice,-0.50654213757,7
+Cameroon,Groundnuts,-0.0625386168383,7
+Cameroon,Beans,-0.11508400283,7
+Cameroon,Sorghum,-0.0936791420631,7
+Cameroon,Sesame,0.920256726846,6
+Cameroon,Onions,0.398818568539,7
+Cameroon,Peas,-0.0424077047163,6
+Cameroon,Soybeans,-0.992318985379,4
+Cameroon,Cassava,-0.403412615973,6
+Gambia,Maize,0.534858486917,12
+Gambia,Sorghum,0.795818090649,12
+Gambia,Millet,0.71788214525,12
+Gambia,Groundnuts,0.805409588674,12
+Gambia,Rice,0.792339969228,12
+Gambia,Bread,0.599299829077,5
+Gambia,Oil,0.664755103616,5
+Gambia,Cassava,0.962884163915,5
+Gambia,Flour,0.0205770691342,5
+Gambia,Milk,0.883116098933,5
+Gambia,Sweet potatoes,0.848393681455,4
+Gambia,Eggs,0.593473457311,5
+Gambia,Meat,0.944508484297,5
+Gambia,Sugar,0.611008306019,5
+Gambia,Garlic,0.858479830803,5
+Gambia,Tomatoes,0.0176134225073,5
+Gambia,Potatoes,0.82440190384,4
+Gambia,Fish,0.944395328473,5
+Gambia,Carrots,-0.5724782198,5
+Gambia,Cashew,0.383305918627,4
+Gambia,Onions,0.374384829838,5
+Gambia,Cabbage,0.330071124784,5
+Gambia,Salt,-0.152976064738,5
+Gambia,Coffee,0.936165487672,5
+Gambia,Peas,-0.0415597493156,4
+Gambia,Apples,0.66172467609,5
+Gambia,Oranges,0.981485932091,5
+Gambia,Bananas,-0.37998729055,5
+Gambia,Beans,-0.268866463273,5
+Gambia,Tea,0.874173231624,5
+Gambia,Fuel (kerosene),0.741648195323,5
+Gambia,Fuel (diesel),-0.756318733837,5
+Gambia,Fuel (petrol-gasoline),-0.792683497192,5
+Mauritania,Rice,-0.349478896423,10
+Mauritania,Wheat,0.105722431678,10
+Mauritania,Oil,0.28206887225,10
+Mauritania,Sugar,0.474692788026,10
+Mauritania,Sorghum,-0.0690134362984,10
+Nigeria,Maize,-0.376643768678,15
+Nigeria,Rice,-0.432682170531,15
+Nigeria,Sorghum,-0.405325937912,15
+Nigeria,Millet,-0.319531540829,15
+Nigeria,Bread,0.98474282227,4
+Nigeria,Oil,0.788697748697,4
+Nigeria,Yam,0.817823720342,4
+Nigeria,Groundnuts,0.904151649736,4
+Nigeria,Fuel (diesel),0.938512280288,4
+Nigeria,Fuel (petrol-gasoline),0.952705237683,4
+Nigeria,Cowpeas,0.464969604985,4
+Nigeria,Gari,-0.144125198629,4

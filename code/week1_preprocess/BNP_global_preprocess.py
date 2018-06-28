@@ -1,3 +1,12 @@
+'''
+Darius Barsony
+donderdag 28 juni 
+
+This program is used to preprocess the data used in this project. 
+It skips some rows that are not neccesary for analysis. 
+Eventually it writes the data to an excel file. 
+'''
+
 import pandas as pd
 import  numpy as np 
 from pandas import ExcelWriter

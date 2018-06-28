@@ -8,8 +8,9 @@ from pandas import Series, DataFrame
 import sklearn
 from sklearn.linear_model import LinearRegression
 
-df = pd.read_csv('../../data/all_data.csv')
+df = pd.read_csv('all_data.csv')
 df = df.dropna()
+print(len(df))
 
 
 def make_regression(df):

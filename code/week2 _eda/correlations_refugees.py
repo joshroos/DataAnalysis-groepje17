@@ -57,7 +57,7 @@ def scatter_refugees(df, wfp_df, country, good):
 
     p.scatter(refugees, prices, marker="circle", size=10,
                 line_color="navy", fill_color="orange", alpha=0.5)
-    p.text(text_align='left', text=['MSE: {}'.format(coeff)], 
+    p.text(text_align='left', text=['Correlation: {}'.format(coeff)], 
            text_font_size='15pt', x=2400000, y=1.7)
     p.line(pd.Series(refugees), a * pd.Series(refugees) + b, color='red')
     p.background_fill_color = "#eeeeee"

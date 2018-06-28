@@ -41,9 +41,8 @@ ul.posts li { list-style: none; }
 
 .west_afrika {
     width: 250px;
-    float: left;
 }
 
-.boxplot_west_afrika {
-    float: left;
-}
+/* .boxplot_west_afrika {
+
+} */

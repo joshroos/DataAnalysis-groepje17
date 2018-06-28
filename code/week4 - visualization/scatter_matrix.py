@@ -17,10 +17,12 @@ from sklearn.metrics import mean_squared_error
 
 # reads necessary files
 data_wfp = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
+data_amount = pd.read_csv('../../data/amount_combinations.csv', encoding='latin-1')
+data_combination = pd.read_csv('../../data/combination_correlations.csv', encoding='latin-1')
 
 # goods and country to be plotted
-goods = ['Oil', 'Rice', 'Flour', 'Tea']
-#country = data_wfp['adm0_name'] == 'Syrian Arab Republic'
+goods = ['Milk', 'Onions', 'Bread', 'Potatoes']
+country = data_wfp['adm0_name'] == 'Ukraine'
 
 
 # makes ColumnDataSource of necessary data
@@ -45,11 +47,11 @@ def make_source(goods, country, data_wfp):
             list_good4 = data_wfp.loc[country & good4 & time & data_month,
                                       'mp_price']
             if len(list_good1) > 0 and len(list_good2) > 0:
-                #if len(list_good3) > 0 and len(list_good4) > 0:
-                prices1.append(list_good1.mean())
-                prices2.append(list_good2.mean())
-                prices3.append(list_good3.mean())
-                prices4.append(list_good4.mean())
+                if len(list_good3) > 0 and len(list_good4) > 0:
+                    prices1.append(list_good1.mean())
+                    prices2.append(list_good2.mean())
+                    prices3.append(list_good3.mean())
+                    prices4.append(list_good4.mean())
 
     # turns lists into panda series
     prices1 = pd.Series(prices1)
@@ -59,17 +61,64 @@ def make_source(goods, country, data_wfp):
 
     # makes dict, manual changes of names necessary
     data = dict(
-            Oil=prices1,
-            Rice=prices2,
-            Flour=prices3,
-            Tea=prices4,)
+            Milk=prices1,
+            Onions=prices2,
+            Bread=prices3,
+            Potatoes=prices4,)
 
     source = ColumnDataSource(data)
     return source, data
 
 
 # makes scatter plot for scatter matrix
-def make_scatter(source, data, country_name, xname, yname, xax=False, yax=False):
+def make_scatter(source, data, xname, yname, xax=False, yax=False):
+    # sets range and borders for plot
+    xdr = DataRange1d(bounds=None)
+    ydr = DataRange1d(bounds=None)
+    mbl = 40 if yax else 0
+    mbb = 40 if xax else 0
+    plot = figure(
+        x_range=xdr, y_range=ydr, background_fill_color="#efe8e2",
+        border_fill_color='white', plot_width=200 + mbl, plot_height=200 + mbb,
+        min_border_left=2+mbl, min_border_right=2, min_border_top=2,
+        min_border_bottom=2+mbb)
+
+    # plots points
+    circle = Circle(x=xname, y=yname, fill_color="blue", fill_alpha=0.2,
+                    size=4, line_color="blue")
+    plot.add_glyph(source, circle)
+
+    # calculates and plots regression line
+    a, b, mse = make_regression_line(data, xname, yname)
+    mse_mean = mse.mean()
+    print(xname, yname, mse_mean)
+    x = data[xname]
+    plot.line(x, a * x + b, color='red')
+    plot.axis.visible = False
+
+    # makes axis according to place in matrix
+    xticker = BasicTicker()
+    if xax:
+        xaxis = LinearAxis()
+        xaxis.axis_label = xname
+        plot.add_layout(xaxis, 'below')
+        xticker = xaxis.ticker
+    plot.add_layout(Grid(dimension=0, ticker=xticker))
+
+    yticker = BasicTicker()
+    if yax:
+        yaxis = LinearAxis()
+        yaxis.axis_label = yname
+        yaxis.major_label_orientation = 'vertical'
+        plot.add_layout(yaxis, 'left')
+        yticker = yaxis.ticker
+
+    plot.add_layout(Grid(dimension=1, ticker=yticker))
+
+    return plot
+
+# makes scatter plot
+def make_scatter_plot(source, data, country_name, xname, yname, xax=False, yax=False):
     # sets range and borders for plot
     xdr = DataRange1d(bounds=None)
     ydr = DataRange1d(bounds=None)
@@ -114,7 +163,6 @@ def make_scatter(source, data, country_name, xname, yname, xax=False, yax=False)
     plot.add_layout(Grid(dimension=1, ticker=yticker))
 
     return plot
-
 
 # makes plot of distribution of data points of good
 def make_dist(data, xname, xax=False, yax=False):
@@ -239,7 +287,7 @@ def make_gridplot(goods, country, data_wfp):
                 plot = show_coeff(data, x, y, xax, yax)
                 row.append(plot)
             elif x != y:
-                plot = make_scatter(source, data,'', x, y, xax, yax)
+                plot = make_scatter(source, data, x, y, xax, yax)
                 row.append(plot)
                 done.append((x, y))
             elif x == y:
@@ -253,37 +301,38 @@ def make_gridplot(goods, country, data_wfp):
     output_file(filename, title="Scatter Matrix")
     show(grid)
 
+make_gridplot(goods,country,data_wfp)
 
 # makes scatterplots about countries in the Middle East for Oil and Rice
 def gridplot_middleeast(goods, data_wfp):
 
     country = data_wfp['adm0_name'] == 'Syrian Arab Republic'
     source, data = make_source(goods, country, data_wfp)
-    p1 = make_scatter(source, data,'Syria', 'Oil', 'Rice', 40, 40)
+    p1 = make_scatter_plot(source, data,'Syria', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Turkey'
     source, data = make_source(goods, country, data_wfp)
-    p2 = make_scatter(source, data,'Turkey', 'Oil', 'Rice', 40, 40)
+    p2 = make_scatter_plot(source, data,'Turkey', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Iran  (Islamic Republic of)'
     source, data = make_source(goods, country, data_wfp)
-    p3 = make_scatter(source, data,'Iran  (Islamic Republic of)', 'Oil', 'Rice', 40, 40)
+    p3 = make_scatter_plot(source, data,'Iran  (Islamic Republic of)', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Yemen'
     source, data = make_source(goods, country, data_wfp)
-    p4 = make_scatter(source, data,'Yemen', 'Oil', 'Rice', 40, 40)
+    p4 = make_scatter_plot(source, data,'Yemen', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Armenia'
     source, data = make_source(goods, country, data_wfp)
-    p5 = make_scatter(source, data,'Armenia', 'Oil', 'Rice', 40, 40)
+    p5 = make_scatter_plot(source, data,'Armenia', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Jordan'
     source, data = make_source(goods, country, data_wfp)
-    p6 = make_scatter(source, data,'Jordan', 'Oil', 'Rice', 40, 40)
+    p6 = make_scatter_plot(source, data,'Jordan', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Iraq'
     source, data = make_source(goods, country, data_wfp)
-    p7 = make_scatter(source, data,'Iraq', 'Oil', 'Rice', 40, 40)
+    p7 = make_scatter_plot(source, data,'Iraq', 'Oil', 'Rice', 40, 40)
     
     filename = "riceandoil_middleeast.html"
     output_file(filename, title="Rice and Oil Middle East")
@@ -297,19 +346,19 @@ def gridplot_westafrica(goods, data_wfp):
 
     country = data_wfp['adm0_name'] == 'Algeria'
     source, data = make_source(goods, country, data_wfp)
-    p1 = make_scatter(source, data,'Algeria', 'Oil', 'Rice', 40, 40)
+    p1 = make_scatter_plot(source, data,'Algeria', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == "Cote d'Ivoire"
     source, data = make_source(goods, country, data_wfp)
-    p2 = make_scatter(source, data,"Cote d'Ivoire", 'Oil', 'Rice', 40, 40)
+    p2 = make_scatter_plot(source, data,"Cote d'Ivoire", 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Guinea-Bissau'
     source, data = make_source(goods, country, data_wfp)
-    p3 = make_scatter(source, data,'Guinea-Bissau', 'Oil', 'Rice', 40, 40)
+    p3 = make_scatter_plot(source, data,'Guinea-Bissau', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Guinea'
     source, data = make_source(goods, country, data_wfp)
-    p4 = make_scatter(source, data,'Guinea', 'Oil', 'Rice', 40, 40)
+    p4 = make_scatter_plot(source, data,'Guinea', 'Oil', 'Rice', 40, 40)
 
     # writes the plot to an html file
     filename = "riceandoil_WestAfrica.html"
@@ -325,11 +374,11 @@ def gridplot_eastafrica(goods, data_wfp):
 
     country = data_wfp['adm0_name'] == 'Madagascar'
     source, data = make_source(goods, country, data_wfp)
-    p1 = make_scatter(source, data,'Madagascar', 'Oil', 'Rice', 40, 40)
+    p1 = make_scatter_plot(source, data,'Madagascar', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Mozambique'
     source, data = make_source(goods, country, data_wfp)
-    p2 = make_scatter(source, data,'Mozambique', 'Oil', 'Rice', 40, 40)
+    p2 = make_scatter_plot(source, data,'Mozambique', 'Oil', 'Rice', 40, 40)
 
     # writes the plot to an html file
     filename = "riceandoil_EastAfrica.html"
@@ -344,20 +393,24 @@ def gridplot_SouthAsia(goods, data_wfp):
 
     country = data_wfp['adm0_name'] == 'Bangladesh'
     source, data = make_source(goods, country, data_wfp)
-    p1 = make_scatter(source, data,'Bangladesh', 'Oil', 'Rice', 40, 40)
+    p1 = make_scatter_plot(source, data,'Bangladesh', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'India'
     source, data = make_source(goods, country, data_wfp)
-    p2 = make_scatter(source, data,'India', 'Oil', 'Rice', 40, 40)
+    p2 = make_scatter_plot(source, data,'India', 'Oil', 'Rice', 40, 40)
 
     country = data_wfp['adm0_name'] == 'Pakistan'
     source, data = make_source(goods, country, data_wfp)
-    p3 = make_scatter(source, data,'Pakistan', 'Oil', 'Rice', 40, 40)
+    p3 = make_scatter_plot(source, data,'Pakistan', 'Oil', 'Rice', 40, 40)
+
+    country = data_wfp['adm0_name'] == 'Tajikistan'
+    source, data = make_source(goods, country, data_wfp)
+    p4 = make_scatter_plot(source, data,'Tajikistan', 'Oil', 'Rice', 40, 40)
     
     # writes the plot to an html file
     filename = "riceandoil_SouthAsia.html"
     output_file(filename, title="Rice and Oil South Asia")
-    p = gridplot([[p1,p2], [p3, None]])
+    p = gridplot([[p1,p2], [p3, p4]])
     show(p)
 
     return
@@ -368,7 +421,7 @@ def gridplot_SouthAsia(goods, data_wfp):
 oil_rice_range_middle_east = ['Armenia', 'Iran  (Islamic Republic of)', 'Iraq', 'Jordan', 'Syrian Arab Republic', 'Turkey', 'Yemen']
 oil_rice_range_west_africa = ['Algeria', "Cote d'Ivoire", 'Guinea-Bissau', 'Guinea']
 oil_rice_range_east_africa = ['Madagascar', 'Mozambique']
-oil_rice_range_south_asia = ['Bangladesh', 'India', 'Pakistan']
+oil_rice_range_south_asia = ['Bangladesh', 'India', 'Pakistan', 'Tajikistan']
 
 # countries East Africa
 h_range = ['Mozambique', 'Zambia','United Republic of Tanzania', 'Madagascar', 'Malawi', 'Burundi', 'Ethiopia', 'Djibouti', 'Kenya', 'Rwanda', 'Somalia', 'Uganda', 'Sudan', 'South Sudan']
@@ -377,12 +430,12 @@ i_range = ['Armenia', 'Iraq', 'Iran  (Islamic Republic of)','Turkey','Syrian Ara
 # countries West Afrika
 j_range = ['Mali', 'Algeria', "Cote d'Ivoire", 'Burkina Faso', 'Niger', 'Guinea', 'Guinea-Bissau', 'Ghana', 'Cameroon', 'Gambia', 'Mauritania', 'Nigeria']
 # countries South Asia
-k_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka']
+k_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka', 'Tajikistan']
 
 #gridplot_middleeast(goods,data_wfp)
 #gridplot_westafrica(goods, data_wfp)
 #gridplot_eastafrica(goods, data_wfp)
-#  gridplot_SouthAsia(goods, data_wfp)
+#gridplot_SouthAsia(goods, data_wfp)
 
 
 # finds the countries within the regions that has data about two given goods
@@ -430,8 +483,8 @@ def find_countries_with_goods(data_wfp, good1, good2, i_range, j_range, h_range,
 
     return
 
-
-#find_countries_with_goods(data_wfp, 'Oil', 'Rice', i_range, j_range, h_range, k_range)
+#maize, millet, sorghum, flour: Gambia
+#find_countries_with_goods(data_wfp, 'Maize', 'Millet', i_range, j_range, h_range, k_range)
 
 # prints the correlation of two given products in a given country
 def correlations(country, product1, product2, data_wfp):
@@ -455,29 +508,81 @@ def correlations(country, product1, product2, data_wfp):
                 n += 1
 
     correlation = np.corrcoef(price_product1, price_product2)
-
     print(country, product1, product2, n, correlation)
 
     return
 
+# prints the average price of two products in a given country
+def average(country, product1, product2, data_wfp):
+    years = [x for x in range(1992, 2018)]
+    months = [x for x in range(1, 13)]
+    price_product1 = []
+    price_product2 = []
+    n = 0
 
-#correlations('Armenia', 'Oil', 'Rice', data_wfp)
+    for i in years:
+        for j in months:
+            price1 = data_wfp.loc[(data_wfp['cm_name'] == product1) & (data_wfp['adm0_name'] == country) & (data_wfp['mp_year'] == i) & (data_wfp['mp_month'] == j), 'mp_price']
+            price2 = data_wfp.loc[(data_wfp['cm_name'] == product2) & (data_wfp['adm0_name'] == country) & (data_wfp['mp_year'] == i) & (data_wfp['mp_month'] == j), 'mp_price']
+
+            if math.isnan(price1.mean()) or math.isnan(price2.mean()):
+                pass
+            else:
+                price_product1.append(price1.mean())
+                price_product2.append(price2.mean())
+                print(price1.mean(), price2.mean())
+                n += 1
+
+    average_price1 = sum(price_product1) / float(len(price_product1))
+    average_price2 = sum(price_product2) / float(len(price_product2))
+
+    print(country, average_price1, average_price2)
+
+    return
+
+#correlations('Tajikistan', 'Oil', 'Rice', data_wfp)
 #correlations('Iraq', 'Oil', 'Rice', data_wfp)
 
-# returns all countries with data about two products
-def Countries_with_oil_and_rice(data_wfp, product1, product2):
+# prints all countries with data about two products (copied to amount_combinations.csv)
+def Countries_with_products(data_wfp, data_combination, product1, product2):
     Countries_with_product1 = data_wfp.loc[(data_wfp['cm_name'] == product1), 'adm0_name'].unique()
     Countries_with_product2 = data_wfp.loc[(data_wfp['cm_name'] == product2), 'adm0_name'].unique()
     both = []
-
-
+   
     for x in Countries_with_product1:
         if x in Countries_with_product2:
             both.append(x)
 
-    print(both)
-    print(len(both))
+    if len(both) >= 5:
+        combi = product1 + ' & ' + product2
+        amount = data_combination.loc[data_combination['combinations'] == combi, 'n'].sum()
+        relative = amount*100/len(both)
+
+        print(product1, ",", product2, ",", len(both),",", amount,",", relative)
+
+
     return
 
-#Countries_with_oil_and_rice(data_wfp, 'Oil', 'Rice')
+# prints amount of all countries and amount with high correlation of all possible food combination
+def compare_countries_with_products(data_wfp, data_combination):
+    all_products = data_wfp['cm_name'].unique()
+
+    for product1 in all_products:
+        for product2 in all_products:
+            Countries_with_products(data_wfp, data_combination, product1, product2)
     
+    return
+
+#compare_countries_with_products(data_wfp,data_combination)
+
+# finds productcombinations in amount_combinations.csv with relative high amount of countries with high correlation 
+def find_combination(data_amount):
+    relevant = data_amount.loc[data_amount['percentage'] > 34, ['product1', 'product2','total_countries','countries_correlation', 'percentage']]
+    
+    for x in relevant.values.tolist():
+        print(x)
+    
+    print(len(relevant.values.tolist()))
+    return
+
+#find_combination(data_amount)

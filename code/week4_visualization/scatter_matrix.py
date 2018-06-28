@@ -17,10 +17,12 @@ from sklearn.metrics import mean_squared_error
 
 # reads necessary files
 data_wfp = pd.read_csv('../../data/WFP_data_normalised.csv', encoding='latin-1')
+data_amount = pd.read_csv('../../data/amount_combinations.csv', encoding='latin-1')
+data_combination = pd.read_csv('../../data/combination_correlations.csv', encoding='latin-1')
 
 # goods and country to be plotted
-goods = ['Oil', 'Rice', 'Flour', 'Tea']
-#country = data_wfp['adm0_name'] == 'Syrian Arab Republic'
+goods = ['Milk', 'Onions', 'Bread', 'Potatoes']
+country = data_wfp['adm0_name'] == 'Ukraine'
 
 
 # makes ColumnDataSource of necessary data
@@ -45,11 +47,11 @@ def make_source(goods, country, data_wfp):
             list_good4 = data_wfp.loc[country & good4 & time & data_month,
                                       'mp_price']
             if len(list_good1) > 0 and len(list_good2) > 0:
-                #if len(list_good3) > 0 and len(list_good4) > 0:
-                prices1.append(list_good1.mean())
-                prices2.append(list_good2.mean())
-                prices3.append(list_good3.mean())
-                prices4.append(list_good4.mean())
+                if len(list_good3) > 0 and len(list_good4) > 0:
+                    prices1.append(list_good1.mean())
+                    prices2.append(list_good2.mean())
+                    prices3.append(list_good3.mean())
+                    prices4.append(list_good4.mean())
 
     # turns lists into panda series
     prices1 = pd.Series(prices1)
@@ -59,10 +61,10 @@ def make_source(goods, country, data_wfp):
 
     # makes dict, manual changes of names necessary
     data = dict(
-            Oil=prices1,
-            Rice=prices2,
-            Flour=prices3,
-            Tea=prices4,)
+            Milk=prices1,
+            Onions=prices2,
+            Bread=prices3,
+            Potatoes=prices4,)
 
     source = ColumnDataSource(data)
     return source, data
@@ -299,6 +301,7 @@ def make_gridplot(goods, country, data_wfp):
     output_file(filename, title="Scatter Matrix")
     show(grid)
 
+make_gridplot(goods,country,data_wfp)
 
 # makes scatterplots about countries in the Middle East for Oil and Rice
 def gridplot_middleeast(goods, data_wfp):
@@ -418,7 +421,7 @@ def gridplot_SouthAsia(goods, data_wfp):
 oil_rice_range_middle_east = ['Armenia', 'Iran  (Islamic Republic of)', 'Iraq', 'Jordan', 'Syrian Arab Republic', 'Turkey', 'Yemen']
 oil_rice_range_west_africa = ['Algeria', "Cote d'Ivoire", 'Guinea-Bissau', 'Guinea']
 oil_rice_range_east_africa = ['Madagascar', 'Mozambique']
-oil_rice_range_south_asia = ['Bangladesh', 'India', 'Pakistan']
+oil_rice_range_south_asia = ['Bangladesh', 'India', 'Pakistan', 'Tajikistan']
 
 # countries East Africa
 h_range = ['Mozambique', 'Zambia','United Republic of Tanzania', 'Madagascar', 'Malawi', 'Burundi', 'Ethiopia', 'Djibouti', 'Kenya', 'Rwanda', 'Somalia', 'Uganda', 'Sudan', 'South Sudan']
@@ -480,8 +483,8 @@ def find_countries_with_goods(data_wfp, good1, good2, i_range, j_range, h_range,
 
     return
 
-
-#find_countries_with_goods(data_wfp, 'Oil', 'Rice', i_range, j_range, h_range, k_range)
+#maize, millet, sorghum, flour: Gambia
+#find_countries_with_goods(data_wfp, 'Maize', 'Millet', i_range, j_range, h_range, k_range)
 
 # prints the correlation of two given products in a given country
 def correlations(country, product1, product2, data_wfp):
@@ -505,29 +508,81 @@ def correlations(country, product1, product2, data_wfp):
                 n += 1
 
     correlation = np.corrcoef(price_product1, price_product2)
-
     print(country, product1, product2, n, correlation)
 
     return
 
+# prints the average price of two products in a given country
+def average(country, product1, product2, data_wfp):
+    years = [x for x in range(1992, 2018)]
+    months = [x for x in range(1, 13)]
+    price_product1 = []
+    price_product2 = []
+    n = 0
 
-#correlations('Armenia', 'Oil', 'Rice', data_wfp)
+    for i in years:
+        for j in months:
+            price1 = data_wfp.loc[(data_wfp['cm_name'] == product1) & (data_wfp['adm0_name'] == country) & (data_wfp['mp_year'] == i) & (data_wfp['mp_month'] == j), 'mp_price']
+            price2 = data_wfp.loc[(data_wfp['cm_name'] == product2) & (data_wfp['adm0_name'] == country) & (data_wfp['mp_year'] == i) & (data_wfp['mp_month'] == j), 'mp_price']
+
+            if math.isnan(price1.mean()) or math.isnan(price2.mean()):
+                pass
+            else:
+                price_product1.append(price1.mean())
+                price_product2.append(price2.mean())
+                print(price1.mean(), price2.mean())
+                n += 1
+
+    average_price1 = sum(price_product1) / float(len(price_product1))
+    average_price2 = sum(price_product2) / float(len(price_product2))
+
+    print(country, average_price1, average_price2)
+
+    return
+
+#correlations('Tajikistan', 'Oil', 'Rice', data_wfp)
 #correlations('Iraq', 'Oil', 'Rice', data_wfp)
 
-# returns all countries with data about two products
-def Countries_with_oil_and_rice(data_wfp, product1, product2):
+# prints all countries with data about two products (copied to amount_combinations.csv)
+def Countries_with_products(data_wfp, data_combination, product1, product2):
     Countries_with_product1 = data_wfp.loc[(data_wfp['cm_name'] == product1), 'adm0_name'].unique()
     Countries_with_product2 = data_wfp.loc[(data_wfp['cm_name'] == product2), 'adm0_name'].unique()
     both = []
-
-
+   
     for x in Countries_with_product1:
         if x in Countries_with_product2:
             both.append(x)
 
-    print(both)
-    print(len(both))
+    if len(both) >= 5:
+        combi = product1 + ' & ' + product2
+        amount = data_combination.loc[data_combination['combinations'] == combi, 'n'].sum()
+        relative = amount*100/len(both)
+
+        print(product1, ",", product2, ",", len(both),",", amount,",", relative)
+
+
     return
 
-#Countries_with_oil_and_rice(data_wfp, 'Oil', 'Rice')
+# prints amount of all countries and amount with high correlation of all possible food combination
+def compare_countries_with_products(data_wfp, data_combination):
+    all_products = data_wfp['cm_name'].unique()
+
+    for product1 in all_products:
+        for product2 in all_products:
+            Countries_with_products(data_wfp, data_combination, product1, product2)
     
+    return
+
+#compare_countries_with_products(data_wfp,data_combination)
+
+# finds productcombinations in amount_combinations.csv with relative high amount of countries with high correlation 
+def find_combination(data_amount):
+    relevant = data_amount.loc[data_amount['percentage'] > 34, ['product1', 'product2','total_countries','countries_correlation', 'percentage']]
+    
+    for x in relevant.values.tolist():
+        print(x)
+    
+    print(len(relevant.values.tolist()))
+    return
+
+#find_combination(data_amount)

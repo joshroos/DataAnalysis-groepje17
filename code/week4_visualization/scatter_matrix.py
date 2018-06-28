@@ -24,8 +24,8 @@ data_amount = pd.read_csv(file_amount, encoding='latin-1')
 df_combi = pd.read_csv(file_combi, encoding='latin-1')
 
 # goods and country to be plotted
-goods = ['Milk', 'Onions', 'Bread', 'Potatoes']
-country = data_wfp['adm0_name'] == 'Ukraine'
+goods = ['Maize', 'Millet', 'Sorghum', 'Flour']
+country = data_wfp['adm0_name'] == 'Gambia'
 
 
 # makes ColumnDataSource of necessary data
@@ -64,10 +64,10 @@ def make_source(goods, country, data_wfp):
 
     # makes dict, manual changes of names necessary
     data = dict(
-            Milk=prices1,
-            Onions=prices2,
-            Bread=prices3,
-            Potatoes=prices4,)
+            Maize=prices1,
+            Millet=prices2,
+            Sorghum=prices3,
+            Flour=prices4,)
 
     source = ColumnDataSource(data)
     return source, data
@@ -304,11 +304,9 @@ def make_gridplot(goods, country, data_wfp):
 
         plots.append(row)
     grid = gridplot(plots)
-    filename = "plots/scatter_matrix_ukraine2.html"
+    filename = "plots/scatter_matrix_gambia.html"
     output_file(filename, title="Scatter Matrix")
     show(grid)
-
-make_gridplot(goods, country, data_wfp)
 
 # makes scatterplots about countries in the Middle East for Oil and Rice
 def gridplot_middleeast(goods, data_wfp):

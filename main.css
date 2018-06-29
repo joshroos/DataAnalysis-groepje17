@@ -44,5 +44,9 @@ ul.posts li { list-style: none; }
 }
 
 .rice_west_afrika, .rice_oost_afrika {
-    display: inline
+    display: inline;
+}
+
+.oekraine, .oekraine2 {
+    display: inline;
 }

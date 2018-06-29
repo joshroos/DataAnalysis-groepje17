@@ -37,7 +37,7 @@ SA_range = ['India', 'Pakistan', 'Bhutan', 'Bangladesh','Nepal', 'Sri Lanka',
 
 # plot figure
 p = figure(tools=["save", "hover", "box_zoom"], background_fill_color="#E8F8F5"
- , title="Price of Rice Middle East", x_range=ME_range)
+ , title="Price of Rice East-Africa", x_range=EA_range)
 
 # shrink lengths of stems to be no longer than the minimums or maximums
 qmin = groups.quantile(q=0.00)

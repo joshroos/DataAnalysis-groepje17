@@ -36,6 +36,7 @@ def BNP_country(country):
         bnp_country.append(BNP[0]/1000000000)
 
     p.line(years, bnp_country)
+    output_file("yemen.html")
     return p
 
 show(BNP_country("Yemen"))
